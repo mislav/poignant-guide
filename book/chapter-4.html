@@ -1,0 +1,1023 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>why&#8217;s (poignant) guide to ruby :: 4. Floating Little Leaves of Code</title>
+    <link rel="stylesheet" type="text/css" href="../guide.css" />
+</head>
+<body class="chapter">
+
+<div id="banner">
+   <div class="pager">
+   <a class="pagebar" href="chapter-3.html">previous</a> | <a class="pagebar" href="chapter-5.html">next</a>
+   </div>
+   <div class="title">
+   <img src="../images/2006.chaptertitle.png" alt="why's (poignant) guide to ruby" />
+   </div>
+</div>
+<div id="container">
+<div class="page">
+    <div class="pageLinks">
+        <a class="pagebar" href="http://whytheluckystiff.net/">whytheluckystiff.net</a> | <a class="pagebar" href="index.html">Contents</a>
+    </div>
+    <div class="pageTitle">
+        
+            <h3>4.</h3>
+            <h1>Floating Little Leaves of Code</h1>
+            <p><img src="../images/chapter.poignant.guide-4.jpg" alt="[o]" /></p>
+        
+    </div>
+    <div class="content">
+
+    
+
+        <p><img src="../images/the.elf-1.gif" title="Impossibly deep in the caverns of Ambrose... the Elf with a pet ham!" alt="Impossibly deep in the caverns of Ambrose... the Elf with a pet ham!" />
+<img src="../images/the.elf-2.gif" title="...and the cat Trady Blix." alt="...and the cat Trady Blix." /></p>
+
+
+	<p>I&#8217;ve never seen the ham do anything but leak juice.  Today, our business in Ambrose Caverns is with the elf.  He is a crucial part of the next lessons. Let&#8217;s all make him feel welcome. Go start warming up your listening hats!   (And please change out of those ridiculous stirrup pants.)</p>
+
+
+	<p>A prompt warning: this lesson is much slower.  Stay with it.  This will be a long, deep breath. The most crucial stage of your instruction.  It may seem like you&#8217;re not learning much code at first.  You will be learning concepts.  By the end of this chapter, you will know Ruby&#8217;s beauty.  The coziness of the code will become a down sleeping bag for your own solace.</p>
+
+    
+    
+        
+        <a name="section1" />
+        <h2>1. The Leaf as a Status Symbol in Ambrose</h2>
+
+        <p>Alright, Elf.  Give us a quick rundown of the currency issues you&#8217;ve faced there in your kingdom.</p>
+
+
+	<p><img src="../images/the.elf-3.gif" title="Blue Crystals got the shaft." alt="Blue Crystals got the shaft." /></p>
+
+
+	<p>Yeah, that&#8217;s not the way I remember it.  This Elf was paging me constantly.  When I refused to call him back, he somehow left a message on my pager.  Meaning: it beeped a couple times and then printed out a small slip of paper.  The slip said something to the effect of, &#8220;Get down here quick!&#8221; and also, &#8220;We&#8217;ve got to rid the earth of this scourge of enterpreneurial caterpillars, these twisted insect vikings are suffocating my blue crystals!&#8221;</p>
+
+
+	<p>Lately, the exchange rate has settled down between leaves and crystals.  One treegrown note is worth five crystals.  So the basic money situation looks like this:</p>
+
+
+<div class='example'><pre><code> <span class="ident">blue_crystal</span> <span class="punct">=</span> <span class="number">1</span>
+ <span class="ident">leaf_tender</span> <span class="punct">=</span> <span class="number">5</span></code></pre></div>
+
+	<p>This example is, like, <em>totally</em> last chapter.  Still.  It&#8217;s a start.  We&#8217;re setting two <em>variables</em>. The <strong>equals sign</strong> is used for <em>assignment</em>.</p>
+
+
+	<p>Now <code><span class="ident">leaf_tender</span></code> represents the number <code><span class="number">5</span></code> (as in: five blue crystals.)  This concept right here is <strong>half of Ruby</strong>.  We&#8217;re <em>defining</em>.  We&#8217;re <em>creating</em>.  This is half of the work.   Assignment is the most basic form of defining.</p>
+
+
+	<p>You can&#8217;t complain though, can you Elf?  You&#8217;ve built an empire from cashing your blue crystals into the new free market among the forest creatures.  (And even though he&#8217;s an elf to us, he&#8217;s a tall monster to them.)</p>
+
+
+	<p><img src="../images/the.elf-4.jpg" title="Animal Perfect, LLC" alt="Animal Perfect, LLC" /></p>
+
+    
+    
+        
+        <div class="sidebar">
+        <h1>sidebar!</h1>
+        
+        <h2>The Scarf Eaters</h2>
+        
+
+        <p>I hate to intrude upon your instruction, but I&#8217;ve already walked all over it enough to  warrant some further disregard.  Can I go over my next project with you?</p>
+
+
+	<p>I&#8217;ve pledged to write another book.  (<em>Trombones</em>.)  The good news is that I won&#8217;t actually be writing any of it.  You won&#8217;t have to endure any more of this inane blathering.</p>
+
+
+	<p>It&#8217;s over between me and words.  I&#8217;d love to stick around and exploit them each, one after another, but it&#8217;s all becoming quite predictable, wouldn&#8217;t you say?  Eventually, they will all be used and I&#8217;d have to come up with fake words and that would be way too cnoofy.</p>
+
+
+	<p>Now.  The deal isn&#8217;t cut yet, but I&#8217;m in negotiations with Anna Quindlen to do my ghost writing. We&#8217;re tag-teaming on a book that&#8217;s going to blow the (Poignant) Guide right out of your hands.  To put it bluntly, the Guide will be worthless.  You won&#8217;t be able to pile enough  pomegranates on top of the thing.</p>
+
+
+	<p>So this new book.  The Scarf Eaters.  It&#8217;s a coming-of-age novel.  But it&#8217;s also a beginner&#8217;s guide to Macromedia Flash.  It&#8217;s like Judy Blume crossed Praystation.  It&#8217;s like 0sil8 starring Hillary Duff.</p>
+
+
+	<p>I don&#8217;t want to give away the plot at all, but to tug your appetite I&#8217;ll just say this: one kid talks to his dead brother in ActionScript.  More to come.</p>
+        <h1>sidebar!</h1>
+        </div>
+
+    
+    
+
+        <p>Nonono.  Hang on a sec.  You&#8217;re not ready for what the Elf here is doing in his caves. You&#8217;ll think it&#8217;s all positively inhumane, naughty, sick, tweeested, yada yada.</p>
+
+
+	<h3> Now You&#8217;re Going to Hear the Animal Perfect Mission Statement Because This Is A Book And We Have Time And No Rush, Right?</h3>
+
+
+	<p>Back, back, way back before speedboats, I owned a prize race horse who took a stumble on  the track.  She did ten front flips and crashed into a guy who was carrying a full jar  of mayonnaisse.  We had blood and mayonnaisse up and down the track.  Needless to say,  she was a disaster.</p>
+
+
+	<p>The vet took one look at her and swore she&#8217;d never walk again.  Her legs were gone and the vet wouldn&#8217;t allow a legless horse to just sit around.  We&#8217;d need to put her down.   He swore his life and career on it, insisting we divide into two parallel lines.  The people  who could not refute the doctor&#8217;s claims on one side; those too stubborn to accept his  infallable medical reasoning on the other.  The Elf, his pet ham, and I were the only  ones in that second line.</p>
+
+
+	<p>So while the others heaped up trophies and great wreaths around the horse, bidding it a  fond farewell before the bullet came to take him home, the Elf and I frantically pawed the Internet for  answers.  We took matter into our own hands, cauterizing her leg wounds with live crawdads.   It worked great!  We now had a horse again.   Or at least: a horse body with a crustaceous abdominal frosting.</p>
+
+
+	<p>She scurried everywhere after that and lived for years in pleasantly moist underground cavities.</p>
+
+
+	<p>Animal Perfect is now the future of animal enhancement.  They build new animals and salvage  old-style animals for parts.  Of course, they&#8217;ve come a long ways. When Animal Perfect started, you&#8217;d see a full-grown bear walk into Animal Perfect and you&#8217;d see a full-grown bear with sunglasses walk out.  Completely cheesy.</p>
+
+
+	<p>Stick around and you&#8217;ll see a crab with <em>his own jet pack</em>.  That&#8217;s a new 2004 model jetcrab.</p>
+
+
+	<p>But now, the whole operation is up and running.  And the cleanliness of the place is astonishing. All the equipment is so shiny.  Everything is in chrome.  Oh, and all the staff have concealed weapons.  They&#8217;re trained to kill anyone who enters unannounced.  Or, if they run out of bullets, they&#8217;re trained to pistol whip anyone who enters unannounced.</p>
+
+
+	<p>Elf, make me a starmonkey.</p>
+
+
+	<p><img src="../images/the.elf-5a.jpg" title="First, the star is caught." alt="First, the star is caught." /></p>
+
+
+	<p>Some imaginary Ruby for you:</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">pipe</span><span class="punct">.</span><span class="ident">catch_a_star</span></code></p>
+	</blockquote>
+
+
+	<p>Variable <code><span class="ident">pipe</span></code>.  Method <code><span class="ident">catch_a_star</span></code>.  A lot of Rubyists like to think of methods as a message. Whatever comes before the dot is handed the message.  The above code tells the <code><span class="ident">pipe</span></code> to <code><span class="ident">catch_a_star</span></code>.</p>
+
+
+	<p>This is the <strong>second half</strong> of Ruby.  Putting things in motion.  These things you define and create in the first half start to <em>act</em> in the second half.</p>
+
+
+	<ol>
+	<li>Defining things.</li>
+		<li>Putting those things into action.</li>
+	</ol>
+
+
+	<p>So what if the star catching code works?  Where does the star go?</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">captive_star</span> <span class="punct">=</span> <span class="ident">pipe</span><span class="punct">.</span><span class="ident">catch_a_star</span></code></p>
+	</blockquote>
+
+
+	<p>See, it&#8217;s up to you to collect the miserable, little star.  If you don&#8217;t, it&#8217;ll simply vanish. Whenever you use a method, you&#8217;ll always be given something back.  You can ignore it or use it.</p>
+
+
+	<p><em>If you can learn to use the answers that methods give you back, then you will <strong>dominate</strong>.</em></p>
+
+
+	<p><img src="../images/the.elf-5b.jpg" title="Star is ratcheted to the monkey's face." alt="Star is ratcheted to the monkey's face." /></p>
+
+
+	<p>Quickly then.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">starmonkey</span> <span class="punct">=</span> <span class="ident">ratchet</span><span class="punct">.</span><span class="ident">attach</span><span class="punct">(</span> <span class="ident">captive_monkey</span><span class="punct">,</span> <span class="ident">captive_star</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>The <code><span class="ident">ratchet</span></code> gets an <code><span class="ident">attach</span></code> message.  What needs to be attached?  The <em>method arguments</em>: the <code><span class="ident">captive_monkey</span></code> and the <code><span class="ident">captive_star</span></code>.  We are given back a <code><span class="ident">starmonkey</span></code>, which we have decided to hang on to.</p>
+
+
+	<p><img src="../images/the.elf-5c.gif" title="Frog on the hand." alt="Frog on the hand." /></p>
+
+
+	<p>This is turning out to be such a short, little proggie that I&#8217;m just going to put it all together as one statement.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">starmonkey</span> <span class="punct">=</span> <span class="ident">ratchet</span><span class="punct">.</span><span class="ident">attach</span><span class="punct">(</span> <span class="ident">captive_monkey</span><span class="punct">,</span> <span class="ident">pipe</span><span class="punct">.</span><span class="ident">catch_a_star</span> <span class="punct">)</span> <span class="punct">+</span> <span class="ident">deco_hand_frog</span></code></p>
+	</blockquote>
+
+
+	<p>See how <code><span class="ident">pipe</span><span class="punct">.</span><span class="ident">catch_a_star</span></code> is right in the arguments for the method?  The caught  star will get passed right to the ratchet.  No need to find a place to put it.  Just let it go.</p>
+
+    
+    
+        
+        <a name="section2" />
+        <h2>2. Small and Nearly Worthless</h2>
+
+        <p><img src="../images/blix-1.gif" title="Law-va." alt="Law-va." /></p>
+
+
+	<p>The hotel here in Ambrose is no good at all.  The beds are all lumpy. The elevator is tiny.  One guy put all his bags in the elevator and found out there wasn&#8217;t room for him.  He hit the button and chased up the stairs after it all.  But the stairwell turned out to be too narrow and his shoulders got wedged going up.</p>
+
+
+	<p>The soap mini-bars they give you are sized down for elves, so it&#8217;s impossible to work up a lather.  I hate it.  I keep mistaking them for contact lenses.</p>
+
+
+	<p>I turned on the faucet and nothing came out.  Thing is: Ambrose is a place with magical properties, so I took a chance.  I put my hands under the spigot.  Invisible, warm wetness.  I felt the hurried sensation of running water, darting through my fingers.  When I took my hands away, they were dry and clean.</p>
+
+
+	<p>It was an amazing nothingness to experience.  It was just like <code><span class="constant">nil</span></code>.</p>
+
+
+	<h3>Nil</h3>
+
+
+	<p>In Ruby, <code><span class="constant">nil</span></code> represents an emptiness.  It is <strong>without value</strong>.  It isn&#8217;t zero. Zero is a number.</p>
+
+
+	<p>It&#8217;s Ruby&#8217;s own walking dead, a flatlined keyword.  You can&#8217;t add to it, it doesn&#8217;t evolve.  But it&#8217;s terribly popular.  This skeleton&#8217;s smiling in all the pictures.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">plastic_cup</span> <span class="punct">=</span> <span class="constant">nil</span></code></p>
+	</blockquote>
+
+
+	<p>The above <code><span class="ident">plastic_cup</span></code> is <strong>empty</strong>.  You could argue that the <code><span class="ident">plastic_cup</span></code> contains something, a <code><span class="constant">nil</span></code>.  The <code><span class="constant">nil</span></code> represents the emptiness, though, so go ahead and call it empty.</p>
+
+
+	<p>Some of you who have programmed before will be tempted to say the <code><span class="ident">plastic_cup</span></code> is <strong>undefined</strong>.  How about let&#8217;s not.  When you say a variable is undefined, you&#8217;re saying that Ruby simply has no recollection of the variable, it doesn&#8217;t know the var, it&#8217;s absolutely non-existent.</p>
+
+
+	<p>But Ruby is aware of the <code><span class="ident">plastic_cup</span></code>.  Ruby can easily look in the <code><span class="ident">plastic_cup</span></code>. It&#8217;s <strong>empty</strong>, but not <strong>undefined</strong>.</p>
+
+
+	<h3>False</h3>
+
+
+	<p style="float:left"><img src="../images/blix-neg.gif" title="Shape of a cat." alt="Shape of a cat." /></p>
+
+
+	<p><em>The cat Trady Blix.  Frozen in emptiness.  Immaculate whiskers rigid.  Placid eyes of lake.  Tail of warm icicle.  Sponsored by a Very Powerful Pause Button.</em></p>
+
+
+	<p>The darkness surrounding Blix can be called <strong>negative space</strong>.  Hang on to that phrase. Let it suggest that the emptiness has a negative connotation.  In a similar way, <code><span class="constant">nil</span></code> has a slightly sour note that it whistles.</p>
+
+
+	<p>Generally speaking, <strong>everything in Ruby has a positive charge to it</strong>.  This spark flows through strings, numbers, regexps, all of it.  Only two keywords wear a shady cloak: <code><span class="constant">nil</span></code> and <code><span class="constant">false</span></code> draggin us down.</p>
+
+
+	<p>You can <strong>test that charge</strong> with an <code><span class="keyword">if</span></code> keyword.  It looks very much like the <code><span class="keyword">do</span></code> blocks we saw in the last chapter, in that both end with an <code><span class="keyword">end</span></code>.</p>
+
+
+<div class='example'><pre><code> <span class="keyword">if</span> <span class="ident">plastic_cup</span>
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Plastic cup is on the up 'n' up!</span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>If <code><span class="ident">plastic_cup</span></code> contains either <code><span class="constant">nil</span></code> or <code><span class="constant">false</span></code>, you won&#8217;t see anything print to the screen.  They&#8217;re not on the <code><span class="keyword">if</span></code> guest list.  So <code><span class="keyword">if</span></code> isn&#8217;t going to run any of the code it&#8217;s protecting.</p>
+
+
+	<p>But <code><span class="constant">nil</span></code> and <code><span class="constant">false</span></code> need not walk away in shame.  They may be of questionable character, but <code><span class="keyword">unless</span></code> runs a smaller establishment that caters to the bedraggled. The <code><span class="keyword">unless</span></code> keyword has a policy of <strong>only allowing those with a negative charge in</strong>. Who are: <code><span class="constant">nil</span></code> and <code><span class="constant">false</span></code>.</p>
+
+
+<div class='example'><pre><code> <span class="keyword">unless</span> <span class="ident">plastic_cup</span>
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Plastic cup is on the down low.</span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>You can also use <code><span class="keyword">if</span></code> and <code><span class="keyword">unless</span></code> at the <strong>end of a single line of code</strong>, if that&#8217;s all that is being protected.</p>
+
+
+<div class='example'><pre><code> <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Yeah, plastic cup is up again!</span><span class="punct">&quot;</span> <span class="keyword">if</span> <span class="ident">plastic_cup</span>
+ <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Hardly. It's down.</span><span class="punct">&quot;</span> <span class="keyword">unless</span> <span class="ident">plastic_cup</span></code></pre></div>
+
+	<p>And another nice trick: stack the <code><span class="keyword">if</span></code> and <code><span class="keyword">unless</span></code>.</p>
+
+
+<div class='example'><pre><code> <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">We're using plastic 'cause we don't have glass.</span><span class="punct">&quot;</span> <span class="keyword">if</span> <span class="ident">plastic_cup</span> <span class="keyword">unless</span> <span class="ident">glass_cup</span></code></pre></div>
+
+	<p>This trick is a gorgeous way of expressing, <em>Do this only if <strong>a* is true and *b</strong> isn&#8217;t true</em>.</p>
+
+
+	<p>Now that you&#8217;ve met <code><span class="constant">false</span></code>, I&#8217;m sure you can see what&#8217;s on next.</p>
+
+    
+    
+        
+        <div class="sidebar">
+        <h1>sidebar!</h1>
+        
+        <h2>Make Your Own Starmonkey!</h2>
+        
+
+        <p>1.  Turn a mug upside-down.
+<img src="../images/starmonkeycrafts-1.jpg" alt="" />
+2. Attach an apple with a rubber band.
+<img src="../images/starmonkeycrafts-2.jpg" alt="" />
+3. Shove car keys into the sides of the apple.
+<img src="../images/starmonkeycrafts-3.jpg" alt="" />
+4. Glue star face.
+<img src="../images/starmonkeycrafts-4.jpg" alt="" /></p>
+
+
+	<p>You have two complementary star faces waiting in your account.</p>
+
+
+	<p style="text-align:center;"><img src="../images/starmonkeycrafts-5.gif" alt="" />
+Standard, placid.</p>
+
+
+	<p style="text-align:center;"><img src="../images/starmonkeycrafts-6.gif" alt="" />
+Eating chalk.</p>
+        <h1>sidebar!</h1>
+        </div>
+
+    
+    
+
+        <h3>True</h3>
+
+
+	<blockquote>
+		<p><code><span class="ident">approaching_guy</span> <span class="punct">=</span> <span class="constant">true</span></code></p>
+	</blockquote>
+
+
+	<p>I saw <code><span class="constant">true</span></code> at the hotel buffet tables today.  I cannot stand that guy. His stance is way too wide.  And you&#8217;ve never met anyone who planted his feet so hard in the ground.  He wears this corny necklace made out of shells.  His face exudes this brash confidence.  (You can tell he&#8217;s exerting all of his restraint just to keep from bursting into Neo flight.)</p>
+
+
+	<p>To be honest, I can&#8217;t be around someone who always has to be right. This <code><span class="constant">true</span></code> is always saying, &#8220;A-OK.&#8221;  Flashing hang ten.  And seriously,  he loves that necklace.  Wears it constantly.</p>
+
+
+	<p>As you&#8217;d suspect, he&#8217;s backstage at everything on the <code><span class="keyword">if</span></code> event schedule.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Hugo Boss</span><span class="punct">&quot;</span> <span class="keyword">if</span> <span class="constant">true</span></code> acts like <code><span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Hugo Boss</span><span class="punct">&quot;</span></code>.</p>
+	</blockquote>
+
+
+	<p>Occassionally, <code><span class="keyword">if</span></code> will haul out the velvet ropes to exercise some crowd control.   The <strong>double equals</strong> gives the appearance of a short link of ropes, right along the sides of a red carpet where only <code><span class="constant">true</span></code> can be admitted.</p>
+
+
+<div class='example'><pre><code> <span class="keyword">if</span> <span class="ident">approaching_guy</span> <span class="punct">==</span> <span class="constant">true</span>
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">That necklace is classic.</span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>The double equals is simply <strong>an ID check</strong>.  Do the gentleman at both ends of this rope appear to match?</p>
+
+
+	<p>In this way, you control who <code><span class="keyword">if</span></code> lets in.  If you have a hard time getting along with <code><span class="constant">true</span></code> as I do, you can heartily welcome <code><span class="constant">false</span></code>.</p>
+
+
+<div class='example'><pre><code> <span class="keyword">if</span> <span class="ident">approaching_guy</span> <span class="punct">==</span> <span class="constant">false</span>
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Get in here, you conniving devil.</span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>Same goes for <code><span class="keyword">unless</span></code>.  The gateway is yours.  Take possession of it.</p>
+
+
+	<h3>Again, I Want You to Dominate</h3>
+
+
+	<p>Now, you want a head trip?  <strong>The double equals sign is a method.</strong>  Can you guess how it works?  Here, check it out with the dot and parens:</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">approaching_guy</span><span class="punct">.==(</span> <span class="ident">true</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>Ruby allows the shortcut, though.  You can drop the dot and back away slowly.</p>
+
+
+	<p>Now, do you remember what you need to do to <strong>dominate</strong> in Ruby?  <em>Use the answers the methods give you.</em></p>
+
+
+<div class='example'><pre><code> <span class="keyword">if</span> <span class="constant">nil</span><span class="punct">.==(</span> <span class="ident">true</span> <span class="punct">)</span>
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">This will never see realization.</span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>In the above, how is the method&#8217;s answer being used?</p>
+
+
+	<p>Let&#8217;s take the statement <code><span class="constant">nil</span>  <span class="constant">true</span></code>.  This will fail every time.  No match.   When there&#8217;s no match, the double equals method answers with <code><span class="constant">false</span></code>.  A shake of the head. That answer is given to <code><span class="keyword">if</span></code>, who can&#8217;t accept a <code><span class="constant">false</span></code>.  The <code><span class="ident">print</span></code> never sees realization.</p>
+
+
+<div class='example'><pre><code> <span class="ident">at_hotel</span> <span class="punct">=</span> <span class="constant">true</span>
+ <span class="ident">email</span> <span class="punct">=</span> <span class="keyword">if</span> <span class="ident">at_hotel</span>
+           <span class="punct">&quot;</span><span class="string">why@hotelambrose.com</span><span class="punct">&quot;</span> 
+         <span class="keyword">else</span>
+           <span class="punct">&quot;</span><span class="string">why@drnhowardcham.com</span><span class="punct">&quot;</span> 
+         <span class="keyword">end</span></code></pre></div>
+
+	<p>Even though <code><span class="keyword">if</span></code> isn&#8217;t a method, <code><span class="keyword">if</span></code> does give a return answer.  Look at the above and wonder over what happens when <code><span class="ident">at_hotel</span></code> is <code><span class="constant">true</span></code>.</p>
+
+
+	<p>The <code><span class="keyword">if</span></code> will return the answer given by the code it chooses to run.  In the case of  <code><span class="ident">at_hotel</span></code> being true, the first string, my e-mail address at Hotel Ambrose, will be returned.  The <code><span class="keyword">else</span></code> keyword marks code which will run, should <code><span class="keyword">if</span></code> fail.  If <code><span class="ident">at_hotel</span></code> is false, the <code><span class="keyword">if</span></code> will answer with my e-mail address at Dr. N. Howard Cham&#8217;s office,  where I take my apprenticeship.</p>
+
+
+	<p>Should you have several lines of code in an <code><span class="keyword">if</span></code> or <code><span class="keyword">unless</span></code>, <strong>only the answer from the last full statement will be used</strong>.</p>
+
+
+<div class='example'><pre><code> <span class="ident">email</span> <span class="punct">=</span> <span class="keyword">if</span> <span class="ident">at_hotel</span>
+           <span class="ident">address</span> <span class="punct">=</span> <span class="punct">&quot;</span><span class="string">why</span><span class="punct">&quot;</span> 
+           <span class="ident">address</span> <span class="punct">&lt;&lt;</span> <span class="punct">&quot;</span><span class="string">@hotelambrose</span><span class="punct">&quot;</span> 
+           <span class="ident">address</span> <span class="punct">&lt;&lt;</span> <span class="punct">&quot;</span><span class="string">.com</span><span class="punct">&quot;</span> 
+         <span class="keyword">end</span></code></pre></div>
+
+	<p>Three lines of code inside the <code><span class="keyword">if</span></code>.  The first line assigns a string with my name in it to a variable. The second and third lines add the rest of my e-mail address on to the end.  The <strong>double less-than <code><span class="punct">&lt;&lt;</span></code> is the concatenation operator</strong>.  To concatenate is to <strong>append</strong>, or <strong>add to the end</strong>.</p>
+
+
+  <p>Just as we saw with the equality checker <code>==</code>, the concatenator is a method.
+     After adding to the end of the string, the concatenator also <strong>answers with that very
+     string</strong>.  So, the third line, which could be read as <code>address.<<( ".com" )</code>,
+   gives back <code>address</code>, which the <code>if</code> then hands back for <code>email</code>'s
+   assignment.</p>
+
+
+	<p>Here&#8217;s a question: what if the <code><span class="keyword">if</span></code> fails?  What if <code><span class="ident">at_hotel</span></code> is false in the above example? Is anything returned?  Nothing is assigned to <code><span class="ident">email</span></code>, right?</p>
+
+
+	<p>Yes, nothing is returned.  By which I mean: <code><span class="constant">nil</span></code> is returned.  And often <code><span class="constant">nil</span></code> is a very useful answer.</p>
+
+
+<div class='example'><pre><code> <span class="ident">print</span><span class="punct">(</span> <span class="keyword">if</span> <span class="ident">at_hotel</span><span class="punct">.</span><span class="ident">nil?</span>
+          <span class="punct">&quot;</span><span class="string">No clue if he's in the hotel.</span><span class="punct">&quot;</span> 
+        <span class="keyword">elsif</span> <span class="ident">at_hotel</span> <span class="punct">==</span> <span class="constant">true</span>
+          <span class="punct">&quot;</span><span class="string">Definitely in.</span><span class="punct">&quot;</span> 
+        <span class="keyword">elsif</span> <span class="ident">at_hotel</span> <span class="punct">==</span> <span class="constant">false</span>
+          <span class="punct">&quot;</span><span class="string">He's out.</span><span class="punct">&quot;</span> 
+        <span class="keyword">else</span>
+          <span class="punct">&quot;</span><span class="string">The system is on the freee-itz.</span><span class="punct">&quot;</span> 
+        <span class="keyword">end</span> <span class="punct">)</span></code></pre></div>
+
+	<p>You can use the <code><span class="ident">nil?</span></code> method on any value in Ruby.  Again, think of it as a message. To the value: &#8220;Are you nil?  Are you empty?&#8221;</p>
+
+
+	<p>If <code><span class="ident">at_hotel</span></code> is empty, Ruby doesn&#8217;t have any idea if I&#8217;m in the hotel or not.  So <code><span class="keyword">if</span></code> answers with the &#8220;No clue&#8221; string.  In order to handle the <code><span class="constant">true</span></code> or <code><span class="constant">false</span></code> possibilities, the <code><span class="keyword">elsif</span></code> keyword is used.  While you can have only one <code><span class="keyword">if</span></code> and one <code><span class="keyword">else</span></code>, you can fill the inbetween with an exorbitant number of <code><span class="keyword">elsif</span></code> keywords.  Each <code><span class="keyword">elsif</span></code> acts as <strong>a further <code><span class="keyword">if</span></code> test</strong>.  Checking for a positive charge.</p>
+
+
+	<p>If you&#8217;re doing okay at this point, then you&#8217;re in tip-top shape for the rest of the book.  You have seen some pretty tough code in the last few examples.  You strong fellow.</p>
+
+    
+    
+        
+        <a name="section3" />
+        <h2>3. Chaining Delusions Together</h2>
+
+        <p><img src="../images/the.elf-6.jpg" title="55,000 starmonkeys and one spirited Olympic hopeful." alt="55,000 starmonkeys and one spirited Olympic hopeful." /></p>
+
+
+	<p>You finish reading the above comic and retire to your daybed for reflection. It&#8217;s one of those canopy affairs which is always logjammed with pillows.  You sit atop the pile, gazing out upon the world.  You see the tall smokestacks belching wide spools of fume and haze.  The tangled concourses of freeways smattered with swift, shimmering traffic is but a gently pulsing eye muscle from your vantage point.</p>
+
+
+	<p>It is all so fantastic.  How the colors of the horizon spread across the landscape as a great mix of butter and grease with a tablespoon of vanilla extract.</p>
+
+
+	<p>Yet, for all of the beauty which beckons for your attention, the images of the Elf and  his Olympic Hopeful return.  And more especially, that order for <strong>55,000</strong> starmonkeys.   <em>55,000 starmonkeys</em>, you think.  <em>Fifty-five Thousand</em>.</p>
+
+
+	<p>You think of just the number itself.  <em>55,000</em>.  It&#8217;s walking down a road.  It might be in a forest, you don&#8217;t know for sure as your eyes are fixed right on the number itself.  It&#8217;s stopping and talking to people.  To tennis players, to a men&#8217;s choral group.  There is merriment and good  feeling.  When it laughs, its lower zeros quiver with glee.</p>
+
+
+	<p>You want to talk to it.  You want to skip along that forest trail with it.  You want to climb aboard a jet bound to Brazil with it.  And after five days and four nights at the leisureful Costa do Sauipe Marriott Resort &#38; Spa, to marry it, to bear a family of 55,000 starmonkeys with it. To take possession of Nigeria with it.</p>
+
+
+	<p>With a flying leap, you dismount your pillow tower of isolation.  Scrambling with the key, you unlock your roll top desk and pull out a sheet of paper, holding it firmly upon the desk.  You begin scribbling.</p>
+
+
+	<blockquote>
+		<p><em>Take possession of Nigeria with my new 55,000 starmonkeys</em>... 
+<em>Over it, build Nigeria-sized <strong>vegetarians only</strong> casino and go-cart arena</em>...
+<em>Wings&#8230; we could have our own special sauce on the wings that&#8217;s different</em>...
+<em>Mustard + codeine = Smotchkkiss&#8217; Starry Starmonkey Glow Sauce</em>...
+<em>Franchise, franchise&#8230; logos</em>... 
+<em>Employee instructional videos</em>... 
+<em>When you give the customer change, let them reach inside the frog on your hand to get it</em>...  
+<em>If they have no change, at least put their reciept some place where they have to touch the frog</em>...  
+<em>We&#8217;re leveling the playing field here</em>...
+<em>Advertise cheap pizza, let&#8217;s make our money off soda</em>...
+<em>Collect all 4 frosted glasses</em>...</p>
+	</blockquote>
+
+
+	<p>Wow, the ideas are really coming out.  You literally had to smack yourself to stop.  We need to put these in a safe place.  Actually, we should store them on your computer and mangle the words.  You look out the window and watch for <span class="caps">FBI</span>.  I&#8217;m going to start this script.</p>
+
+
+	<h3>The Flipping Script</h3>
+
+
+<div class='example'><pre><code> <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Type and be diabolical: </span><span class="punct">&quot;</span> 
+ <span class="ident">idea_backwards</span> <span class="punct">=</span> <span class="ident">gets</span><span class="punct">.</span><span class="ident">reverse</span></code></pre></div>
+
+	<p>Let this script be your confidante.  It will ask for evil plans and turn their letters backwards. The <code><span class="ident">gets</span></code> method is <strong>built into Ruby</strong>.  It&#8217;s a <strong>kernel method</strong> like <code><span class="ident">print</span></code>.  This method <code><span class="ident">gets</span></code> will pause Ruby to let you type.  When you hit <em>Enter</em>, <code><span class="ident">gets</span></code> will then stop paying attention to your keyboard punchings and answer back to Ruby with a string that contains everything you typed.</p>
+
+    
+    
+        
+        <div class="sidebar">
+        <h1>sidebar!</h1>
+        
+        <h2>Get Ahead with The Tiger&#8217;s Vest</h2>
+        
+
+        <p><a href="expansion-pak-1.html"><img src="../images/ad-tiger.gif" alt="" /></a></p>
+
+
+	<p>Want to start using Ruby alongside your reading?  Split your attention and head off to <a href="expansion-pak-1.html">Expansion Pak I: The Tiger&#8217;s Vest</a>, a trite mini-chapter which will aid you in installing Ruby.  In addition, you&#8217;ll learn how to use Irb and Ri, two teaching aids that come with Ruby which will really speed you up in your learning.</p>
+        <h1>sidebar!</h1>
+        </div>
+
+    
+    
+
+        <p>The <code><span class="ident">reverse</span></code> method is then used on the string that <code><span class="ident">gets</span></code> is giving back.  The <code><span class="ident">reverse</span></code> method is part of the <code><span class="constant">String</span></code> class.  Which means that <strong>anything which is a string has the <code><span class="ident">reverse</span></code> method available</strong>.  More on classes in the next chapter, for now just know that <strong>a lot of methods are only available with certain types of values</strong>.</p>
+
+
+	<p>I don&#8217;t think <code><span class="ident">reverse</span></code> is going to cut it.  The authorities only need to put a mirror to &#8220;airegiN fo noissessop ekaT.&#8221;  Bust us when starmonkeys start to touch down in Lagos.</p>
+
+
+	<p>The capital letters give it away.  Maybe if we uppercase all letters in the string before we reverse it.</p>
+
+
+<div class='example'><pre><code> <span class="ident">idea_backwards</span> <span class="punct">=</span> <span class="ident">gets</span><span class="punct">.</span><span class="ident">upcase</span><span class="punct">.</span><span class="ident">reverse</span></code></pre></div>
+
+	<h3>Your Repetitiveness Pays Off</h3>
+
+
+	<p>You hand me a legal pad, doused in illegible shorthand.  Scanning over it, I start to notice patterns.  That you seem to use the same set of words repeatedly in your musings.   Words like <em>starmonkey</em>, <em>Nigeria</em>, <em>firebomb</em>.  Some phrases even.  <em>Put the kabosh on.</em> That gets said a lot.</p>
+
+
+	<p>Let us disguise these foul terms, my brother.  Let us obscure them from itching eyes that cry to know our delicate schemes and to thwart us from having great pleasure and many go-carts. We will replace them with the most innocent language.  New words with secret meaning.</p>
+
+
+	<p>I start up a word list, a Ruby <code><span class="constant">Hash</span></code>, which contains these oft seen and dangerous words of yours. In the Hash, each dangerous word is matched up against a code word (or phrase).  The code word will be swapped in for the real word.</p>
+
+
+<div class='example'><pre><code> <span class="ident">code_words</span> <span class="punct">=</span> <span class="punct">{</span>
+   <span class="punct">'</span><span class="string">starmonkeys</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">Phil and Pete, those prickly chancellors of the New Reich</span><span class="punct">',</span> 
+   <span class="punct">'</span><span class="string">catapult</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">chucky go-go</span><span class="punct">',</span> <span class="punct">'</span><span class="string">firebomb</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">Heat-Assisted Living</span><span class="punct">',</span> 
+   <span class="punct">'</span><span class="string">Nigeria</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">&quot;</span><span class="string">Ny and Jerry's Dry Cleaning (with Donuts)</span><span class="punct">&quot;,</span>
+   <span class="punct">'</span><span class="string">Put the kabosh on</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">Put the cable box on</span><span class="punct">'</span>
+ <span class="punct">}</span></code></pre></div>
+
+	<p>The words which are placed before the arrow are called <strong>keys</strong>.  The words after the arrows, the definitions, are often just called <strong>values</strong>.</p>
+
+
+	<p>Notice the double quotes around <code><span class="constant">Ny</span> <span class="keyword">and</span> <span class="constant">Jerry</span><span class="punct">'</span><span class="string">s Dry Cleaning (with Donuts)</span></code>.  Since a single quote is being used an apostrophe, we can&#8217;t use single quotes around the string.  (Although, you can use single quotes if you put a backslash before the apostrophe such as: <code><span class="punct">'</span><span class="string">Ny and Jerry<span class="escape">\'</span>s Dry Cleaning (with Donuts)</span><span class="punct">'</span></code>.)</p>
+
+
+	<p>Should you need to look up a specific word, you can do so by using the <strong>square brackets</strong> method.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">code_words</span><span class="punct">['</span><span class="string">catapult</span><span class="punct">']</span></code> will answer with the string <code><span class="punct">'</span><span class="string">chucky go-go</span><span class="punct">'</span></code>.</p>
+	</blockquote>
+
+
+	<p>Look at the square brackets as if they are a wooden pallet the word is sitting upon. A forklift could slide its prongs into each side of the pallet and bring it down from a shelf back in the warehouse.  The word on the pallet is called the <em>index</em>. We are asking the forklift to find the index for us and bring back its corresponding value.</p>
+
+
+	<p>If you&#8217;ve never been to a warehouse, you could also look at the brackets as handles. Imagine an industrious worker putting on his work gloves and hefting the index back to your custody.  If you&#8217;ve never used handles before, then I&#8217;m giving you about thirty seconds to find a handle and use it before I blow my lid.</p>
+
+
+	<p>As with many of the other operators you&#8217;ve seen recently, the index brackets are simply a shortcut for a method.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">code_words</span><span class="punct">.[](</span> <span class="punct">'</span><span class="string">catapult</span><span class="punct">'</span> <span class="punct">)</span></code> will answer with the string <code><span class="punct">'</span><span class="string">chucky go-go</span><span class="punct">'</span></code>.</p>
+	</blockquote>
+
+
+	<h3>Making the Swap</h3>
+
+
+	<p>I went ahead and saved the Hash of code words to a file called <strong>wordlist.rb</strong>.</p>
+
+
+<div class='example'><pre><code> <span class="ident">require</span> <span class="punct">'</span><span class="string">wordlist</span><span class="punct">'</span>
+
+ <span class="comment"># Get evil idea and swap in code words</span>
+ <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Enter your new idea: </span><span class="punct">&quot;</span> 
+ <span class="ident">idea</span> <span class="punct">=</span> <span class="ident">gets</span>
+ <span class="ident">code_words</span><span class="punct">.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">real</span><span class="punct">,</span> <span class="ident">code</span><span class="punct">|</span> 
+   <span class="ident">idea</span><span class="punct">.</span><span class="ident">gsub!</span><span class="punct">(</span> <span class="ident">real</span><span class="punct">,</span> <span class="ident">code</span> <span class="punct">)</span>
+ <span class="keyword">end</span>
+
+ <span class="comment"># Save the jibberish to a new file</span>
+ <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">File encoded.  Please enter a name for this idea: </span><span class="punct">&quot;</span> 
+ <span class="ident">idea_name</span> <span class="punct">=</span> <span class="ident">gets</span><span class="punct">.</span><span class="ident">strip</span>
+ <span class="constant">File</span><span class="punct">::</span><span class="ident">open</span><span class="punct">(</span> <span class="punct">&quot;</span><span class="string">idea-</span><span class="punct">&quot;</span> <span class="punct">+</span> <span class="ident">idea_name</span> <span class="punct">+</span> <span class="punct">&quot;</span><span class="string">.txt</span><span class="punct">&quot;,</span> <span class="punct">&quot;</span><span class="string">w</span><span class="punct">&quot;</span> <span class="punct">)</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">f</span><span class="punct">|</span>
+   <span class="ident">f</span> <span class="punct">&lt;&lt;</span> <span class="ident">idea</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>Script starts by pulling in our word list.  Like <code><span class="ident">gets</span></code> and <code><span class="ident">print</span></code>, the <code><span class="ident">require</span></code> method is a kernel method, you can use it anywhere.  I give it the string <code><span class="punct">'</span><span class="string">wordlist</span><span class="punct">'</span></code> and it will look for a file named <strong>wordlist.rb</strong>.</p>
+
+
+	<p>After that, there are two sections.  I am marking these sections with comments, the lines that start with <strong>pound</strong> symbols.  Comments are <strong>useful notes</strong> that accompany your code.  Folks who come wandering through your code will appreciate the help.  When going through your own code after some time has passed, comments will help you get back into your mindset.  And there&#8217;s software out there that can take your comments and build documents from them.  (RDoc and Ri&#8212;see Expansion Pak #1!)</p>
+
+
+	<p>I like comments because I can skim a big pile of code and spot the highlights.</p>
+
+
+	<p>As the comments tell us, the first section asks you for your evil idea and swaps in the new code words.  The second section saves the encoded idea into a new text file.</p>
+
+
+<div class='example'><pre><code> <span class="ident">code_words</span><span class="punct">.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">real</span><span class="punct">,</span> <span class="ident">code</span><span class="punct">|</span> 
+   <span class="ident">idea</span><span class="punct">.</span><span class="ident">gsub!</span><span class="punct">(</span> <span class="ident">real</span><span class="punct">,</span> <span class="ident">code</span> <span class="punct">)</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>You see the <code><span class="ident">each</span></code> method?  The <code><span class="ident">each</span></code> method is all over in Ruby.   It&#8217;s available for Arrays, Hashes, even Strings.   Here, our <code><span class="ident">code_words</span></code> dictionary is kept in a Hash.  This <code><span class="ident">each</span></code> method will hurry through <strong>all the pairs of the Hash</strong>, one dangerous word matched with its code word, handing each pair to the <code><span class="ident">gsub!</span></code> method for the actual replacement.</p>
+
+
+	<p>In Ruby, <code><span class="ident">gsub</span></code> is short for <em>global substitution</em>.  The method is used to search and replace. Here, we want to find all the occurences of a dangerous word and replace with its safe code word.  With <code><span class="ident">gsub</span></code>, you provide the <strong>word to find as the first argument</strong>, then the <strong>word to put in its place as the second argument</strong>.</p>
+
+
+	<p>Why aren&#8217;t we hanging on to the answer from <code><span class="ident">gsub</span></code>?  Doesn&#8217;t <code><span class="ident">gsub</span></code> give us an answer back that we should keep?  You&#8217;d think the line would read:</p>
+
+
+<div class='example'><pre><code> <span class="ident">safe_idea</span> <span class="punct">=</span> <span class="ident">idea</span><span class="punct">.</span><span class="ident">gsub</span><span class="punct">(</span> <span class="ident">real</span><span class="punct">,</span> <span class="ident">code</span> <span class="punct">)</span></code></pre></div>
+
+	<p>Yes, with <code><span class="ident">gsub</span></code> we&#8217;d need to hang on to its answer.  We&#8217;re using a variation of <code><span class="ident">gsub</span></code> that is totally hyper.  Notice the <strong>exclamation mark</strong> on the <code><span class="ident">gsub!</span></code> used inside the <code><span class="ident">each</span></code> block.  The exclamation mark is a sign that <code><span class="ident">gsub!</span></code> is a bit of a zealot.  See, <code><span class="ident">gsub!</span></code> will go ahead and <strong>replace the words in <code><span class="ident">idea</span></code> directly</strong>.  When it&#8217;s done <code><span class="ident">idea</span></code> will contain the newly altered string and you won&#8217;t be able to find the old string.</p>
+
+
+	<p>Call <code><span class="ident">gsub!</span></code> a <strong>destructive method</strong>.  It makes its changes to the value directly.  Whereas <code><span class="ident">gsub</span></code> will leave the value intact, answering back with a new string which contains the alterations. (Why must <code><span class="ident">gsub!</span></code> scream when he descends upon his prey?  Merciless assailant!)</p>
+
+
+	<h3> Text Files of a Madman</h3>
+
+
+	<p>Let us now save the encoded idea to a file.</p>
+
+
+<div class='example'><pre><code> <span class="comment"># Save the jibberish to a new file</span>
+ <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">File encoded.  Please enter a name for this idea: </span><span class="punct">&quot;</span> 
+ <span class="ident">idea_name</span> <span class="punct">=</span> <span class="ident">gets</span><span class="punct">.</span><span class="ident">strip</span>
+ <span class="constant">File</span><span class="punct">::</span><span class="ident">open</span><span class="punct">(</span> <span class="punct">'</span><span class="string">idea-</span><span class="punct">'</span> <span class="punct">+</span> <span class="ident">idea_name</span> <span class="punct">+</span> <span class="punct">'</span><span class="string">.txt</span><span class="punct">',</span> <span class="punct">'</span><span class="string">w</span><span class="punct">'</span> <span class="punct">)</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">f</span><span class="punct">|</span>
+   <span class="ident">f</span> <span class="punct">&lt;&lt;</span> <span class="ident">idea</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>This section starts by asking you for a name by which the idea can be called.  This name is used to build a file name when we save the idea.</p>
+
+
+	<p>The <code><span class="ident">strip</span></code> method is for strings.  This method <strong>trims spaces and blank lines</strong> from the <strong>beginning and end</strong> of the string.  This will remove the <em>Enter</em> at the end of the string you typed. But it&#8217;ll also handle spaces if you accidentally left any.</p>
+
+
+	<p>After we have the idea&#8217;s name, we open a new, blank text file.  The file name is built by adding strings together.  If you typed in <code><span class="punct">'</span><span class="string">mustard-plus-codeine</span><span class="punct">'</span></code>, then our math will be: <code><span class="punct">'</span><span class="string">idea-</span><span class="punct">'</span> <span class="punct">+</span> <span class="punct">'</span><span class="string">mustard-plus-codeine</span><span class="punct">'</span> <span class="punct">+</span> <span class="punct">'</span><span class="string">.txt</span><span class="punct">'</span></code>.  Ruby presses these into a single string. <code><span class="punct">'</span><span class="string">idea-mustard-plus-codeine.txt</span><span class="punct">'</span></code> is the file.</p>
+
+
+	<p>We&#8217;re using the class method <code><span class="constant">File</span><span class="punct">::</span><span class="ident">open</span></code> to create the new file.  Up until now, we&#8217;ve used several kernel methods to do our work.  We hand the <code><span class="ident">print</span></code> method a string and it prints the string on your screen.  One secret about kernel methods like <code><span class="ident">print</span></code>: they are actually <strong>class methods</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="constant">Kernel</span><span class="punct">::</span><span class="ident">print</span><span class="punct">(</span> <span class="punct">&quot;</span><span class="string">55,000 Starmonkey Salute!</span><span class="punct">&quot;</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>What does this mean?  Why does it matter?  It means <code><span class="constant">Kernel</span></code> is the center of Ruby&#8217;s universe. Wherever you are in your script, <code><span class="constant">Kernel</span></code> is right beside you.  You don&#8217;t even need to spell <code><span class="constant">Kernel</span></code> out for Ruby.  Ruby knows to check <code><span class="constant">Kernel</span></code>.</p>
+
+
+	<p>Most methods are more specialized than <code><span class="ident">print</span></code> or <code><span class="ident">gets</span></code>.  Take the <code><span class="constant">File</span><span class="punct">::</span><span class="ident">open</span></code> for example.  The creator of Ruby, Matz, has given us many different methods which which read, rename, or delete files.  They are all organized inside the <code><span class="constant">File</span></code> class.</p>
+
+
+	<blockquote>
+		<p><code><span class="constant">File</span><span class="punct">::</span><span class="ident">read</span><span class="punct">(</span> <span class="punct">&quot;</span><span class="string">idea-mustard-plus-codeine.txt</span><span class="punct">&quot;</span> <span class="punct">)</span></code> will answer back with a string containing all of the text from your idea file.</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><code><span class="constant">File</span><span class="punct">::</span><span class="ident">rename</span><span class="punct">(</span> <span class="punct">&quot;</span><span class="string">old_file.txt</span><span class="punct">&quot;,</span> <span class="punct">&quot;</span><span class="string">new_file.txt</span><span class="punct">&quot;</span> <span class="punct">)</span></code> will rename <code><span class="ident">old_file</span><span class="punct">.</span><span class="ident">txt</span></code>.</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><code><span class="constant">File</span><span class="punct">::</span><span class="ident">delete</span><span class="punct">(</span> <span class="punct">&quot;</span><span class="string">new_file.txt</span><span class="punct">&quot;</span> <span class="punct">)</span></code> will nuke the new file.</p>
+	</blockquote>
+
+
+	<p>These File methods are all <strong>built right into Ruby</strong>.  They are all just stored in a container called the <code><span class="constant">File</span></code> class.  So, while you can safely call kernel methods without needing to type <code><span class="constant">Kernel</span></code>, Ruby doesn&#8217;t automatically check the <code><span class="constant">File</span></code> class. You&#8217;ll need to give the full method name.</p>
+
+
+<div class='example'><pre><code> <span class="constant">File</span><span class="punct">::</span><span class="ident">open</span><span class="punct">(</span> <span class="punct">'</span><span class="string">idea-</span><span class="punct">'</span> <span class="punct">+</span> <span class="ident">idea_name</span> <span class="punct">+</span> <span class="punct">'</span><span class="string">.txt</span><span class="punct">',</span> <span class="punct">'</span><span class="string">w</span><span class="punct">'</span> <span class="punct">)</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">f</span><span class="punct">|</span>
+   <span class="ident">f</span> <span class="punct">&lt;&lt;</span> <span class="ident">idea</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>We pass two arguments into <code><span class="constant">File</span><span class="punct">::</span><span class="ident">open</span></code>.  The first is the <strong>file name to open</strong>.  The second is a string containing our <strong>file mode</strong>.  We use <code><span class="punct">'</span><span class="string">w</span><span class="punct">'</span></code>, which means to write to a brand-new file.  (Other options are: <code><span class="punct">'</span><span class="string">r</span><span class="punct">'</span></code> to read from the file or <code><span class="punct">'</span><span class="string">a</span><span class="punct">'</span></code> to add to the end of the file.)</p>
+
+
+	<p>The file is opened for writing and we are handed back the file in variable <code><span class="ident">f</span></code>, which can be seen <strong>sliding down the chute into our block</strong>.  Inside the block, we write to the file.  When the block closes with <code><span class="keyword">end</span></code>, our file is closed as well.</p>
+
+
+	<p>Notice we use the <strong>concatenator</strong> <code><span class="punct">&lt;&lt;</span></code> to write to the file.  We can do this because files have a method called <code><span class="punct">&lt;&lt;</span></code> just like strings do.</p>
+
+
+	<h3>Settle Down, Your Ideas Aren&#8217;t Trapped</h3>
+
+
+	<p>Here, let&#8217;s get your ideas back to their original verbage, so you can rumminate over their brilliance.</p>
+
+
+<div class='example'><pre><code> <span class="ident">require</span> <span class="punct">'</span><span class="string">wordlist</span><span class="punct">'</span>
+
+ <span class="comment"># Print each idea out with the words fixed</span>
+ <span class="constant">Dir</span><span class="punct">['</span><span class="string">idea-*.txt</span><span class="punct">'].</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">file_name</span><span class="punct">|</span>
+   <span class="ident">idea</span> <span class="punct">=</span> <span class="constant">File</span><span class="punct">.</span><span class="ident">read</span><span class="punct">(</span> <span class="ident">file_name</span> <span class="punct">)</span>
+   <span class="ident">code_words</span><span class="punct">.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">real</span><span class="punct">,</span> <span class="ident">code</span><span class="punct">|</span> 
+     <span class="ident">idea</span><span class="punct">.</span><span class="ident">gsub!</span><span class="punct">(</span> <span class="ident">code</span><span class="punct">,</span> <span class="ident">real</span> <span class="punct">)</span>
+   <span class="keyword">end</span>
+   <span class="ident">puts</span> <span class="ident">idea</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>By now, you should be up to snuff with most of this example.  I won&#8217;t bore you with all of the mundane details.  See if you can figure out how it works on your own.</p>
+
+
+	<p>We have an interesting class method here, though.  The <code><span class="constant">Dir</span><span class="punct">::[]</span></code> method searches a directory (some of you may call them &#8220;folders&#8221;).  Just as you&#8217;ve seen with Hashes, the index brackets can be class methods.  (Can you start to see the shiny, glinting gorgeousness of Ruby?)</p>
+
+
+	<p>So we&#8217;re using the forklift to get those files in the directory which match <code><span class="punct">'</span><span class="string">idea-*.txt</span><span class="punct">'</span></code>.  The <code><span class="constant">Dir</span><span class="punct">::[]</span></code> method will use the asterisk as a wildcard.  We&#8217;re basically saying, &#8220;Match anything that starts with <em>idea-</em> and ends with <em>.txt</em>.&#8221;  The forklift shuffles off to the directory and comes back with a list of all matching files.</p>
+
+
+	<p>That <strong>list of files</strong> will come in the form of <code><span class="constant">Array</span></code> the Caterpillar, with a <code><span class="constant">String</span></code> for each  file.  If you are curious and want to play with with <code><span class="constant">Dir</span><span class="punct">::[]</span></code>, try this:</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">p</span> <span class="constant">Dir</span><span class="punct">['</span><span class="string">idea-*.txt</span><span class="punct">']</span></code> will print:</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><code><span class="punct">['</span><span class="string">idea-mustard-plus-codeine.txt</span><span class="punct">']</span></code> (<em>an Array of file names!</em>)</p>
+	</blockquote>
+
+
+	<p>Yes, the <code><span class="ident">p</span></code> method works like <code><span class="ident">print</span></code>.  But where <code><span class="ident">print</span></code> is designed for displaying strings, <code><span class="ident">p</span></code> will print <em>anything</em>.  Check this out.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">p</span> <span class="constant">File</span><span class="punct">::</span><span class="ident">methods</span></code> will print:</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><code><span class="punct">[&quot;</span><span class="string">send</span><span class="punct">&quot;,</span> <span class="punct">&quot;</span><span class="string">display</span><span class="punct">&quot;,</span> <span class="punct">&quot;</span><span class="string">name</span><span class="punct">&quot;,</span> <span class="punct">&quot;</span><span class="string">exist?</span><span class="punct">&quot;,</span> <span class="punct">&quot;</span><span class="string">split</span><span class="punct">&quot;,</span></code> ... <em>a whole list of method names!</em> <code><span class="punct">]</span></code></p>
+	</blockquote>
+
+    
+    
+        
+        <a name="section4" />
+        <h2>4. The Miracle of Blocks</h2>
+
+        <p><img src="../images/blix-2.gif" title="Flowerboyz?  Heard it before." alt="Flowerboyz?  Heard it before." /></p>
+
+    
+    
+        
+        <div class="sidebar">
+        <h1>sidebar!</h1>
+        
+        <h2>Excerpt from The Scarf Eaters</h2>
+        
+
+        <p>(<em>from Chapter V: A Man in Uniform</em>.)</p>
+
+
+	<p>In April, the callow lilies came back.  They stretched their baby angel wings out and reached for the world.  Gently, their tendrils caressed the sullen fence posts until even they lilted lovelier.</p>
+
+
+	<p>From her bedroom window, Lara watched the lilies exude their staunch femininity. She slipped the tassels of a fresh, carpathian, embroidered scarf into her mouth and  ate slowly. The long cloth slid down her throat and tickled as it snaked along her esophagus.  She giggled and burped.</p>
+
+
+	<p>Oh, how the flora drew her in.  Looking at flowers went so well with being a teenage girl.  She wanted to paint them, so she opened a new Flash template.  A blank movie this time.</p>
+
+
+	<p>She set her cursor loose in the garden of her movie&#8217;s viewable area.  Vector white lines below shorter vector yellow lines.  She selected the white lines and grouped them together. She even moved them to a new layer entitled &#8220;Cry, Baby Angel, Cry.&#8221;  Then she converted them into a graphic object and moved them to the library.</p>
+
+
+	<p>She felt a warm chill as she moved the long, white petals to her movie&#8217;s library.  It felt so official.  <em>I choose you.  I name you.  Dwell in the comfort of my palace forevermore.</em></p>
+
+
+	<p>Heh.  She laughed.  Colorado Springs was hardly a &#8220;palace.&#8221;</p>
+
+
+	<p>Since they had moved, Dad had only been home once.  He had barged through the front door in full uniform and had given quite a start to both Lara and her mother.  Her mother had even dropped a head of lettuce <del>- which head she had just finished washing -</del> in a pitcher of Lick-M-Aid.</p>
+
+
+	<p>The pitcher was just wide enough for the lettuce and it lodged in there pretty good. Dad came over and yanked at the moist head for sometime until declaring it <span class="caps">FUBAR</span>, in a voice both bemused and then crestfallen.  He tossed the clotted spout in the trash bin.</p>
+
+
+	<p>It was only later that day that Lara&#8217;s mother realized that she could have simply halved the lettuce with an electric knife.  Dad laughed and slapped his forehead.  He then went around and slapped Lara&#8217;s forehead, and her mother&#8217;s too, affectionately.</p>
+
+
+	<p>&#8220;We just weren&#8217;t thinking, were we?&#8221; is what he said.  &#8220;And who dares blame us?  We&#8217;re a real family today.  And we shouldn&#8217;t have to do anything else on the day we got our family back.&#8221;</p>
+
+
+	<p>Lara&#8217;s smiled reflected across the glass of her monitor.  She chose the text tool and in 42 point serif typed: &#8220;Dad.&#8221;  She created a path for it and let it tween off the right side of the screen.  She cried long after it was gone.</p>
+        <h1>sidebar!</h1>
+        </div>
+
+    
+    
+
+        <p>Since you and I are becoming closer friends as we share this time together, I should probably let you in on a bit of the history going on here.  It&#8217;s a good time for a break I say.</p>
+
+
+	<p>First, you should know that Blix is my cat.  My second pet to Bigelow. Granted, we hardly see each other anymore.  He&#8217;s completely self-sufficient. I&#8217;m not exactly sure where he&#8217;s living these days, but he no longer lives in the antechamber to my quarters.  He emptied his savings account about seven months ago.</p>
+
+
+	<p>He does have a set of keys for the house and the Seville.  Should he ever find himself stranded, I will gladly step away from our differences and entertain his antics around the house again.</p>
+
+
+	<p>Make no mistake.  I miss having him around.  Can&#8217;t imagine he misses my company, but I miss his.</p>
+
+
+	<h3>A Siren and A Prayer</h3>
+
+
+	<p>I first saw Blix on television when I was a boy.  He had a starring role on a very gritty police drama called <em>A Siren and A Prayer</em>.  The show was about a god-fearing police squad that did their jobs, did them well, and saw their share of miracles out on the beat.  I mean the officers on this show were <em>great</em> guys, very religious, practically clergy.  But,  you know, even clergymen don&#8217;t have the good sense to kill a guy after he&#8217;s gone too far. These guys knew where to draw that line.  They walked that line every day.</p>
+
+
+	<p>So, it was a pretty bloody show, but they always had a good moral at the end.  Most times the moral was something along the lines of, &#8220;Wow, we got out of that one quick.&#8221;  But there&#8217;s serious camaraderie in a statement like that.</p>
+
+
+	<p>The show basically revolved around this one officer.  &#8220;Mad&#8221; Dick Robinson.  People called him Mad because he was basically insane.  I can&#8217;t remember if he was actually clinically insane, but people were always questioning his decisions.  Mad often blew his top and chewed out some of the other officers, most of whom had unquestionable moral character.  But we all know it&#8217;s a tough world, the stakes are high out there, and everyone who watched the show held Mad in great regard.  I think everyone on the squad grew quite a bit as people, thanks to Mad&#8217;s passion.</p>
+
+
+	<p>The officers couldn&#8217;t do it all themselves though.  In every single episode, they plead with a greater force for assistance.  And, in every single episode, they got their tips from a cat named Terry (played by my cat Blix.)  He was just a kitten at the time and, as a young boy tuning into <em>A Siren and A Prayer</em>, I found myself longing for my own crime-sniffing cat. Terry took these guys down the subway tunnels, through the rotting stench of abandoned marinas, into backdoors of tall, industrial smokestacks.</p>
+
+
+	<p>Sometimes he was all over an episode, darting in and out, preparing traps and directing traffic. But other times you wouldn&#8217;t see him the whole episode.  Then you&#8217;d rewind through the whole show and look and look and look.  You&#8217;d give up.  He can&#8217;t be in that episode.</p>
+
+
+	<p>Still, you can&#8217;t bear to let it go, so you go comb through the whole episode with the jog on your remote, combing, pouring over each scene.  And there he is.  Way up behind the floodlight that was turned up too high.  The one that left Mad with permanent eye damage.  Why?  Why burn out the retinas of your own colleague, Terry?</p>
+
+
+	<p>But the question never got answered because the series was cancelled.  They started to do special effects with the cat and it all fell apart.  In the last episode of the show, there is a moment where Terry is trapped at the top of a crane, about to fall into the searing slag in the furnace of an iron smelt.  He looks back.  No going back.  He looks down.  Paws over eyes (<em>no joke!</em>), he leaps from the crane and, mid-flight, snags a rope and swings to safety, coming down on a soft antelope hide that one of the workers had presumably been tanning that afternoon.</p>
+
+
+	<p>People switched off the television set the very moment the scene aired.  They tried changing the name. First it was <em>God Gave Us a Squad</em>.  <em>Kiss of Pain</em>.  Then, <em>Kiss of Pain in Maine</em>, since the entire precinct ended up relocating there.  But the magic was gone.  I went back to summer school that year to make up some classes and all the kids had pretty much moved on to football pencils.</p>
+
+
+	<h3>Blocks</h3>
+
+
+	<p>A couple years ago, I started teaching Blix about Ruby.  When we got to this part in his lessons, the part that covers blocks, he said to me, &#8220;Blocks remind me of Mad Dick Robinson.&#8221;</p>
+
+
+	<p>&#8220;Oh?&#8221;  I hadn&#8217;t heard that name in awhile.  &#8220;I can&#8217;t see how that could be.&#8221;</p>
+
+
+	<p>&#8220;Well, you say blocks can be difficult to understand.&#8221;</p>
+
+
+	<p>&#8220;They&#8217;re not difficult,&#8221; I said.  &#8220;A <strong>block</strong> is just <strong>code that&#8217;s grouped together</strong>.&#8221;</p>
+
+
+	<p>&#8220;And Mad was just an officer, sworn to uphold his duty,&#8221; he said.  &#8220;But he was a real miracle to watch out in the field.  Now, this first example you&#8217;ve shown me&#8230;&#8221;  He pointed to an example I&#8217;d written down for him.</p>
+
+
+<div class='example'><pre><code> <span class="ident">kitty_toys</span> <span class="punct">=</span>
+   <span class="punct">[</span><span class="symbol">:shape</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">sock</span><span class="punct">',</span> <span class="symbol">:fabric</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">cashmere</span><span class="punct">']</span> <span class="punct">+</span>
+   <span class="punct">[</span><span class="symbol">:shape</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">mouse</span><span class="punct">',</span> <span class="symbol">:fabric</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">calico</span><span class="punct">']</span> <span class="punct">+</span>
+   <span class="punct">[</span><span class="symbol">:shape</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">eggroll</span><span class="punct">',</span> <span class="symbol">:fabric</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">chenille</span><span class="punct">']</span>
+ <span class="ident">kitty_toys</span><span class="punct">.</span><span class="ident">sort_by</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span> <span class="ident">toy</span><span class="punct">[</span><span class="symbol">:fabric</span><span class="punct">]</span> <span class="punct">}</span></code></pre></div>
+
+	<p>&#8220;This is a small miracle,&#8221; he said. &#8220;I can&#8217;t deny its beauty.  Look, there are my kitty toys, laid out with their characteristics.  Below them, the block, sorting them by fabric.&#8221;</p>
+
+
+	<p>&#8220;I apologize if your list of toys looks a bit tricky,&#8221; I said.  Like you, he had learned about the Array, the caterpillar stapled into the code, with square brackets on each side and each item separated by commas.  (Ah, here is one: <code><span class="punct">['</span><span class="string">sock</span><span class="punct">',</span> <span class="punct">'</span><span class="string">mouse</span><span class="punct">',</span> <span class="punct">'</span><span class="string">eggroll</span><span class="punct">']</span></code>.)  He had also been taught the Hash, which is like a dictionary, with curly braces on each end which look like small, open books.  Commas in the Hash between each pair.  Each word in the dictionary matched up with its definition by an arrow.  (Be beholden: <code><span class="punct">{'</span><span class="string">blix</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">cat</span><span class="punct">',</span> <span class="punct">'</span><span class="string">why</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">human</span><span class="punct">'}</span></code>.)</p>
+
+
+	<p>&#8220;Yes, vexing,&#8221; he said.  &#8220;It has square brackets like it&#8217;s an Array, but with the arrows like it&#8217;s a Hash. I don&#8217;t think you&#8217;re going to get away with that.&#8221;</p>
+
+
+	<p>&#8220;It does seem a bit subversive, doesn&#8217;t it?&#8221;  I said, tease-nudging him with a spoon.  &#8220;I&#8217;ve done your kitty toy list in a mix of the two.  I&#8217;m using a shortcut.  Which is: <strong>If you use arrows inside of an Array,  you&#8217;ll end up with a Hash inside of that Array.</strong>&#8220;</p>
+
+
+	<p>&#8220;Oh, I see,&#8221; he said.  &#8220;You criss-crossed &#8216;em.  How neat!&#8221;</p>
+
+
+	<p>&#8220;Yes, yes, you&#8217;re on it,&#8221; I said.  He was also very good with a protractor.  &#8220;I have three Arrays, each with a Hash inside.  Notice the plus signs?  I&#8217;m adding them into one big Array.  Here&#8217;s another way of writing it&#8230;&#8221;  I jotted down.</p>
+
+
+<div class='example'><pre><code> <span class="ident">kitty_toys</span> <span class="punct">=</span> <span class="punct">[</span>
+   <span class="punct">{</span><span class="symbol">:shape</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">sock</span><span class="punct">',</span> <span class="symbol">:fabric</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">cashmere</span><span class="punct">'},</span>
+   <span class="punct">{</span><span class="symbol">:shape</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">mouse</span><span class="punct">',</span> <span class="symbol">:fabric</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">calico</span><span class="punct">'},</span>
+   <span class="punct">{</span><span class="symbol">:shape</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">eggroll</span><span class="punct">',</span> <span class="symbol">:fabric</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">chenille</span><span class="punct">'}</span>
+ <span class="punct">]</span></code></pre></div>
+
+	<p>One Array, which acts as our list of chew toys.  Three Hashes in the Array to describe each toy.</p>
+
+
+	<h3>Sorting and Iterating to Save Lives</h3>
+
+
+	<p>&#8220;Let&#8217;s sort your toys by shape now,&#8221; I said.  &#8220;Then, we&#8217;ll print them out in that order.&#8221;</p>
+
+
+<div class='example'><pre><code> <span class="ident">kitty_toys</span><span class="punct">.</span><span class="ident">sort_by</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span> <span class="ident">toy</span><span class="punct">[</span><span class="symbol">:shape</span><span class="punct">]</span> <span class="punct">}.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span>
+   <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">Blixy has a <span class="expr">#{ toy[:shape] }</span> made of <span class="expr">#{ toy[:fabric] }</span></span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>&#8220;How does <code><span class="ident">sort_by</span></code> work?&#8221; asked Blix.  &#8220;I can tell it&#8217;s a method you can use with Arrays.  Because <code><span class="ident">kitty_toys</span></code> is an Array.  But what is <code><span class="ident">toy</span></code>?&#8221;</p>
+
+
+	<p>&#8220;Okay, <code><span class="ident">toy</span></code> is a <strong>block argument</strong>,&#8221; I said.  &#8220;Remember: the skinny pipes on each side of <code><span class="ident">toy</span></code> make it a <strong>chute</strong>.&#8221;</p>
+
+
+	<p>&#8220;Sure, but it looks like you&#8217;re using it like a Hash.  Inside the block you have <code><span class="ident">toy</span><span class="punct">[</span><span class="symbol">:shape</span><span class="punct">]</span></code>. That looks like a Hash.&#8221;</p>
+
+
+	<p>&#8220;The <code><span class="ident">sort_by</span></code> method is an <strong>iterator</strong>, Blix.  It <strong>iterates</strong>, or <strong>cycles</strong>, through <strong>a list of things</strong>.  You remember that episode when Mad&#8230;&#8221;</p>
+
+
+	<p>&#8220;Episode?&#8221; he said.  Yeah, he can&#8217;t understand the concept of TV dramas.   Yeah, I&#8217;ve tried explaining.</p>
+
+
+	<p>&#8220;Or, yeah, remember that one <em>eyewitness account</em> we watched where Mad was trying to talk down that crazy spelling bee contestant from the ledge of an college library?&#8221;</p>
+
+
+	<p>&#8220;I remember it better than you because I was riding in a remote control plane.&#8221;  Yep, it was one of those episodes.</p>
+
+
+	<p>&#8220;Do you remember how Mad got the guy to come down?&#8221; I asked.</p>
+
+
+	<p>&#8220;People in spelling bees love letters,&#8221; said Blix.  &#8220;So what Mad did was a genius move on his part. He started with the letter A and gave reasons, for all the letters of the alphabet, why the guy should walk back down the building and be safe on the ground.&#8221;</p>
+
+
+	<p>&#8221;&#8217;A is for the Architecture of buildings like this,&#8217;&#8221; I said, in a gruff Mad voice. &#8221;&#8217;Which give us hope in a crumbling world.&#8217;&#8221;</p>
+
+
+	<p>&#8221;&#8217;B is for Big Guys, like your friend Mad the Cop,&#8217;&#8221; said Blix.  &#8221;&#8217;Guys who help people all the time and don&#8217;t know how to spell too great, but still help guys who spell really great.&#8217;&#8221;</p>
+
+
+	<p>&#8220;See, he went through all the letters, one at a time.  He was <em>iterating</em> through them.&#8221; <em>It Err Ate Ing.</em></p>
+
+
+	<p>&#8220;But the guy jumped anyway, Why.  He jumped off on letter Q or something.&#8221;</p>
+
+
+	<p>&#8221;&#8217;Q is for Quiet Moments that help us calm down and think about all of life&#8217;s little pleasures, so we don&#8217;t get all uptight and starting goofing around on tiptoes at the very edge of a big, bad building.&#8217;&#8221;</p>
+
+
+	<p>&#8220;And then he jumped,&#8221; said Blix.  He shook his head.  &#8220;You can&#8217;t blame Mad.  He did his best.&#8221;</p>
+
+
+	<p>&#8220;He had a big heart, that&#8217;s for sure,&#8221; I said, patting Blix on the shoulder.</p>
+
+
+<div class='example'><pre><code> <span class="ident">kitty_toys</span><span class="punct">.</span><span class="ident">sort_by</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span> <span class="ident">toy</span><span class="punct">[</span><span class="symbol">:shape</span><span class="punct">]</span> <span class="punct">}.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span>
+   <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">Blixy has a <span class="expr">#{ toy[:shape] }</span> made of <span class="expr">#{ toy[:fabric] }</span></span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>&#8220;As for your <code><span class="ident">sort_by</span></code>, it <strong>starts at the top</strong> of the list and <strong>goes through each item</strong>, one at a time. So <code><span class="ident">toy</span></code> is one of those items.  With each item, <code><span class="ident">sort_by</span></code> stops and <strong>slides that item down the chute</strong>, under the <code><span class="ident">toy</span></code> name, and let&#8217;s you figure out what to do with it.&#8221;</p>
+
+
+	<p>&#8220;Okay, so <code><span class="ident">toy</span></code> takes turns being each of the different toys I have.&#8221;</p>
+
+
+	<p>&#8220;That&#8217;s right,&#8221; I said.  &#8220;You know how I&#8217;ve really been harping on <em>using the answers that methods give you</em>?  Here, we&#8217;re simply looking up the toy&#8217;s shape inside the block.  The block then answers to <code><span class="ident">sort_by</span></code> with the shape string, such as <code><span class="punct">&quot;</span><span class="string">mouse</span><span class="punct">&quot;</span></code> or <code><span class="punct">&quot;</span><span class="string">sock</span><span class="punct">&quot;</span></code>.  Once it&#8217;s done cycling through the whole list, <code><span class="ident">sort_by</span></code> will have alphabetically compared each of the shape strings and will give back a new sorted Array.&#8221;</p>
+
+
+	<h3> An Unfinished Lesson</h3>
+
+
+	<p>&#8220;That&#8217;s good enough for today,&#8221; said Blix.  &#8220;Can I have a fresh saucer of milk, please?&#8221;</p>
+
+
+	<p>I filled his saucer to the brim and he guzzled from it for some time while I took a poker and jabbed at coals in the fireplace.  My mind wandered and I couldn&#8217;t help but think further of blocks.  I wondered what I would teach Blix next.</p>
+
+
+	<p>I probably would have taught him about <code><span class="keyword">next</span></code>.  When you are iterating through a list, you may use <code><span class="keyword">next</span></code> to <strong>skip on to the next item</strong>.  Here we&#8217;re counting toys that have a non-eggroll shape by skipping those that do with <code><span class="keyword">next</span></code>.</p>
+
+
+<div class='example'><pre><code> <span class="ident">non_eggroll</span> <span class="punct">=</span> <span class="number">0</span>
+ <span class="ident">kitty_toys</span><span class="punct">.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span>
+   <span class="keyword">next</span> <span class="keyword">if</span> <span class="ident">toy</span><span class="punct">[</span><span class="symbol">:shape</span><span class="punct">]</span> <span class="punct">==</span> <span class="punct">'</span><span class="string">eggroll</span><span class="punct">'</span>
+   <span class="ident">non_eggroll</span> <span class="punct">=</span> <span class="ident">non_eggroll</span> <span class="punct">+</span> <span class="number">1</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>I could also have taught him about <code><span class="keyword">break</span></code>, which <strong>kicks you out of an iterating loop</strong>. In the code below, we&#8217;ll print out (with <code><span class="ident">p</span></code>) each of the toy Hashes until we hit the toy whose fabric is chenille.  The <code><span class="keyword">break</span></code> will cause the <code><span class="ident">each</span></code> to abruptly end.</p>
+
+
+<div class='example'><pre><code> <span class="ident">kitty_toys</span><span class="punct">.</span><span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">toy</span><span class="punct">|</span>
+   <span class="keyword">break</span> <span class="keyword">if</span> <span class="ident">toy</span><span class="punct">[</span><span class="symbol">:fabric</span><span class="punct">]</span> <span class="punct">==</span> <span class="punct">'</span><span class="string">chenille</span><span class="punct">'</span>
+   <span class="ident">p</span> <span class="ident">toy</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>I never got to teach him such things.  I continued poking away at a particularly stubborn coal which was caught in the iron curtain of the fireplace and threatened to drop on my antelope skin rug.</p>
+
+
+	<p>As I hacked away ferociously at the black stone, Blix slipped away, presumably on the bus bound for Wixl, the very bustling metropolis of the animal economies.  Who knows, he may have first stopped in Ambrose or Riathna or any of the other villages along the way.  My instinct say that Wixl was his definitely his final stop.</p>
+
+
+	<p>Without any student to instruct and coax along, I found myself quite lonely, holed up in the estate.  In the stillness of the dead corridors, I began to sketch out a biography in the  form of this guide.</p>
+
+
+	<p>I worked on it whenever I found myself bored.  And when I wasn&#8217;t bored, I could always switch on <em>The Phantom Menace</em> to get me in the mood.</p>
+
+
+	<p><img src="../images/the.elf-7.jpg" title="Someone let them all out." alt="Someone let them all out." /></p>
+
+    
+    
+
+        <p style="text-align:right;">
+        <a href="chapter-5.html">Turn page.</a>
+        </p>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+body {
+	background-image: url(images/2006.pale.jpg);
+    color: #222;
+    font-family: Utopia, Georgia, Times, serif;
+    line-height: 110%;
+    margin: 0;
+    padding: 0;
+}
+body.chapter {
+    text-align: center;
+    padding-bottom: 36px;
+}
+body.expansion {
+    background: url(images/2006.pakback.png);
+    padding-bottom: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 5px;
+    padding: 0;
+}
+h1 {
+    font-size: 2.2em;
+}
+#wrapper {
+    z-index: 10;
+}
+#main h2, .content h2 {
+    border-bottom: solid 1px #BBB;
+    font-size: 1.4em;
+    line-height: 130%;
+}
+.content h2 {
+    margin: 32px 5px 8px 5px;
+}
+#main h3, .content h3 {
+    font-size: 1.2em;
+    line-height: 120%;
+}
+.content h3 {
+    margin: 18px 5px 8px 5px;
+    border-bottom: solid 1px #CCC;
+}
+strong, em {
+    font-size: 1.1em;
+}
+a img {
+    border: 0;
+}
+blockquote {
+    font-style: italic;
+    font-size: larger;
+    line-height: 1.2;
+    color: #435;
+    margin: 0 75px;
+}
+blockquote .attrib {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-variant: small-caps;
+}
+blockquote code, p code, li code {
+    color: #936;
+    font-style: normal;
+    background-color: #FFFEF9;
+    padding: 2px;
+    line-height: 170%;
+    font-size: 12pt;
+}
+blockquote code {
+    padding: 5px;
+    font-size: .9em;
+}
+.example {
+    border: solid 1px #C9B;
+    background-color: #FFF5F9;
+    padding: 3px;
+    margin: 5px 40px 5px 22px;
+}
+table {
+    padding: 5px 20px;
+}
+table td {
+    padding-right: 8px;
+}
+pre {
+    background-color: #FFFEF9;
+    padding: 5px;
+    margin: 0px;
+    color: #936;
+    line-height: 170%;
+}
+#sidepane {
+    float: left;
+	width: 420px;
+	z-index: 20;
+}
+#bookplate {
+	margin: 0; padding: 0;
+}
+#bookcontents {
+	background: url(images/2006.contents.jpg) no-repeat;
+	margin: 0; padding: 55px 120px 40px 20px;
+    margin-top: -3px;
+	font-size: 9pt;
+}
+#bookcontents ol li ol {
+	list-style: lower-alpha;
+}
+#bookseal {
+	position: absolute;
+	top: 433px;
+	left: 147px;
+    z-index: 2;
+}
+/* set the image to use and establish the lower-right position */
+.foxbox, .foxbox_body, .foxbox_head 
+{ 
+    background: transparent url(images/2006.foxbox.jpg) no-repeat bottom right;
+}
+/* set the top-right image */
+.foxbox_head
+{ 
+    background-position: top left; 
+    margin-right: -15px; /* pull the right image over on top of border */ 
+    padding-right: 40px; /* right-image-gap + right-inside padding */ 
+}
+/* set the top-left image */ 
+.foxbox_head h3 
+{ 
+    margin: 0; /* reset main site styles*/ 
+    border: 0; /* ditto */ 
+    padding: 10px 0 10px 30px; /* padding-left = image gap + interior padding ... no padding-right */ 
+    height: auto !important; height: 1%; /* IE Holly Hack */ 
+} 
+/* set the lower-left corner image */ 
+.foxbox_body 
+{ 
+    background-position: bottom left; 
+    margin-right: 25px; /* interior-padding right */ 
+    padding: 5px 0 15px 40px; /* mirror .foxbox_head right/left */ 
+} 
+.foxbox_body p {
+    font-size: 9pt;
+    margin: 8px;
+	padding: 0 10px 0 40px;
+	line-height: 120%;
+}
+#cornerkick {
+	z-index: 1;
+	position: absolute;
+	top: 1800px;
+	right: 0px;
+}
+.toc {
+    padding-left: 30px;
+}
+.toc ul {
+    margin: 0px;
+    padding: 0px;
+}
+.toc li {
+    font-size: .8em;
+    line-height: 140%;
+}
+.content li {
+    line-height: 170%;
+    padding: 10px 4px;
+}
+.content p {
+    line-height: 170%;
+}
+#main {
+    padding-top: 20px;
+	margin-left: 410px;
+}
+#main li {
+    font-size: 1.2em;
+}
+#main li ul li {
+    color: #666;
+    font-size: .8em;
+    list-style: none;
+}
+p {
+    margin: 0px 40px 0px 0px;
+    line-height: 20px;
+    padding: 10px;
+}
+p#terms {
+    font-size: .8em;
+    line-height: 140%;
+}
+.sidebar {
+    color: #000;
+	background-image: url(images/2006.pale.jpg);
+    width: 280px;
+    float: right;
+    padding: 0;
+    margin: 0;
+    margin-left: 14px;
+    z-index: 15;
+}
+.sidebar ul {
+    margin-top: 0px;
+}
+.sidebar li {
+    font-size: .9em;
+    line-height: 120%;
+    padding: 10px 4px;
+}
+.sidebar h1 {
+    background-color: #7A8A9A;
+    color: #EFF9ED;
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+    font-size: .9em;
+}
+.sidebar h2 {
+    color: #555;
+    font-size: 1.0em;
+    border-bottom: solid 4px #CCC;
+    margin: 0;
+    padding: 10px;
+}
+.sidebar p {
+    font-size: .9em;
+    margin: 5px;
+    padding: 10px;
+}
+.sidebar blockquote {
+    background-color: #FFFFFF;
+    color: #666666;
+    font-size: .8em;
+    width: auto;
+    margin: 0px 14px;
+}
+.sidebar pre {
+    border: none;
+    background-color: #E6EDF3;
+    color: #334465;
+    font-weight: normal;
+    font-size: .9em;
+    margin: 5px;
+    padding: 0px;
+    line-height: 120%;
+}
+.bulletin {
+    background-color: #FFF;
+    color: #555;
+    padding: 5px;
+    font-size: .7em;
+}
+
+#banner, #footer {
+    text-align: left;
+    color: #4A4A4A;
+    padding: 0;
+    padding-top: 10px;
+    width: 850px;
+    margin: 0px auto;
+}
+#banner {
+    padding-top: 20px;
+}
+#footer {
+    padding-bottom: 20px;
+}
+#banner .pager,
+#footer .pager {
+    float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+    font-size: 11pt;
+}
+#banner .pagebar,
+#footer .pagebar {
+    font-size: 11pt;
+}
+#container {
+    background: url(images/2006.bookstripe.gif) bottom left repeat-x;
+    width: 850px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 4px;
+}
+.page {
+    background: white url(images/2006.bookstripe.gif) top left repeat-x;
+    padding: 12px;
+    padding-right: 0;
+    margin: 0;
+}
+body.expansion #container {
+    background: url(images/2006.pakstripe.png) bottom left repeat-x;
+}
+body.expansion .page {
+    background: white url(images/2006.pakstripe.png) top left repeat-x;
+}
+body.expansion #banner {
+    color: #eee;
+}
+body.expansion #banner a:link,
+body.expansion #banner a:visited,
+body.expansion #banner a:active {
+    color: #cdf;
+}
+body.expansion #banner a:hover {
+    color: #ffc;
+}
+.pageLinks {
+    padding: 8px 5px;
+    text-align: left;
+    font-size: 9pt;
+}
+.content {
+    text-align: left;
+}
+.pageTitle {
+    line-height: 200%;
+    width: 600px;
+    margin: 0px auto;
+    text-align: center;
+}
+.pageTitle p {
+    margin: 0px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+/* printing */
+@page { size 8.5in 11in; margin: 0cm; }
+
+/* syntax highlighting */
+.keyword {
+    font-weight: bold;
+}
+.comment {
+    color: #555;
+}
+.string, .number {
+    color: #396;
+}
+.string {
+    background-color: #E9F5F5;
+}
+.regex {
+    background-color: #E9F1F5;
+    color: #435;
+}
+.ident {
+    color: #369;
+}
+.symbol {
+    color: #000;
+}
+.constant, .class {
+    color: #630;
+    font-weight: bold;
+}

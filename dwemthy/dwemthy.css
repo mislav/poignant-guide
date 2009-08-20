@@ -1,0 +1,79 @@
+body {
+    background: #EFE url(../images/dwemthy-spiral.gif) top right repeat-y;
+    color: black;
+    color: #222;
+    font-family: Georgia, Times, serif;
+    line-height: 130%;
+    margin: 0px;
+    padding: 0px;
+}
+#dwemthy {
+    background: url(../images/dwemthy-back-castol.gif) bottom right no-repeat;
+    width: 100%;
+    padding-bottom: 600px;
+}
+#dwemthycastle {
+    background: url(../images/dwemthy-back-castle-anim.gif) top right no-repeat;
+    width: 100%;
+}
+#dwemthyrain {
+    background: url(../images/dwemthy-back-rainset.gif) top left no-repeat;
+    width: 100%;
+}
+#headar {
+    width: 364px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+#banerr {
+    width: 100%;
+    background: url(../images/dwemthy-banerr.png);
+    padding: 10px;
+}
+#banerr p {
+    width: 413px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 8pt;
+}
+#banerr2 {
+    width: 100%;
+    background: #400;
+    padding: 4px;
+}
+#banerr2 p {
+    color: white;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 8pt;
+    font-weight: bold;
+}
+#banerr2 a,
+#banerr2 a:visited {
+    color: #f99;
+}
+.comik {
+    width: 778px;
+    margin: 40px auto;
+}
+.writ {
+    color: black;
+    width: 548px;
+    margin: 0 auto;
+}
+.writ h1 {
+    background: url(../images/dwemthy-h1.png);
+    color: #333;
+    text-align: center;
+    line-height: 90%;
+}
+.writ span {
+    background-color: #efe;
+}
+.writ pre {
+    background-color: #034;
+    color: white;
+    padding: 5px 8px;
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>$$$ DWEMTHY_S ARRAY ^!^ A RUBY MINI_DUNGEON ^!^ ONLY 60 LINES OF CODE ^!^ DWEMTY IS WATCHING ^!^ A STALE BREATH IS ON YOUR NAPE, IS IT NOT ?? ^!^ DWEMTHY COMETH $$$</title>
+    <link rel="stylesheet" type="text/css" href="dwemthy.css" />
+</head>
+<body>
+<div id="dwemthy">
+<div id="dwemthycastle">
+<div id="dwemthyrain">
+	<div id="headar"><img src="../images/dwemthy-header-dissolve.png" /></div>
+    <div id="banerr">
+        <p><img src="../images/dwemthy-logo.gif" /></p>
+    </div>
+    <div id="banerr2">
+        <p>...[just one miniscule tableau from <a href="../index.html">why's (poignant) guide to ruby</a>]...</p>
+    </div>
+</div>
+</div>
+
+	<div class="comik"><img src="../images/dwemthy-asweome.gif" /></div>
+
+    <div class="writ">
+        <h1>You Are A Rabbit, UNTIL!</h1>
+
+        <p><span>In this game, you are a rabbit who is going to die.  A dragon is going to do it.  Deep in Dwemthy's Array.</span></p>
+
+<pre>
+class Dragon < Creature
+  life 1340     # tough scales
+  strength 451  # bristling veins
+  charisma 1020 # toothy smile
+  weapon 939    # fire breath
+end
+</pre>
+
+    <p><span>More on this code in a moment.</span></p>
+
+    <p><span>Please, never ask who Dwemthy is.  Obviously he is a mastermind and would never disclose his location or true identity.
+    He has sired dynasties.  He has set living ogres aflame.  Horses everywhere smell him at all times.  Most of all, he knows
+    carnal pleasures.  And to think that this...</span></p>
+
+    <p><span>This is his Array.</span></p>
+    </div>
+
+	<div class="comik"><img src="../images/wixl.dwemthy-2.gif" /></div>
+
+    <div class="writ">
+    <p><span>A scalding SEETHING LAVA infiltrates the cacauphonous ENGORGED MINESHAFTS deep within the ageless canopy of the
+    DWEMTHY FOREST... chalky and nocturnal screams from the belly of the RAVENOUS WILD STORKUPINE... who eats wet
+    goslings RIGHT AFTER they've had a few graham crackers and a midday nap... amidst starved hippos TECHNICALLY
+    ORPHANED but truthfully sheltered by umbrellas owned jointly by car dealership conglomerates... beneath uncapped vials of mildly pulpy BLUE
+    ELIXIR... which shall remain... heretofore... UNDISTURBED... DWEMTHY!!!</span></p>
+
+    <p><span>Contrary to the ill-guided notions of certain introductory comics, DWEMTHY'S ARRAY is not a mind puzzle.  It is
+    a short 60 line role-playing game that is played with Ruby metaprogramming.  The game comes from chapter six of
+    <a href="../index.html">Why's (Poignant) Guide to Ruby</a>.</span></p>
+
+    <p><span><i>If you don't understand Dwemthy's Array, it is Dwemthy's fault.  He designed the game to complicate our lives
+    and were it simpler, it would not be the awe-inspiring quest we've come to cherish in our arms this very hour.</i></span></p>
+
+    <h1>Enough Elaborate Metaphor And Sly Juxtaposition, GIVE US THE CORRESPONDING CODE!</h1>
+    
+    <p><span>To play, you must have Ruby (the beloved programming language) on your computer.  If you don't, you must leave Dwemthy's Array immediately and never
+        speak of it, except with your legal guardian to whom your life is entrusted.  If you need Ruby, please visit
+        <a href="../book/expansion-pak-1.html">The Tiger's Vest</a>.</span></p>
+
+    <p><span>Tread carefully &#0151; here is the code for DWEMTHY'S ARRAY!!</span></p>
+
+    <pre>
+# The guts of life force within Dwemthy's Array
+class Creature
+
+  # Get a metaclass for this class
+  def self.metaclass; class << self; self; end; end
+
+  # Advanced metaprogramming code for nice, clean traits
+  def self.traits( *arr )
+    return @traits if arr.empty?
+
+    # 1. Set up accessors for each variable
+    attr_accessor *arr
+
+    # 2. Add a new class method to for each trait.
+    arr.each do |a|
+      metaclass.instance_eval do
+        define_method( a ) do |val|
+          @traits ||= {}
+          @traits[a] = val
+        end
+      end
+    end
+
+    # 3. For each monster, the `initialize' method
+    #    should use the default number for each trait.
+    class_eval do
+      define_method( :initialize ) do
+        self.class.traits.each do |k,v|
+          instance_variable_set("@#{k}", v)
+        end
+      end
+    end
+
+  end
+
+  # Creature attributes are read-only
+  traits :life, :strength, :charisma, :weapon
+
+  # This method applies a hit taken during a fight.
+  def hit( damage )
+    p_up = rand( charisma )
+    if p_up % 9 == 7
+      @life += p_up / 4
+      puts "[#{ self.class } magick powers up #{ p_up }!]"
+    end 
+    @life -= damage
+    puts "[#{ self.class } has died.]" if @life <= 0
+  end
+
+  # This method takes one turn in a fight.
+  def fight( enemy, weapon )
+    if life <= 0
+      puts "[#{ self.class } is too dead to fight!]"
+      return
+    end
+
+    # Attack the opponent
+    your_hit = rand( strength + weapon )
+    puts "[You hit with #{ your_hit } points of damage!]"
+    enemy.hit( your_hit )
+
+    # Retaliation
+    p enemy
+    if enemy.life > 0
+      enemy_hit = rand( enemy.strength + enemy.weapon )
+      puts "[Your enemy hit with #{ enemy_hit } points of damage!]"
+      self.hit( enemy_hit )
+    end
+  end
+
+end
+
+class DwemthysArray < Array
+  alias _inspect inspect
+  def inspect; "#<#{ self.class }#{ _inspect }>"; end
+  def method_missing( meth, *args )
+    answer = first.send( meth, *args )
+    if first.life <= 0
+      shift
+      if empty?
+        puts "[Whoa.  You decimated Dwemthy's Array!]"
+      else
+        puts "[Get ready. #{ first.class } has emerged.]"
+      end
+    end
+    answer || 0
+  end
+end
+</pre>
+
+    <p><span>To play, start <code>irb</code>.  Cut and paste the above code into irb.  (You
+        may also save the above code in a file called dwemthy.rb.  Then, load with: 
+        <code>require 'dwemthy'</code>.</span></p>
+
+    <h1>Introducing: You.</h1>
+
+    <p><span>You may certainly tinker with derivations on this rabbit.  But official
+        Dwemthy Paradigms explicitly denote the code &#0151; and the altogether character &#0151; inscribed
+        below.</span></p>
+
+    <pre>
+class Rabbit < Creature
+  traits :bombs
+
+  life 10
+  strength 2
+  charisma 44
+  weapon 4
+  bombs 3
+
+  # little boomerang
+  def ^( enemy )
+    fight( enemy, 13 )
+  end
+  # the hero's sword is unlimited!!
+  def /( enemy )
+    fight( enemy, rand( 4 + ( ( enemy.life % 10 ) ** 2 ) ) )
+  end
+  # lettuce will build your strength and extra ruffage
+  # will fly in the face of your opponent!!
+  def %( enemy )
+    lettuce = rand( charisma )
+    puts "[Healthy lettuce gives you #{ lettuce } life points!!]"
+    @life += lettuce
+    fight( enemy, 0 )
+  end
+  # bombs, but you only have three!!
+  def *( enemy )
+    if @bombs.zero?
+      puts "[UHN!! You're out of bombs!!]"
+      return
+    end
+    @bombs -= 1
+    fight( enemy, 86 )
+  end
+end
+</pre>
+
+    <p><span>You have four weapons.  I shan't describe them further.</span></p>
+
+    <h1>Rabbit Fights ScubaArgentine!</h1>
+
+    <p><span>You cannot just go rushing into Dwemthy's Array, unseatbelted and merely
+        perfumed!!  You must advance deliberately through the demonic cotillion.  Or south,
+        through the thickets and labyrinth of coal.</span></p>
+
+    <p><span>For now, let's lurk covertly through the grotto of sausage smells.  And 
+        defeat the ScubaArgentine.</span></p>
+
+    <pre>
+class ScubaArgentine < Creature
+  life 46
+  strength 35
+  charisma 91
+  weapon 2
+end
+</pre>
+
+    <p><span>To get the fight started, make sure you've created one of you and one of the
+        ScubaArgentine</span></p>
+
+    <pre>
+r = Rabbit.new
+s = ScubaArgentine.new
+</pre>
+
+    <p><span>Now use the little boomerang!</span></p>
+
+    <pre>
+>> r ^ s
+[You hit with 2 points of damage!]
+#<ScubaArgentine:0x808c864 @charisma=91, @strength=35, @life=44, @weapon=2>
+[Your enemy hit with 28 points of damage!]
+[Rabbit has died.]
+</pre>
+
+    <p><span>For crying out loud!!  Our sample rabbit died!!</span></p>
+
+    <p><span>Grim prospects.  I can't ask you to return to the rabbit kingdom, though.
+        Just pretend like you didn't die and make a whole new rabbit.</span></p>
+
+    <h1>The Harsh Realities of Dwemthy's Array AWAIT YOU TO MASH YOU!!</h1>
+
+    <p><span>Once you're done playchoking the last guy with his oxygen tube, it's time
+        to enter The Array.  I doubt you can do it.  You left your hatchet at home.  And
+        I hope you didn't use all your bombs on the easy guy.</span></p>
+
+    <p><span>You have six foes.</span></p>
+
+    <pre>
+class IndustrialRaverMonkey < Creature
+  life 46
+  strength 35
+  charisma 91
+  weapon 2
+end
+
+class DwarvenAngel < Creature
+  life 540
+  strength 6
+  charisma 144
+  weapon 50
+end
+
+class AssistantViceTentacleAndOmbudsman < Creature
+  life 320
+  strength 6
+  charisma 144
+  weapon 50
+end
+
+class TeethDeer < Creature
+  life 655
+  strength 192
+  charisma 19
+  weapon 109
+end
+
+class IntrepidDecomposedCyclist < Creature
+  life 901
+  strength 560
+  charisma 422
+  weapon 105
+end
+
+class Dragon < Creature
+  life 1340     # tough scales
+  strength 451  # bristling veins
+  charisma 1020 # toothy smile
+  weapon 939    # fire breath
+end
+</pre>
+
+    <p><span>These are the living, breathing monstrosities of Dwemthy's Array.  I don't
+        know how they got there.  No one knows.  Actually, I'm guessing the IntrepidDecomposedCyclist
+        rode his ten-speed.  But the others: NO ONE knows.</span></p>
+
+    <p><span>If it's really important for you to know, let's just say the others were born there.
+        Can we move on??</span></p>
+
+   <p><span>As Dwemthy's Array gets deeper, the challenge becomes more difficult.</span></p>
+
+   <pre>
+dwarr = DwemthysArray[IndustrialRaverMonkey.new,
+                      DwarvenAngel.new,
+                      AssistantViceTentacleAndOmbudsman.new,
+                      TeethDeer.new,
+                      IntrepidDecomposedCyclist.new,
+                      Dragon.new]
+</pre>
+
+    <p><span>Fight the Array and the monsters will appear as you go.  Godspeed
+        and may you return with harrowing tales and nary an angel talon piercing
+        through your shoulder.</span></p>
+
+    <p><span>Oh, and none of this "I'm too young to die" business.  I'm sick of that crap.
+        I'm not going to have you insulting our undead young people.  They are our future.
+        After our future is over, that is.</span></p>
+
+
+    </div>
+
+	<div class="comik"><img src="../images/wixl.dwemthy-3.gif" /></div>
+</div>
+
+    <div id="banerr2">
+        <p>mystify your friends... AND YOURSELF!... by learning the secrets of DWEMTHY'S ARRAY in <a href="../index.html">why's (poignant) guide to ruby</a> the internet book of leisurelearning.  come on, it's right there.</p>
+    </div>
+</body>
+</html>

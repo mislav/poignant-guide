@@ -1,0 +1,922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>why&#8217;s (poignant) guide to ruby :: 3. A Quick (and Hopefully Painless) Ride Through Ruby (with Cartoon Foxes)</title>
+    <link rel="stylesheet" type="text/css" href="../guide.css" />
+</head>
+<body class="chapter">
+
+<div id="banner">
+   <div class="pager">
+   <a class="pagebar" href="chapter-2.html">previous</a> | <a class="pagebar" href="chapter-4.html">next</a>
+   </div>
+   <div class="title">
+   <img src="../images/2006.chaptertitle.png" alt="why's (poignant) guide to ruby" />
+   </div>
+</div>
+<div id="container">
+<div class="page">
+    <div class="pageLinks">
+        <a class="pagebar" href="http://whytheluckystiff.net/">whytheluckystiff.net</a> | <a class="pagebar" href="index.html">Contents</a>
+    </div>
+    <div class="pageTitle">
+        
+            <h3>3.</h3>
+            <h1>A Quick (and Hopefully Painless) Ride Through Ruby (with Cartoon Foxes)</h1>
+            <p><img src="../images/chapter.poignant.guide-3.jpg" alt="[o]" /></p>
+        
+    </div>
+    <div class="content">
+
+    
+
+        <p><img src="../images/the.foxes-1.png" title="The foxes show up." alt="The foxes show up." /></p>
+
+
+	<p>Yeah, these are the two.  My asthma&#8217;s kickin in so I&#8217;ve got to go take a puff of medicated air just now.  Be with you in a moment.</p>
+
+
+	<p><img src="../images/the.foxes-2.png" title="Foxes in boxes." alt="Foxes in boxes." /></p>
+
+
+	<p>I&#8217;m told that this chapter is best accompanied by a rag.  Something you can mop your face with as the sweat pours off your face.</p>
+
+
+	<p>Indeed, we&#8217;ll be racing through the whole language.  Like striking every match in a box as quickly as can be done.</p>
+
+    
+    
+        
+        <a name="section1" />
+        <h2>1. Language and I MEAN Language</h2>
+
+        <p><img src="../images/the.foxes-3.png" title="Our friends, those two helpless foxies, finally realize the gravity of their predicament." alt="Our friends, those two helpless foxies, finally realize the gravity of their predicament." /></p>
+
+
+	<p>My conscience won&#8217;t let me call Ruby a <em>computer</em> language.  That would imply that the language works primarily on the computer&#8217;s terms.  That the language is designed to accomodate the computer, first and foremost.  That therefore, we, the coders, are foreigners, seeking citizenship in the computer&#8217;s locale.  It&#8217;s the computer&#8217;s language and we are translators for the world.</p>
+
+
+	<p>But what do you call the language when your brain begins to think in that language?  When you start to use the language&#8217;s own words and colloquialisms to express yourself.  Say, the computer can&#8217;t do that.  How can it be the computer&#8217;s language?  It is ours, we speak it natively!</p>
+
+
+	<p>We can no longer truthfully call it a <em>computer</em> language.  It is <em>coderspeak</em>.  It is the language  of our thoughts.</p>
+
+
+	<p><strong>Read the following aloud to yourself.</strong></p>
+
+
+	<blockquote>
+		<p><code><span class="number">5</span><span class="punct">.</span><span class="ident">times</span> <span class="punct">{</span> <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Odelay!</span><span class="punct">&quot;</span> <span class="punct">}</span></code></p>
+	</blockquote>
+
+
+	<p>In English sentences, punctuation (such as periods, exclamations, parentheses) are silent.  Punctuation adds meaning to words, helps give cues as to what the author intended by a sentence.  So let&#8217;s read the above as: <em>Five times print &#8220;Odelay!&#8221;.</em></p>
+
+
+	<p>Which is exactly what this small Ruby program does.  Beck&#8217;s  <a href="http://www.whiskeyclone.net/ghost/L/lordonlyknows.html">mutated Spanish</a> exclamation will print five times on the computer screen.</p>
+
+
+	<p><strong>Read the following aloud to yourself.</strong></p>
+
+
+	<blockquote>
+		<p><code><span class="ident">exit</span> <span class="keyword">unless</span> <span class="punct">&quot;</span><span class="string">restaurant</span><span class="punct">&quot;.</span><span class="ident">include?</span> <span class="punct">&quot;</span><span class="string">aura</span><span class="punct">&quot;</span></code></p>
+	</blockquote>
+
+
+	<p>Here we&#8217;re doing a basic reality check.  Our program will <strong>exit</strong> (the program will end) <strong>unless</strong>  the word <strong>restaurant</strong> contains (or <strong>includes</strong>) the word <strong>aura</strong>.  Again, in English: <em>Exit unless the word restaurant includes the word aura.</em></p>
+
+
+	<p>Ever seen a programming language use question marks so effectively?  Ruby uses some punctuation, such as exclamations and question marks, to enhance readability of the code.  We&#8217;re asking a question in the above code, so why not make that apparent?</p>
+
+
+	<p><strong>Read the following aloud to yourself.</strong></p>
+
+
+	<blockquote>
+		<p><code><span class="punct">['</span><span class="string">toast</span><span class="punct">',</span> <span class="punct">'</span><span class="string">cheese</span><span class="punct">',</span> <span class="punct">'</span><span class="string">wine</span><span class="punct">'].</span><span class="ident">each</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">food</span><span class="punct">|</span> <span class="ident">print</span> <span class="ident">food</span><span class="punct">.</span><span class="ident">capitalize</span>  <span class="punct">}</span></code></p>
+	</blockquote>
+
+
+	<p>While this bit of code is less readable and sentence-like than the previous examples, I&#8217;d still encourage you to read it aloud.  While Ruby may sometimes read like English, it sometimes reads as a shorter English.  Fully translated into English, you might read the above as: <em>With the words &#8216;toast&#8217;, &#8216;cheese&#8217;, and &#8216;wine&#8217;: take each food and print it capitalized.</em></p>
+
+
+	<p>The computer then courteously responds: <code><span class="constant">Toast</span></code>, <code><span class="constant">Cheese</span></code> and <code><span class="constant">Wine</span></code>.</p>
+
+
+	<p>At this point, you&#8217;re probably wondering how these words actually fit together.  Smotchkkiss is wondering what the dots and brackets mean.  I&#8217;m going to discuss the various <em>parts of speech</em> next.</p>
+
+
+	<p>All you need to know thus far is that Ruby is basically built from sentences.  They aren&#8217;t exactly English sentences.  They are short collections of words and punctuation which encompass a single thought.  These sentences can form books.  They can form pages.  They can form entire novels, when strung together. Novels that can be read by humans, but also by computers.</p>
+
+    
+    
+        
+        <div class="sidebar">
+        <h1>sidebar!</h1>
+        
+        <h2>Concerning Commercial Uses of the (Poignant) Guide</h2>
+        
+
+        <p>This book is released under a Creative Commons license which allows unlimited commercial use of this text.  Basically, this means you can sell all these bootleg copies of my book and keep the revenues for yourself.  I trust my readers (and the world around them) to rip me off. To put out some crappy Xerox edition with that time-tested clipart of praying hands on the cover.</p>
+
+
+	<p>Guys, the lawsuits just ain&#8217;t worth the headache.  So I&#8217;m just going to straight up endorse authorized piracy, folks.  Anybody who wants to read the book should be able to read it. Anybody who wants to market the book or come up with special editions, I&#8217;m flattered.</p>
+
+
+	<p>Why would I want the $$$?  <span class="caps">IGNORE ALL OTHER SIDEBARS</span>: I&#8217;ve lost the will to be a rich slob.   Sounds inhuman, but I like my little black-and-white television.  Also my hanging plastic flower lamp. I don&#8217;t want to be a career writer.  Cash isn&#8217;t going inspire me.  Pointless.</p>
+
+
+	<p>So, if money means nothing to the lucky stiff, why rip me off when you could co-opt shady business practices to literally crush my psyche and leave me wheezing in some sooty iron lung?   Oh, and the irony of using my own works against me!  Die, Poignant Boy!</p>
+
+
+	<p>To give you an idea of what I mean, here are a few underhanded concepts that could seriously kill my willpower and force me to reconsider things like existence.</p>
+
+
+	<p><strong><span class="caps">IDEA ONE</span>: BIG <span class="caps">TOBACCO</span></strong></p>
+
+
+	<p>Buy a cigarette company.  Use my cartoon foxes to fuel an aggressive ad campaign.   Here&#8217;s a billboard for starters:</p>
+
+
+	<p><img src="../images/the.foxes-0a.png" title="Addiction is like Pokemon!" alt="Addiction is like Pokemon!" /></p>
+
+
+	<p>Make it obvious that you&#8217;re targeting children and the asthmatic.  Then, once you&#8217;ve got everyone going, have the <strong>truth</strong> people do an expose on me and my farm of inky foxes.</p>
+
+
+	<blockquote>
+		<p><strong>Sensible Hipster Standing on Curb in Urban Wilderness</strong>: He calls himself the lucky stiff.</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p>(Pulls aside curtain to reveal grey corpse on a gurney.)</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><strong>Hipster</strong>: Some stiffs ain&#8217;t so lucky.</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p>(Erratic zoom in.  Superimposed cartoon foxes for subliminal Willy Wonka mind trip.)</p>
+	</blockquote>
+
+
+	<p>Yo.  Why you gotta dis Big Smokies like dat, Holmes?</p>
+
+
+	<p><strong><span class="caps">IDEA TWO</span>: HEY, <span class="caps">FIRING SQUAD</span></strong></p>
+
+
+	<p>Like I said, start selling copies of my book, but corrupt the text.  These altered copies would contain numerous blatant (and libelous) references to government agencies, such as the U.S. Marshals and the Pentagon.  You could make me look like a complete traitor.  Like I have all these plans to, you know, kill certain less desirable members of the U.S. Marshals or the Pentagon.</p>
+
+
+	<p>Not that there are any less desirable members of the U.S. Marshals or the Pentagon.  Yeah, I didn&#8217;t mean it like that.</p>
+
+
+	<p>Oh, crap.</p>
+
+
+	<p>Oh, crap.  Oh, crap.  Oh, crap.</p>
+
+
+	<p>Turn off the lights.  Get down.</p>
+
+
+	<p><strong><span class="caps">IDEA THREE</span>: BILLBOARDS, <span class="caps">PART II</span></strong></p>
+
+
+	<p>How about making fun of asthmatics directly?</p>
+
+
+	<p><img src="../images/the.foxes-0b.png" title="Call it a puffer! ROFL!" alt="Call it a puffer! ROFL!" /></p>
+
+
+	<p><strong><span class="caps">IDEA FOUR</span>: ALEC <span class="caps">BALDWIN</span></strong></p>
+
+
+	<p>Adapt the book into a movie.  And since, you know, I&#8217;m a character in this book,  you could get someone like Alec Baldwin to play me.  Someone who&#8217;s at a real lowpoint in his career.</p>
+
+
+	<p>You could make it seem like I did tons of drugs.  Like I was insane to work with. Like I kept firing people and locking them in the scooter room and making them wear outfits made of bread.  Yeah, like I could actually be <em>baking</em> people into the outfits.</p>
+
+
+	<p>You could have this huge mold that I strap people into.  Then, I pour all the dough on them and actually bake them until the bread has risen and they&#8217;ve almost died. And when the television crews come and I&#8217;m on Good Morning America, they&#8217;ll ask, &#8220;So, how many people have you employed in the production of your book?&#8221;  And I&#8217;d respond, &#8220;A baker&#8217;s dozen!&#8221; and erupt into that loud maniacal laughing that would force audience members to cup their hands over their ears.</p>
+
+
+	<p>Of course, in the throes of my insanity, I would declare war on the world.  The bread people would put up quite a fight.  Until the U.S. Marshals (or the Pentagon) engineer a giant robotic monkey brain (played by Burt Lancaster) to come after me.</p>
+
+
+	<p>Here&#8217;s where you&#8217;ll make me look completely lame.  Not only will I sacrifice all of the bread people (the Starchtroopers) to save myself, not only will I surrender to the great monkey brain like a coward, but when I narrowly escape, I&#8217;ll yell at the audience.  Screaming insistently that it&#8217;s <em>MY</em> movie and no one should see it any more, I&#8217;ll rip the screen in half and the film projector will spin with its reel flapping in defeat.  And that will be the end of the movie.  People will be <em>so</em> pissed.</p>
+
+
+	<p>Now, I&#8217;ve got to thinking.  See, and actually, Alec Baldwin did a decent voiceover in <em>The Royal Tenenbaums</em>.  His career might be okay.  You might not want to use him. He might not do it.</p>
+
+
+	<p>Tell ya what.  I&#8217;ll play the part.  I&#8217;ve made a career out of lowpoints.</p>
+        <h1>sidebar!</h1>
+        </div>
+
+    
+    
+        
+        <a name="section2" />
+        <h2>2. The Parts of Speech</h2>
+
+        <p>Just like the white stripe down a skunk&#8217;s back and the winding, white train of a bride, many of Ruby&#8217;s parts of speech have visual cues to help you identify them.  Punctuation and capitalization will help your brain to see bits of code and feel intense recognition. Your mind will frequently yell <em>Hey, I know that guy!</em>  You&#8217;ll also be able to name-drop in conversations with other Rubyists.</p>
+
+
+	<p>Try to focus on the look of each of these parts of speech.  The rest of the book will detail the specifics.  I give short descriptions for each part of speech, but you don&#8217;t have to understand the explanation.  By the end of this chapter, you should be  able to recognize every part of a Ruby program.</p>
+
+
+	<h3>Variables</h3>
+
+
+	<p>Any plain, lowercase word is a variable in ruby.  Variables may consist of letters, digits and underscores.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">x</span></code>, <code><span class="ident">y</span></code>, <code><span class="ident">banana2</span></code> or <code><span class="ident">phone_a_quail</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Variables are like nicknames.  Remember when everyone used to call you Stinky Pete? People would say, &#8220;Get over here, Stinky Pete!&#8221;  And everyone miraculously knew that  Stinky Pete was you.</p>
+
+
+	<p>With variables, you give a nickname to something you use frequently.  For instance, let&#8217;s say you run an orphanage.  It&#8217;s a mean orphanage.  And whenever Daddy Warbucks comes to buy more kids, we insist that he pay us <strong>one-hundred twenty-one dollars and eight cents</strong> for the kid&#8217;s teddy bear, which the kid has become attached to over in the darker moments of living in such nightmarish custody.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">teddy_bear_fee</span> <span class="punct">=</span> <span class="number">121.08</span></code></p>
+	</blockquote>
+
+
+	<p>Later, when you ring him up at the cash register (a really souped-up cash register which runs Ruby!), you&#8217;ll need to add together all his charges into a <strong>total</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">total</span> <span class="punct">=</span> <span class="ident">orphan_fee</span> <span class="punct">+</span> <span class="ident">teddy_bear_fee</span> <span class="punct">+</span> <span class="ident">gratuity</span></code></p>
+	</blockquote>
+
+
+	<p>Those variable nicknames sure help.  And in the seedy underground of child sales, any help is appreciated I&#8217;m sure.</p>
+
+
+	<p><img src="../images/the.foxes-4a.png" title="They mock my examples." alt="They mock my examples." /></p>
+
+
+	<h3>Numbers</h3>
+
+
+	<p>The most basic type of number is an <em>integer</em>, a <strong>series of digits</strong> which can start with a <strong>plus or minus sign</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="number">1</span></code>, <code><span class="number">23</span></code>, and <code><span class="punct">-</span><span class="number">10000</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Commas are not allowed in numbers, but underscores are.  So if you feel the need to mark your thousands so the numbers are more readable, use an underscore.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">population</span> <span class="punct">=</span> <span class="number">12_000_000_000</span></code></p>
+	</blockquote>
+
+
+	<p>Decimal numbers are called <em>floats</em> in Ruby.  Floats consist of numbers with <strong>a decimal place</strong> or <strong>scientific notation</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="number">3.14</span></code>, <code><span class="punct">-</span><span class="number">808.08</span></code> and <code><span class="number">12.043</span><span class="ident">e</span><span class="punct">-</span><span class="number">04</span></code> are examples.</p>
+	</blockquote>
+
+
+	<h3>Strings</h3>
+
+
+	<p>Strings are any sort of characters (letters, digits, punctuation) surrounded by quotes.  Both single and double <strong>quotes</strong> are used to create strings.</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">&quot;</span><span class="string">sealab</span><span class="punct">&quot;</span></code>, <code><span class="punct">'</span><span class="string">2021</span><span class="punct">'</span></code>, or <code><span class="punct">&quot;</span><span class="string">These cartoons are hilarious!</span><span class="punct">&quot;</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>When you enclose characters in quotes, they are stored together as a single string.</p>
+
+
+	<p>Think of a reporter who is jotting down the mouthnoises of a rambling celebrity.  &#8220;I&#8217;m a lot wiser,&#8221; says Avril Lavigne.  &#8220;Now I know what the business is like&#8212;what you have to do and how to work it.&#8221;</p>
+
+
+<div class='example'><pre><code> <span class="ident">avril_quote</span> <span class="punct">=</span> <span class="punct">&quot;</span><span class="string">I'm a lot wiser.  Now I know 
+  what the business is like -- what you have 
+  to do and how to work it.</span><span class="punct">&quot;</span></code></pre></div>
+
+	<p>So, just as we stored a number in the <strong>teddy_bear_fee</strong> variable, now we&#8217;re storing a collection of characters (a string) in the <strong>avril_quote</strong> variable.  The reporter sends this quote to the printers, who just happen to use Ruby to operate their printing press.</p>
+
+
+<div class='example'><pre><code> <span class="ident">print</span> <span class="ident">oprah_quote</span>
+ <span class="ident">print</span> <span class="ident">avril_quote</span>
+ <span class="ident">print</span> <span class="ident">ashlee_simpson_debacle</span></code></pre></div>
+
+	<p><img src="../images/the.foxes-4b.png" title="They desire to be in my examples." alt="They desire to be in my examples." /></p>
+
+
+	<h3>Symbols</h3>
+
+
+	<p>Symbols are words that look just like variables.  Again, they may contain letters, digits, or underscores.  But they <strong>start with a colon</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="symbol">:a</span></code>, <code><span class="symbol">:b</span></code>, or <code><span class="symbol">:ponce_de_leon</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Symbols are lightweight strings.  Usually, symbols are used in situations where you need a string but you won&#8217;t be printing it to the screen.</p>
+
+
+	<p>You could say a symbol is a bit easier on the computer.  It&#8217;s like an antacid.  The colon indicates the bubbles trickling up from your computer&#8217;s stomach as it digests the symbol.  Ah.  Sweet, sweet relief.</p>
+
+
+	<p><img src="../images/the.foxes-4c.png" title="Chunky bacon!!" alt="Chunky bacon!!" /></p>
+
+
+	<h3>Constants</h3>
+
+
+	<p>Constants are words like variables, but constants are <strong>capitalized</strong>.  If variables are the nouns of Ruby, then think of constants as the proper nouns.</p>
+
+
+	<blockquote>
+		<p><code><span class="constant">Time</span></code>, <code><span class="constant">Array</span></code> or <code><span class="constant">Bunny_Lake_is_Missing</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>In English, proper nouns are capitalized.  The Empire State Building.  You can&#8217;t just move The Empire State Building.  You can&#8217;t just decide that the Empire State Building is something else. Proper nouns are like that.  They refer to something very specific and usually don&#8217;t change over time.</p>
+
+
+	<p>In the same way, constants can&#8217;t be changed after they are set.</p>
+
+
+	<blockquote>
+		<p><code><span class="constant">EmpireStateBuilding</span> <span class="punct">=</span> <span class="punct">&quot;</span><span class="string">350 5th Avenue, NYC, NY</span><span class="punct">&quot;</span></code></p>
+	</blockquote>
+
+
+	<p>If we try to change the constant, Ruby will complain to us.  Such things are frowned upon.</p>
+
+
+	<p><img src="../images/the.foxes-4d.png" title="Come on, chunky bacon." alt="Come on, chunky bacon." /></p>
+
+
+	<h3>Methods</h3>
+
+
+	<p>If variables and constants are the nouns, then methods are the verbs. Methods are usually attached to the end of variables and constants by a <strong>dot</strong>.  You&#8217;ve already  seen methods at work.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">front_door</span><span class="punct">.</span><span class="ident">open</span></code></p>
+	</blockquote>
+
+
+	<p>In the above, <strong>open</strong> is the method.  It is the action, the verb. In some cases, you&#8217;ll see actions chained together.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">front_door</span><span class="punct">.</span><span class="ident">open</span><span class="punct">.</span><span class="ident">close</span></code></p>
+	</blockquote>
+
+
+	<p>We&#8217;ve instructed the computer to open the front door and then immediately close it.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">front_door</span><span class="punct">.</span><span class="ident">is_open?</span></code></p>
+	</blockquote>
+
+
+	<p>The above is an action as well.  We&#8217;re instructing the computer to test the door to see if it&#8217;s open. The method could be called <code><span class="constant">Door</span><span class="punct">.</span><span class="ident">test_to_see_if_its_open</span></code>, but the <code><span class="ident">is_open?</span></code> name is succinct and  just as correct.  Both exclamation marks and question marks may be used in method names.</p>
+
+
+	<h3>Method arguments</h3>
+
+
+	<p>A method may require more information in order to perform its action.  If we want the computer to paint the door, we should provide a color as well.</p>
+
+
+	<p>Method arguments are attached to the end of a method.  The arguments are usually surrounded by <strong>parentheses</strong> and separated by <strong>commas</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">front_door</span><span class="punct">.</span><span class="ident">paint</span><span class="punct">(</span> <span class="number">3</span><span class="punct">,</span> <span class="symbol">:red</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>The above paints the front door 3 coats of red.</p>
+
+
+	<p>Think of it as an inner tube the method is pulling along, containing its extra instructions. The parentheses form the wet, round edges of the inner tube.  The commas are the feet of each argument, sticking over the edge.  The last argument has its feet tucked under so they don&#8217;t show.</p>
+
+
+	<p>Like a boat pulling many inner tubes, methods with arguments can be chained.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">front_door</span><span class="punct">.</span><span class="ident">paint</span><span class="punct">(</span> <span class="number">3</span><span class="punct">,</span> <span class="symbol">:red</span> <span class="punct">).</span><span class="ident">dry</span><span class="punct">(</span> <span class="number">30</span> <span class="punct">).</span><span class="ident">close</span><span class="punct">()</span></code></p>
+	</blockquote>
+
+
+	<p>The above paints the front door 3 coats of red, dries for 30 minutes, and closes the door.  Even though the last method has no arguments, you can still put parentheses if you like.  There is no use dragging an empty inner tube, so the parentheses are normally dropped.</p>
+
+
+	<p>Some methods (such as <code><span class="ident">print</span></code>) are kernel methods.  These methods are used throughout Ruby.  Since they are so common, you won&#8217;t use the dot.</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">print</span> <span class="punct">&quot;</span><span class="string">See, no dot.</span><span class="punct">&quot;</span></code></p>
+	</blockquote>
+
+
+	<h3>Class methods</h3>
+
+
+	<p>Like the methods described above (also called <em>instance</em> methods), class methods are usually attached after variables and constants.  Rather than a dot, a <strong>double colon</strong> is used.</p>
+
+
+	<blockquote>
+		<p><code><span class="constant">Door</span><span class="punct">::</span><span class="ident">new</span><span class="punct">(</span> <span class="symbol">:oak</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>As seen above, the <code><span class="ident">new</span></code> class method is most often used to create things.  In the above example, we&#8217;re asking Ruby to make a new oak door for us.  Of course, Ruby has to have an understanding of how to make a door&#8212;as well as a wealth of timber, lumberjacks, and those long, wiggily, two-man saws.</p>
+
+
+	<p><img src="../images/the.foxes-4e.png" title="Plenty of chunky bacon to go around." alt="Plenty of chunky bacon to go around." /></p>
+
+
+	<h3>Global variables</h3>
+
+
+	<p>Variables which begin with a <strong>dollar sign</strong> are global.</p>
+
+
+	<blockquote>
+		<p><code><span class="global">$x</span></code>, <code><span class="global">$1</span></code>, <code><span class="global">$chunky</span></code> and <code><span class="global">$CHunKY_bACOn</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Most variables are rather temporary in nature.  Some parts of your program are like little houses. You walk in and they have their own variables.  In one house, you may have a <code><span class="ident">dad</span></code> that represents Archie, a travelling salesman and skeleton collector.  In another house, <code><span class="ident">dad</span></code> could represent Peter, a lion tamer with a great love for flannel.  Each house has its own meaning for <code><span class="ident">dad</span></code>.</p>
+
+
+	<p>With global variables, you can be guaranteed that the variable is the same in every little house. The dollar sign is very appropriate.  Every American home respects the value of the dollar.  We&#8217;re crazy for the stuff.  Try knocking on any door in America and hand them cash.  I can guarantee you won&#8217;t get the same reaction if you knock on a door and offer Peter, a lion tamer with a great love for flannel.</p>
+
+
+	<p>Global variables can be used anywhere in your program.  They never go out of sight.</p>
+
+
+	<h3>Instance variables</h3>
+
+
+	<p>Variables which begin with an <strong>at</strong> symbol are instance variables.</p>
+
+
+	<blockquote>
+		<p><code><span class="attribute">@x</span></code>, <code><span class="attribute">@y</span></code>, and <code><span class="attribute">@only_the_chunkiest_cut_of_bacon_I_have_ever_seen</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>These variables are often used to define the attributes of something.  For example, you might provide Ruby with the width of the <code><span class="ident">front_door</span></code> by setting the <code><span class="attribute">@width</span></code> variable inside that <code><span class="ident">front_door</span></code>.  Instance variables are used to define characteristics of a single object in Ruby.</p>
+
+
+	<p>Think of the <strong>at</strong> symbol as meaning <strong>attribute</strong>.</p>
+
+
+	<h3>Class variables</h3>
+
+
+	<p>Variables which begin with <strong>double at</strong> symbols are class variables.</p>
+
+
+	<blockquote>
+		<p><code><span class="attribute">@@x</span></code>, <code><span class="attribute">@@y</span></code>, and <code><span class="attribute">@@i_will_take_your_chunky_bacon_and_raise_you_two</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Class variables, too, are used to define attributes.  But rather than defining an attribute for a single object in Ruby, class variables give an attribute to many related objects in Ruby.  If instance variables set attributes for a single <code><span class="ident">front_door</span></code>, then class variables  set attributes for everything that is a <code><span class="constant">Door</span></code>.</p>
+
+
+	<p>Think of the <strong>double at</strong> prefix as meaning <strong>attribute all</strong>.  Additionally, you can think of a swarm of <strong>AT-ATs</strong> from <em>Star Wars</em>, which are all commanded by Ruby.  You change a class variable and not just one changes, they all change.</p>
+
+
+	<p><img src="../images/the.foxes-4f.png" title="Woohoo! Chunky bacon accomplished!" alt="Woohoo! Chunky bacon accomplished!" /></p>
+
+
+	<h3>Blocks</h3>
+
+
+	<p>Any code surrounded by <strong>curly braces</strong> is a block.</p>
+
+
+	<blockquote>
+		<p><code><span class="number">2</span><span class="punct">.</span><span class="ident">times</span> <span class="punct">{</span> <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Yes, I've used chunky bacon in my examples, but never again!</span><span class="punct">&quot;</span> <span class="punct">}</span></code> is an example.</p>
+	</blockquote>
+
+
+	<p>With blocks, you can group a set of instructions together so that they can be passed around your program.   The curly braces give the appearance of crab pincers that have snatched the code and are holding it together.  When you see these two pincers, remember that the code inside has been pressed into a single unit.</p>
+
+
+	<p>It&#8217;s like one of those little Hello Kitty boxes they sell at the mall that&#8217;s stuffed with tiny pencils and microscopic paper, all crammed into a glittery transparent case that can be concealed in your palm for covert stationary operations.  Except that blocks don&#8217;t require so much squinting.</p>
+
+
+	<p>The curly braces can also be traded for the words <strong>do</strong> and <strong>end</strong>, which is nice if your block is longer than one line.</p>
+
+
+<div class='example'><pre><code> <span class="ident">loop</span> <span class="keyword">do</span>
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Much better.</span><span class="punct">&quot;</span> 
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Ah.  More space!</span><span class="punct">&quot;</span> 
+   <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">My back was killin' me in those crab pincers.</span><span class="punct">&quot;</span> 
+ <span class="keyword">end</span></code></pre></div>
+
+	<h3>Block arguments</h3>
+
+
+	<p>Block arguments are a set of variables surrounded by <strong>pipe</strong>  characters and separated by <strong>commas</strong>.</p>
+
+
+	<blockquote>
+		<p><code lang="en">|x|</code>, <code><span class="punct">|</span><span class="ident">x</span><span class="punct">,</span><span class="ident">y</span><span class="punct">|</span></code>, and <code><span class="punct">|</span><span class="ident">up</span><span class="punct">,</span> <span class="ident">down</span><span class="punct">,</span> <span class="ident">all_around</span><span class="punct">|</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Block arguments are used at the beginning of a block.</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">{</span> <span class="punct">|</span><span class="ident">x</span><span class="punct">,</span><span class="ident">y</span><span class="punct">|</span> <span class="ident">x</span> <span class="punct">+</span> <span class="ident">y</span> <span class="punct">}</span></code></p>
+	</blockquote>
+
+
+	<p>In the above example, <code><span class="punct">|</span><span class="ident">x</span><span class="punct">,</span><span class="ident">y</span><span class="punct">|</span></code> are the arguments.  After the arguments, we have a bit of code.  The expression <code><span class="ident">x</span> <span class="punct">+</span> <span class="ident">y</span></code> adds the two arguments together.</p>
+
+
+	<p>I like to think of the pipe characters as representing a tunnel.  They give the appearance of a chute that the variables are sliding down.  (An <code><span class="ident">x</span></code> goes down spread eagle, while the <code><span class="ident">y</span></code> neatly crosses her legs.)  This chute acts as a passageway between blocks and the world around them.</p>
+
+
+	<p>Variables are passed through this chute (or tunnel) into the block.</p>
+
+
+	<p><img src="../images/the.foxes-4g.png" title="And then, the dismal truth." alt="And then, the dismal truth." /></p>
+
+
+	<h3>Ranges</h3>
+
+
+	<p>A range is two values surrounded by <strong>parentheses</strong> and separated by <strong>an ellipsis</strong> (in the form of two or three dots).</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">(</span><span class="number">1</span><span class="punct">..</span><span class="number">3</span><span class="punct">)</span></code> is a range, representing the numbers 1 through 3.</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><code><span class="punct">('</span><span class="string">a</span><span class="punct">'..'</span><span class="string">z</span><span class="punct">')</span></code> is a range, representing a lowercase alphabet.</p>
+	</blockquote>
+
+
+	<p>Think of it as an accordion which has been squeezed down for carrying.  (Sure, you can build a great sense of self-worth by carrying around an unfolded accordion, but sometimes a person needs to wallow in self-doubt, carefully concealing the squeeze-box.)  The parentheses are the handles on the sides of a smaller, handheld accordion.  The dots are the chain, keeping the folds tightly closed.</p>
+
+
+	<p>Normally, only two dots are used.  If a third dot is used, the last value in the range is excluded.</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">(</span><span class="number">0</span><span class="punct">...</span><span class="number">5</span><span class="punct">)</span></code> represents the numbers 0 through 4.</p>
+	</blockquote>
+
+
+	<p>When you see that third dot, imagine opening the accordion slightly.  Just enough to let one note from its chamber.  The note is that end value.  We&#8217;ll let the sky eat it.</p>
+
+
+	<h3>Arrays</h3>
+
+
+	<p>An array is a list surrounded by <strong>square brackets</strong> and separated by <strong>commas</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">[</span><span class="number">1</span><span class="punct">,</span> <span class="number">2</span><span class="punct">,</span> <span class="number">3</span><span class="punct">]</span></code> is an array of numbers.</p>
+	</blockquote>
+
+
+	<blockquote>
+		<p><code><span class="punct">['</span><span class="string">coat</span><span class="punct">',</span> <span class="punct">'</span><span class="string">mittens</span><span class="punct">',</span> <span class="punct">'</span><span class="string">snowboard</span><span class="punct">']</span></code> is an array of strings.</p>
+	</blockquote>
+
+
+	<p>Think of it as a caterpillar which has been stapled into your code.  The two square brackets are staples which keep the caterpillar from moving, so you can keep track of which end is the head and which is the tail.  The commas are the caterpillar&#8217;s legs, wiggling between each section of its body.</p>
+
+
+	<p>Once there was a caterpillar who had commas for legs.  Which meant he had to allow a literary pause after each step.  The other caterpillars really respected him for it and he came to have  quite a commanding presence.  Oh, and talk about a philanthropist!  He was notorious for giving fresh leaves to those less-fortunate.</p>
+
+
+	<p>Yes, an array is a collection of things, but it also keeps those things in a specific order.</p>
+
+
+	<h3>Hashes</h3>
+
+
+	<p>A hash is a dictionary surrounded by <strong>curly braces</strong>.  Dictionaries match words with their definitions.  Ruby does so with <strong>arrows</strong> made from an equals sign, followed by a greater-than sign.</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">{'</span><span class="string">a</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">aardvark</span><span class="punct">',</span> <span class="punct">'</span><span class="string">b</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">badger</span><span class="punct">'}</span></code> is an example.</p>
+	</blockquote>
+
+
+	<p>This time, the curly braces represent little book symbols.  See how they look like little, open books with creases down the middle?  They represent opening and closing our dictionary.</p>
+
+
+	<p>Imagine our dictionary has a definition on each of its pages.  The commas represent the corner of each page, which we turn to see the next definition.  And on each page: a word followed by an arrow pointing to the definition.</p>
+
+
+<div class='example'><pre><code> <span class="punct">{</span>
+   <span class="punct">'</span><span class="string">name</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">Peter</span><span class="punct">',</span>
+   <span class="punct">'</span><span class="string">profession</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">lion tamer</span><span class="punct">',</span>
+   <span class="punct">'</span><span class="string">great love</span><span class="punct">'</span> <span class="punct">=&gt;</span> <span class="punct">'</span><span class="string">flannel</span><span class="punct">'</span>
+ <span class="punct">}</span></code></pre></div>
+
+	<p>I&#8217;m not comparing hashes to dictionaries because you can only store definitions in a hash.  In the example above, I stored personal information for Peter, the lion tamer with a great love for flannel.  Hashes are like dictionaries because they can be very easy to search through.</p>
+
+
+	<p>Unlike arrays, the items in a hash are not kept in a specific order.</p>
+
+
+	<p><img src="../images/the.foxes-5.png" title="The foxes think silence will kill the comic." alt="The foxes think silence will kill the comic." /></p>
+
+
+	<h3>Regular Expressions</h3>
+
+
+	<p>A regular expression (or <em>regexp</em>) is a set of characters surrounded by <strong>slashes</strong>.</p>
+
+
+	<blockquote>
+		<p><code><span class="punct">/</span><span class="regex">ruby</span><span class="punct">/</span></code>, <code><span class="punct">/</span><span class="regex">[0-9]+</span><span class="punct">/</span></code> and <code><span class="punct">/</span><span class="regex">^<span class="escape">\d</span>{3}-<span class="escape">\d</span>{3}-<span class="escape">\d</span>{4}</span><span class="punct">/</span></code> are examples.</p>
+	</blockquote>
+
+
+	<p>Regular expressions are used to find words or patterns in text.  The slashes on each side of the expression are pins.</p>
+
+
+	<p>Imagine if you had a little word with pins on both side and you held it over a book.  You pass the word over the book and when it gets near a matching word, it starts blinking.  You pin the regular expression onto the book, right over the match and it glows with the letters of the matching word.</p>
+
+
+	<p>Oh, and when you poke the pins into the book, the paper sneezes, <em>reg-exp!</em></p>
+
+
+	<p>Regular expressions are much faster than passing your hand over pages of a book.  Ruby can use a regular expression to search volumes of books very quickly.</p>
+
+
+	<h3>Operators</h3>
+
+
+	<p>You&#8217;ll use the following list of operators to do math in Ruby or to compare things. Scan over the list, recognize a few.  You know, addition <code><span class="punct">+</span></code> and subtraction <code><span class="punct">-</span></code> and so on.</p>
+
+
+<div class='example'><pre class="text">  ** !  ~  *  /  %  +  -  &#38;  
+  &lt;&lt; &gt;&gt; |  ^  &gt;  &gt;= &lt;  &lt;= &lt;=&gt;
+  || != =~ !~ &#38;&#38; += -= == ===
+  .. ... not and or          
+</pre></div>
+
+	<h3>Keywords</h3>
+
+
+	<p>Ruby has a number of built-in words, imbued with meaning.  These words cannot be used as variables or changed to suit your purposes.  Some of these we&#8217;ve already discussed.  They are in the safe house, my friend.  You touch these and you&#8217;ll be  served an official syntax error.</p>
+
+
+<div class='example'><pre class="text">  alias   and     BEGIN   begin   break   case    class   def     defined 
+  do      else    elsif   END     end     ensure  false   for     if 
+  in      module  next    nil     not     or      redo    rescue  retry 
+  return  self    super   then    true    undef   unless  until   when 
+  while   yield 
+</pre></div>
+
+	<p>Good enough.  These are the illustrious members of the Ruby language.  We&#8217;ll be having quite the junket for the next three chapters, gluing these parts together into sly bits of (poignant) code.</p>
+
+
+	<p>I&#8217;d recommend skimming all of the parts of speech once again.  Give yourself a broad view of them.  I&#8217;ll be testing your metal in the next section.</p>
+
+
+	<p><img src="../images/the.foxes-6.png" title="Out in the pickup truck." alt="Out in the pickup truck." /></p>
+
+    
+    
+        
+        <div class="sidebar">
+        <h1>sidebar!</h1>
+        
+        <h2>Seven Moments of Zen from My Life</h2>
+        
+
+        <ol>
+	<li>8 years old.  Just laying in bed, thinking.  And I realize.   <em>There&#8217;s nothing stopping me from becoming a child dentist.</em></li>
+		<li>21.  Found a pencil on the beach.  Embossed on it: <em>I cherish serenity.</em>  Tucked it away into the inside breast pocket of my suit jacket.  Watched the waves come and recede.</li>
+		<li>22.  Found a beetle in my bathroom that was just about to fall into a heating vent. Swiped him up.  Tailored him a little backpack out of a leaf and a thread. In the backpack: a skittle and a <span class="caps">AAA</span> battery.  That should last him.  Set him loose out by the front gate.</li>
+		<li>Three years of age.  Brushed aside the curtain.  Sunlight.</li>
+		<li>14.  Riding my bike out on the pier with my coach who is jogging behind me as the sun goes down right after I knocked out Piston Honda in the original  Nintendo version of Mike Tyson&#8217;s Punch-Out.</li>
+		<li>11.  Sick.  Watching Heathcliff on television.  For hours, it was Heathcliff. And he was able to come right up close to my face.  His head spun toward me. His face pulsed back and forth, up close, then off millions of miles away. Sound was gone.  In fractions of a second, Heathcliff filled the universe, then blipped off to the end of infinity.  I heard my mother&#8217;s voice trying to cut through the cartoon.  Heathclose, Heathaway, Heathclose, Heathaway. It was a religious rave with a cat strobe and muffled bass of mother&#8217;s voice. (I ran a fever of 105 that day.)</li>
+		<li>18.  Bought myself a gigapet.  A duck.  Fed it for awhile.  Gave it a bath. Forgot about it for almost a couple months.  One day, while cleaning, I found a chain and he was there on the end.  Hey, little duck.  Mad freaky, hoppin&#8217; around with his hair out, squawking diagonal lines.  In a tuxedo.</li>
+	</ol>
+        <h1>sidebar!</h1>
+        </div>
+
+    
+    
+        
+        <a name="section3" />
+        <h2>3. If I Haven't Treated You Like a Child Enough Already</h2>
+
+        <p>I&#8217;m proud of you.   Anyone will tell you how much I brag about you.  How I go on and on about this great anonymous person out there who scrolls and reads and scrolls and reads.  &#8220;These kids,&#8221; I tell them.  &#8220;Man, these kids got heart.  I never&#8230;&#8221;  And I can&#8217;t even finish a sentence because I&#8217;m absolutely blubbering.</p>
+
+
+	<p>And my heart glows bright red under my filmy, translucent skin and they have to administer 10cc  of JavaScript to get me to come back.  (I respond well to toxins in the blood.)  Man, that stuff will  kick the peaches right out your gills!</p>
+
+
+	<p>So, yes.  You&#8217;ve kept up nicely.  But now I must begin to be a brutal schoolmaster. I need to start seeing good marks from you.  So far, you&#8217;ve done nothing but move your eyes around a lot.  Okay, sure, you did some exceptional reading aloud earlier.  Now we need some comprehension skills here, Smotchkkiss.</p>
+
+
+	<p><strong>Say aloud each of the parts of speech used below.</strong></p>
+
+
+	<blockquote>
+		<p><code><span class="number">5</span><span class="punct">.</span><span class="ident">times</span> <span class="punct">{</span> <span class="ident">print</span> <span class="punct">&quot;</span><span class="string">Odelay!</span><span class="punct">&quot;</span> <span class="punct">}</span></code></p>
+	</blockquote>
+
+
+	<p>You might want to even cover this paragraph up while you read, because your eyes might want to sneak to the answer.  We have a <em>number</em> <code><span class="number">5</span></code>, followed by a <em>method</em> <code><span class="punct">.</span><span class="ident">times</span></code>.  Then, the first crab pincers of a <em>block</em>.  The kernel <em>method</em> <code><span class="ident">print</span></code> has no dot and is followed by a <em>string</em> <code><span class="punct">&quot;</span><span class="string">Odelay!</span><span class="punct">&quot;</span></code>.  The final crab pincers close our <em>block</em>.</p>
+
+
+	<p><strong>Say aloud each of the parts of speech used below.</strong></p>
+
+
+	<blockquote>
+		<p><code><span class="ident">exit</span> <span class="keyword">unless</span> <span class="punct">&quot;</span><span class="string">restaurant</span><span class="punct">&quot;.</span><span class="ident">include?</span> <span class="punct">&quot;</span><span class="string">aura</span><span class="punct">&quot;</span></code></p>
+	</blockquote>
+
+
+	<p>Like the <code><span class="ident">print</span></code> method, <code><span class="ident">exit</span></code> is a kernel <em>method</em>.  If you were paying attention during the big list of keywords, you&#8217;ll know that <code><span class="keyword">unless</span></code> is just such a <em>keyword</em>.  The <em>string</em> <code><span class="punct">&quot;</span><span class="string">restaurant</span><span class="punct">&quot;</span></code> is clung to by the <em>method</em> <code><span class="ident">include?</span></code>.  And finally, the string <code><span class="punct">&quot;</span><span class="string">aura</span><span class="punct">&quot;</span></code>.</p>
+
+
+	<p><strong>Say aloud each of the parts of speech used below.</strong></p>
+
+
+	<blockquote>
+		<p><code><span class="punct">['</span><span class="string">toast</span><span class="punct">',</span> <span class="punct">'</span><span class="string">cheese</span><span class="punct">',</span> <span class="punct">'</span><span class="string">wine</span><span class="punct">'].</span></code>
+<code><span class="ident">each</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">food</span><span class="punct">|</span> <span class="ident">print</span><span class="punct">(</span> <span class="ident">food</span><span class="punct">.</span><span class="ident">capitalize</span> <span class="punct">)</span> <span class="punct">}</span></code></p>
+	</blockquote>
+
+
+	<p>This caterpillar partakes of finer delicacies.  An <em>array</em> starts this example.  In the array, three <em>strings</em> <code><span class="punct">'</span><span class="string">toast</span><span class="punct">'</span></code>, <code><span class="punct">'</span><span class="string">cheese</span><span class="punct">'</span></code>, and <code><span class="punct">'</span><span class="string">wine</span><span class="punct">'</span></code>.  The whole array is trailed by a <em>method</em> <code><span class="ident">each</span></code>.</p>
+
+
+	<p>Inside of a <em>block</em>, the <em>block argument</em> <code><span class="ident">food</span></code>, travelling down its little waterslide into the block.  The <em>method</em> <code><span class="ident">capitalize</span></code> then capitalizes the first letter of the block argument, which  has become <em>variable</em> <code><span class="ident">food</span></code>.  This capitalized <em>string</em> is passed to kernel <em>method</em> <code><span class="ident">print</span></code>.</p>
+
+
+	<p>Look over these examples once again.  Be sure you recognize the parts of speech used.  They each have a distinct look, don&#8217;t they?  Take a deep breath, press firmly on your temples.  Now, let&#8217;s dissect a cow&#8217;s eye worth of code.</p>
+
+    
+    
+        
+        <a name="section4" />
+        <h2>4. An Example to Help You Grow Up</h2>
+
+        <p><img src="../images/the.foxes-7.png" title="Gettin' cabin fever." alt="Gettin' cabin fever." /></p>
+
+
+	<p><strong>Say aloud each of the parts of speech used below.</strong></p>
+
+
+<div class='example'><pre><code> <span class="ident">require</span> <span class="punct">'</span><span class="string">net/http</span><span class="punct">'</span>
+ <span class="constant">Net</span><span class="punct">::</span><span class="constant">HTTP</span><span class="punct">.</span><span class="ident">start</span><span class="punct">(</span> <span class="punct">'</span><span class="string">www.ruby-lang.org</span><span class="punct">',</span> <span class="number">80</span> <span class="punct">)</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">http</span><span class="punct">|</span>
+     <span class="ident">print</span><span class="punct">(</span> <span class="ident">http</span><span class="punct">.</span><span class="ident">get</span><span class="punct">(</span> <span class="punct">'</span><span class="string">/en/LICENSE.txt</span><span class="punct">'</span> <span class="punct">).</span><span class="ident">body</span> <span class="punct">)</span>
+ <span class="keyword">end</span></code></pre></div>
+
+	<p>The first line is a method call.  The <em>method</em> called <code><span class="ident">require</span></code> is used.  A <em>string</em> is passed to the method containing <code><span class="punct">'</span><span class="string">net/http</span><span class="punct">'</span></code>.  Think of this first line of code as a sentence.  We have told Ruby to load some helper code, the <code><span class="constant">Net</span><span class="punct">::</span><span class="constant">HTTP</span></code> library.</p>
+
+
+	<p>The next three lines all go together.  The <em>constant</em> <code><span class="constant">Net</span><span class="punct">::</span><span class="constant">HTTP</span></code> refers to the library we loaded above. We are using the <em>method</em> <code><span class="ident">start</span></code> from the library.  Into the method, we&#8217;re sending a <em>string</em> <code><span class="punct">'</span><span class="string">www.ruby-lang.org</span><span class="punct">'</span></code> and the <em>number</em> <code><span class="number">80</span></code>.</p>
+
+
+	<p>The word <code><span class="keyword">do</span></code> opens a <em>block</em>.  The block has one <em>block variable</em> <code><span class="ident">http</span></code>.  Inside the block, the <em>method</em> <code><span class="ident">print</span></code> is called.  What is being printed?</p>
+
+
+	<p>From the <em>variable</em> <code><span class="ident">http</span></code>, the <em>method</em> <code><span class="ident">get</span></code> is called.  Into <code><span class="ident">get</span></code>, we pass a <em>string</em> containing the path <code><span class="punct">'</span><span class="string">/en/LICENSE.txt</span><span class="punct">'</span></code>.  Now, notice that another method is chained onto <code><span class="ident">get</span></code>.  The <em>method</em> <code><span class="ident">body</span></code>.  Then, the block closes with <code><span class="keyword">end</span></code>.</p>
+
+
+	<p>Doing okay?  Just out of curiousity, can you guess what this example does?  Hopefully, you&#8217;re seeing  some patterns in Ruby.  If not, just shake your head vigorously while you&#8217;ve got these examples in  your mind.  The code should break apart into manageable pieces.</p>
+
+
+	<p>For example, this pattern is used a number of times:</p>
+
+
+	<blockquote>
+		<p><em>variable</em> . <em>method</em> ( <em>method arguments</em> )</p>
+	</blockquote>
+
+
+	<p>You see it inside the block:</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">http</span><span class="punct">.</span><span class="ident">get</span><span class="punct">(</span> <span class="punct">'</span><span class="string">/en/LICENSE.txt</span><span class="punct">'</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>We&#8217;re using Ruby to get a web page.  You&#8217;ve probably used <span class="caps">HTTP</span> with your web browser.  <span class="caps">HTTP</span> is the Hypertext Transfer Protocol.  <span class="caps">HTTP</span> is used to transfer web pages across the internet.  Conceptualize a bus driver that can drive across the internet and bring back web pages for us.  On his hat are stitched the letters <span class="caps">HTTP</span>.</p>
+
+
+	<p>The variable <code><span class="ident">http</span></code> is that bus driver.  The <em>method</em> is a message to the bus driver.  Go <code><span class="ident">get</span></code> the web page called <code><span class="punct">/</span><span class="regex">en</span><span class="punct">/</span><span class="constant">LICENSE</span><span class="punct">.</span><span class="ident">txt</span></code>.</p>
+
+
+	<p>So where you see the chain of methods:</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">http</span><span class="punct">.</span><span class="ident">get</span><span class="punct">(</span> <span class="punct">'</span><span class="string">/en/LICENSE.txt</span><span class="punct">'</span> <span class="punct">).</span><span class="ident">body</span></code></p>
+	</blockquote>
+
+
+	<p>Since we&#8217;ll be getting back a web page from the <code><span class="ident">http</span></code> bus driver, you can read this in your brain as:</p>
+
+
+	<blockquote>
+		<p><em>web page</em> .body</p>
+	</blockquote>
+
+
+	<p>And this bit of code:</p>
+
+
+	<blockquote>
+		<p><code><span class="ident">print</span><span class="punct">(</span> <span class="ident">http</span><span class="punct">.</span><span class="ident">get</span><span class="punct">(</span> <span class="punct">'</span><span class="string">/en/LICENSE.txt</span><span class="punct">'</span> <span class="punct">).</span><span class="ident">body</span> <span class="punct">)</span></code></p>
+	</blockquote>
+
+
+	<p>This code gets the web page.  We send a <code><span class="ident">body</span></code> message to the web page, which gives us all the <span class="caps">HTML</span> in a <em>string</em>.  We then <code><span class="ident">print</span></code> that string.  See how the basic dot-method pattern happens in a chain.  The next chapter will explore all these sorts of patterns in Ruby.  It&#8217;ll be good fun.</p>
+
+
+	<p>So, what does this code do?  It prints the <span class="caps">HTML</span> for the Ruby home page to the screen.  Using  an web-enabled bus driver.</p>
+
+    
+    
+        
+        <a name="section5" />
+        <h2>5. And So, The Quick Trip Came To An Eased, Cushioned Halt</h2>
+
+        <p><img src="../images/the.foxes-8.png" title="Running after the truck." alt="Running after the truck." /></p>
+
+
+	<p>So now we have a problem.  I get the feeling that you are enjoying this way too much. And you haven&#8217;t even hit the chapter where I use jump-roping songs to help you learn how to parse <span class="caps">XML</span>!</p>
+
+
+	<p>If you&#8217;re already enjoying this, then things are really going bad.  Two chapters from now you&#8217;ll be writing your own Ruby programs.  In fact, it&#8217;s right about there that I&#8217;ll have you start writing your own role-playing game, your own file-sharing network (a la BitTorrent), as well as a program that will pull genuine random numbers from the Internet.</p>
+
+
+	<p style="float:right"><img src="../images/graph-1.gif" title="Proof has been extracted from the pudding." alt="Proof has been extracted from the pudding." /></p>
+
+
+	<p>And you know (you&#8217;ve got to know!) that this is going to turn into an obsession.  First, you&#8217;ll completely forget to take the dog out.  It&#8217;ll be standing by the screen door, darting its head about, as your eyes devour the code, as your fingers slip messages to the computer.</p>
+
+
+	<p>Thanks to your neglect, things will start to break.  Your mounds of printed  sheets of code will cover up your air vents.  Your furnace will choke.  The trash will pile-up: take-out boxes you hurriedly ordered in, junk mail you couldn&#8217;t care to dispose of.  Your own uncleanliness will pollute the air.  Moss will infest the rafters, the water will clog, animals will let themselves in, trees will come up through the foundations.</p>
+
+
+	<p>But your computer will be well-cared for.  And you, Smotchkkiss, will have nourished it with your knowledge. In the eons you will have spent with your machine, you will have become part-CPU.  And it will have become part-flesh.  Your arms will flow directly into its ports.  Your eyes will accept the video directly from <span class="caps">DVI</span>-24 pin.  Your lungs will sit just above the processor, cooling it.</p>
+
+
+	<p>And just as the room is ready to force itself shut upon you, just as all the overgrowth swallows you and your machine, you will finish your script.  You and the machine together will run this latest Ruby script, the product of your obsession.  And the script will fire up chainsaws to trim the trees, hearths to warm and regulate the house.  Builder nanites will rush from your script, reconstructing your quarters, retiling, renovating, chroming, polishing, disinfecting.  Mighty androids will force your crumbling house into firm, rigid architecture.  Great pillars will rise, statues chiseled.  You will have dominion over this palatial estate and over the encompassing mountains and islands of your stronghold.</p>
+
+
+	<p>So I guess you&#8217;re going to be okay.  Whatdya say?  Let&#8217;s get moving on this script of yours?</p>
+
+    
+    
+
+        <p style="text-align:right;">
+        <a href="chapter-4.html">Turn page.</a>
+        </p>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
