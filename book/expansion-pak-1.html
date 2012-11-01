@@ -37,24 +37,9 @@
         
         <h2>About Ruby Versions</h2>
         
-
-        <p>If you&#8217;ve visited any sites which offer Ruby for download, you&#8217;ve probably seen a number of different versions of Ruby available.  Obviously, the greater the version number, the more recent the version of Ruby.  But that&#8217;s not exactly true.  Version numbers have meaning in Rubyland and I&#8217;d like you to make an educated choice.</p>
-
-
-	<p><strong>1.8.3</strong> is the latest <strong>stable</strong> version of Ruby.  Stable versions offer the latest features which have been widely tested and are recommended for general use.  When new stable versions come out, you can safely upgrade to these new versions.</p>
-
-
-	<p><strong>1.9.0</strong> is the latest <strong>development</strong> release of Ruby.  The development release includes experimental changes to Ruby and unfixed problems.  This release is for anyone who wants take a peep into the future of Ruby at the risk of encountering some bugs.</p>
-
+	<p><strong>1.9.3</strong> is the latest <strong>stable</strong> version of Ruby.  Stable versions offer the latest features which have been widely tested and are recommended for general use.  When new stable versions come out, you can safely upgrade to these new versions.</p>
 
 	<p>Now, you&#8217;ll notice that the version number is comprised of three individual numbers, which are: <strong>the major version</strong>, <strong>the minor version</strong>, and <strong>the teeny version</strong>.  The  major version counts each complete rewrite of Ruby.  The minor version is changed based on sweeping changes to Ruby.  The teeny version is incremented every few months as smaller changes and bug fixes are brought in.</p>
-
-
-	<p>All editions of Ruby thus far have a major version of 1.  When Ruby2 comes along, you&#8217;ll see this notch up one.</p>
-
-
-	<p>The minor version indicates whether a version is stable or not.  <strong>If the minor version is an even number, then that version of Ruby is stable.   If it&#8217;s odd, then that Ruby is a development version.</strong>  After a year or so, when the development version is ready  for the world, both numbers are increased and the teeny version is returned to zero.</p>
-
 
 	<p>Oh, and if I could give you a taste of how smoothly Ruby moves along!  I can&#8217;t count how often a fresh idea lands on the Ruby-Core mailing list, where the Emperors of Ruby converse, and <strong>that same idea</strong> gets worked into Ruby within a few days.  It is a lovely machine says I.</p>
         <h1>sidebar!</h1>
@@ -67,35 +52,24 @@
 
 
 	<ul>
-	<li>If you are using <strong>Microsoft Windows</strong>, begin by downloading the <a href="http://rubyforge.org/frs/?group_id=167">Ruby Installer for Windows</a>.  Running this &#8220;one-click&#8221; installer will setup Ruby for you, as well as a tidy pack of useful software, such as a small text editor and some additional libraries.</li>
-		<li>If you are on Apple&#8217;s <strong>Mac <span class="caps">OS X</span></strong>, then Ruby might already be installed.  Versions 10.2 and 10.3 of <span class="caps">OS X</span> both came with Ruby.  Still, I encourage you to upgrade Ruby so that all the examples in this book will work for you.  Download a <strong>stable</strong> <a href="http://homepage.mac.com/discord/Ruby/">disk image</a>. You will need <span class="caps">OS X 10</span>.3 (Panther) and the XCode Tools in order to use this image.</li>
-		<li>On <strong>FreeBSD</strong>, Ruby is right there in the ports system.  In fact, if you&#8217;ve used the essential <code><span class="ident">portupgrade</span></code> tool, then Ruby is already installed.  Akinori Musha, one of Ruby&#8217;s immensely talented core developers, wrote portupgrade, which means that you can use your Ruby learning right away to hack up your <code><span class="ident">pkgtools</span><span class="punct">.</span><span class="ident">conf</span></code>.
-_* <div class='example'><pre class="text"> cd /usr/ports/lang/ruby18
- sudo make install
-</pre></div></li>
-		<li>On <strong>RedHat</strong> or <strong>Mandrake</strong> Linux, you can find <a href="http://rpmfind.net/linux/rpm2html/search.php?query=Ruby">Ruby RPMs</a>. I believe Ruby is also available through Ximian&#8217;s Red Carpet.</li>
+	<li>If you are using <strong>Microsoft Windows</strong>, begin by downloading the <a href="http://rubyinstaller.org/">Ruby Installer for Windows</a>.  Running this &#8220;one-click&#8221; installer will setup Ruby for you, as well as a tidy pack of useful software, such as a small text editor and some additional libraries.</li>
+		<li>If you are on Apple&#8217;s <strong>Mac <span class="caps">OS X</span></strong>, then Ruby is already installed.  However, it is not the latest version available, so I encourage you to upgrade it by first installing <a href="http://mxcl.github.com/homebrew/">Homebrew</a> package manager, then in the Terminal run:
+    <pre><code>brew install ruby</code></pre>
+    </li>
 		<li>On <strong>Debian</strong>, use <code><span class="ident">apt</span><span class="punct">-</span><span class="ident">get</span> <span class="ident">install</span> <span class="ident">ruby</span></code>.</li>
 		<li>On <strong>Gentoo</strong>, <code><span class="ident">emerge</span> <span class="ident">ruby</span></code>.</li>
-		<li>Other <strong>Linux</strong> and <strong><span class="caps">UNIX</span></strong> platforms, even <strong><span class="caps">OS X</span></strong> (if the disk images don&#8217;t work for you):  Download the <a href="http://ruby-lang.org/en/20020102.html">latest source code</a>.   For instance, <a href="ftp://ftp.ruby-lang.org/pub/ruby/ruby-1.8.3.tar.gz">Ruby 1.8.3</a>.  To unpack and compile:
-_* <div class='example'><pre class="text"> tar xzvf ruby-1.8.3.tar.gz
- cd ruby-1.8.3
- ./configure
- make
- make install
-</pre></div>
-_* (Again, the above commands are for installing Ruby from the source code.  You may need to use <code><span class="ident">su</span></code> or <code><span class="ident">sudo</span></code> to give you permission to run the <code><span class="ident">make</span> <span class="ident">install</span></code>.)</li>
 	</ul>
 
 
 	<p>To test if Ruby is installed, open a command shell and run: <code><span class="ident">ruby</span> <span class="punct">-</span><span class="ident">v</span></code>.  If Ruby is installed properly, you&#8217;ll see a bit of version info.</p>
 
 
-<div class='example'><pre class="text"> ruby 1.8.3 (2005-11-25) [i386-mswin32]
+<div class='example'><pre class="text"> ruby 1.9.3p194 (2012-04-20) [x86_64-darwin12.0.0]
 </pre></div>
 
 	<ul>
 	<li>To open a command shell in <strong>Microsoft Windows</strong>, go to the Start Menu and select <code><span class="constant">Run</span><span class="punct">...</span></code>. Type in: <code><span class="ident">cmd</span></code>.  Press OK.  A command shell window will appear.</li>
-		<li>To open a command shell on <strong>Mac <span class="caps">OS X</span></strong>, go to <strong>Applications &gt; Utilities</strong>.  Run the <strong>Terminal</strong> program.</li>
+		<li>To open a command shell on <strong>Mac <span class="caps">OS X</span></strong>, run the <strong>Terminal</strong> application from <strong>Spotlight</strong>.</li>
 	</ul>
 
 
@@ -197,36 +171,10 @@ _* (Again, the above commands are for installing Ruby from the source code.  You
 
 	<p>You can read more about customizing Irb and saving your configuration to a file in  the complete <a href="http://www.rubycentral.com/book/irb.html">guide to Irb</a>, available in the free-for-your-wandering-Internet-eyes <em>Programming Ruby</em>.</p>
 
-    
-    
-        
-        <div class="sidebar">
-        <h1>sidebar!</h1>
-        
-        <h2>Windows Hiccups</h2>
-        
-
-        <p>Okay, here&#8217;s what you do to get tab completion working in Windows.   <a href="http://whytheluckystiff.net/ruby/dist/readline.so-for-1.8.zip">Download this.</a> A zip with two files inside.  These get copied into your Ruby installation. Place readline.dll in the <strong>bin</strong> folder.  The readline.so goes in <strong>lib/ruby/1.8/i386-mswin32</strong> folder.</p>
-
-
-	<p>Then, run in your command shell: <code><span class="ident">irb</span> <span class="punct">--</span><span class="ident">readline</span> <span class="punct">-</span><span class="ident">r</span> <span class="ident">irb</span><span class="punct">/</span><span class="ident">completion</span></code>.</p>
-
-
-	<p>And for Europeans, you&#8217;ll need <a href="http://whytheluckystiff.net/ruby/dist/Input.euro">this.</a> Save it as <strong>.inputrc</strong> and place it in your home directory.  (Your personal directory which contains your Desktop and My Documents folders.)</p>
-        <h1>sidebar!</h1>
-        </div>
-
-    
-    
-
         <h3>Tab Completion</h3>
 
 
-	<p>One feature of Irb which is rarely mentioned is its beneficial tab completion.  And it&#8217;s a bit of a taboo topic at the moment, since getting it to work on Windows is a slight horror. (No, don&#8217;t be afraid.  All at once now, look to your right.)</p>
-
-
-	<p>If you&#8217;re on Linux or FreeBSD, the tab completion should work right off.  And if you&#8217;re using <span class="caps">OS X</span>, you should be sure you&#8217;re upgrade to the latest 1.8 and when run Irb, use:</p>
-
+	<p>One feature of Irb which is rarely mentioned is its beneficial tab completion.</p>
 
 <div class='example'><pre class="text"> irb --readline -r irb/completion
 </pre></div> 
