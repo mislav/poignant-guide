@@ -1364,6 +1364,7 @@ Answer: Yes.</p>
      <span class="ident">args</span><span class="punct">.</span><span class="ident">each</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">say</span><span class="punct">|</span> <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">  </span><span class="punct">&quot;</span> <span class="punct">+</span> <span class="ident">say</span> <span class="punct">}</span>
      <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">And she loves every second of it.</span><span class="punct">&quot;</span> 
      <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">(I think she thinks you're poetic.)</span><span class="punct">&quot;</span> 
+   <span class="keyword">end</span>
  <span class="keyword">end</span></code></pre></div>
 
 	<p>When you call the method <code><span class="ident">deirdre</span></code> above, I&#8217;m sure you know what will happen.  Deirdre will love every second of it, you and your dazzling poetry.</p>
@@ -1961,11 +1962,11 @@ Answer: Yes.</p>
 
 
 <div class='example'><pre><code> <span class="ident">m</span> <span class="punct">=</span> <span class="punct">&quot;</span><span class="string">bats!</span><span class="punct">&quot;</span> 
- <span class="ident">eval</span> <span class="punct">%{</span><span class="string">
+ <span class="ident">eval</span> <span class="punct">%(</span><span class="string">
    def <span class="expr">#{ m }</span>
      puts &quot;{&quot; * 100
    end
- </span><span class="punct">}</span></code></pre></div>
+ </span><span class="punct">)</span></code></pre></div>
 
 	<p>Just like a double-quoted string, you can use the string interpolation lilypads inside.</p>
 
