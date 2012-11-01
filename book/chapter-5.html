@@ -229,7 +229,7 @@
  <span class="ident">each</span> <span class="keyword">do</span> <span class="punct">|</span><span class="ident">verb</span><span class="punct">|</span>
    <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">Dr. Cham </span><span class="punct">&quot;</span> <span class="punct">+</span> <span class="ident">verb</span> <span class="punct">+</span> <span class="punct">&quot;</span><span class="string"> his niece Hannah.</span><span class="punct">&quot;</span> 
  <span class="keyword">end</span>
- <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">Yes, Dr. Cham </span><span class="punct">&quot;</span> <span class="punct">+</span> <span class="ident">verb</span> <span class="punct">+</span> <span class="punct">&quot;</span><span class="string"> his niece Hannah.</span><span class="punct">&quot;</span></code></pre></div>
+ <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">Finally, Dr. Cham </span><span class="punct">&quot;</span> <span class="punct">+</span> <span class="ident">verb</span> <span class="punct">+</span> <span class="punct">&quot;</span><span class="string"> his niece Hannah.</span><span class="punct">&quot;</span></code></pre></div>
 
 	<p>The block <em>iterates</em> (spins, cycles) through each of the Doctor&#8217;s actions.  The <code><span class="ident">verb</span></code> variable changes with each pass.  In one pass, he&#8217;s sedating.  In the next, he&#8217;s powdering.  Then, he&#8217;s electrocuting.</p>
 
@@ -240,13 +240,12 @@
 <div class='example'><pre class="result"> Dr. Cham sedated his niece Hannah.
  Dr. Cham sprinkled his niece Hannah.
  Dr. Cham electrocuted his niece Hannah.
- Yes, Dr. Cham electrocuted his niece Hannah.
+ Finally, Dr. Cham rescued his niece Hannah.
 </pre></div>
 
-	<p>Blocks are allowed to see variables in the vicinity.  The block noticed that the <code><span class="ident">verb</span></code> variable existed and it overwrote its contents as it went along.  When the block completed and its tiny life  ended, the <code><span class="ident">verb</span></code> variable came out a changed creature.</p>
+	<p>Blocks are allowed to see variables in the vicinity.  But this block has its own <code><span class="ident">verb</span></code> variable which is updated each cycle.  When the block completed and its tiny life  ended, the outer <code><span class="ident">verb</span></code> stayed the same as it were before.</p>
 
-
-	<p>If a block uses a variable which hasn&#8217;t been used previously, though, then that variable vanishes at the end of the block.  The block&#8217;s <strong>scope</strong> closes and the variable goes with it.  Say that <code><span class="ident">verb</span></code> wasn&#8217;t used before the block.</p>
+	<p>This is the nature of local variables.  When its <strong>scope</strong> closes, the variable goes away with it.  Say that <code><span class="ident">verb</span></code> wasn&#8217;t used before the block.</p>
 
 
 <div class='example'><pre><code> <span class="punct">['</span><span class="string">sedated</span><span class="punct">',</span> <span class="punct">'</span><span class="string">powdered</span><span class="punct">',</span> <span class="punct">'</span><span class="string">electrocuted</span><span class="punct">'].</span>
@@ -255,7 +254,7 @@
  <span class="keyword">end</span>
  <span class="ident">puts</span> <span class="punct">&quot;</span><span class="string">Yes, Dr. Cham </span><span class="punct">&quot;</span> <span class="punct">+</span> <span class="ident">verb</span> <span class="punct">+</span> <span class="punct">&quot;</span><span class="string"> his niece Hannah.</span><span class="punct">&quot;</span></code></pre></div>
 
-	<p>Pulls an error: <code><span class="ident">undefined</span> <span class="ident">local</span> <span class="ident">variable</span> <span class="keyword">or</span> <span class="ident">method</span> `<span class="ident">verb</span><span class="punct">'</span><span class="string"></span></code>.  Poof.</p>
+	<p>Pulls an error: <code><span class="ident">undefined</span> <span class="ident">local</span> <span class="ident">variable</span> <span class="keyword">or</span> <span class="ident">method</span> `<span class="ident">verb</span><span class="punct">'</span><span class="string"></span></code>.  Poof.  The inner variable won't leak outside its scope.</p>
 
 
 	<p>It must be something difficult, even for a great scientist, to carry away the corpse of a young girl whose dress is still starched and embroidered, but whose mouth is darkly clotted purple at the corners.   In Dr. Cham&#8217;s journal, he writes that he was tormented by her ghost, which glistened gold and scorched lace.  His delusions grew and he ran from hellhounds and massive vengeful, angelic hands.</p>
