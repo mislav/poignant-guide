@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>why’s (poignant) guide to ruby :: {{ page.date | date: "%-d" }}. {{ page.title | escape }}</title>
+    <link rel="stylesheet" type="text/css" href="../guide.css">
+</head>
+<body class="chapter">
+
+<div id="banner">
+   <div class="pager">
+     <a class="pagebar" href="{% if page.previous %}{{ page.previous.url | split:"/" | last }}{% else %}../{% endif %}">previous</a> |
+     <a class="pagebar" href="{% if page.next %}{{ page.next.url | split:"/" | last }}{% else %}./{% endif %}">next</a>
+   </div>
+   <div class="title">
+   <img src="../images/2006.chaptertitle.png" alt="why's (poignant) guide to ruby" />
+   </div>
+</div>
+
+<div id="container">
+  <div class="page">
+    <div class="pageLinks">
+      <a class="pagebar" href="./">Contents</a>
+    </div>
+    <div class="pageTitle">
+      <h3>{{ page.date | date: "%-d" }}.</h3>
+      <h1>{{ page.title }}</h1>
+      <p><img src="../images/chapter.poignant.guide-{{ page.date | date: "%-d" }}.jpg" alt="" /></p>
+    </div>
+
+    <div class="content">
+      {{ content }}
+
+      <p style="text-align:right;">
+      <a href="{% if page.next %}{{ page.next.url | split:"/" | last }}{% else %}./{% endif %}">Turn page.</a>
+      </p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

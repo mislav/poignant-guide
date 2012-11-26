@@ -84,11 +84,13 @@ table td {
     padding-right: 8px;
 }
 pre {
-    background-color: #FFFEF9;
     padding: 5px;
     margin: 0px;
     color: #936;
     line-height: 170%;
+}
+.content > pre, .content > .highlight > pre {
+  margin: 0 75px;
 }
 #sidepane {
     float: left;
@@ -209,7 +211,9 @@ p#terms {
     line-height: 120%;
     padding: 10px 4px;
 }
-.sidebar h1 {
+.sidebar:before, .sidebar:after {
+    content: "Sidebar!";
+    display: block;
     background-color: #7A8A9A;
     color: #EFF9ED;
     text-align: center;
@@ -333,29 +337,29 @@ body.expansion #banner a:hover {
 @page { size 8.5in 11in; margin: 0cm; }
 
 /* syntax highlighting */
-.keyword {
-    font-weight: bold;
+.highlight .k { /* keyword */
+  font-weight: bold;
 }
-.comment {
-    color: #555;
+.highlight .c1 { /* comment */
+  color: #555;
 }
-.string, .number {
-    color: #396;
+.highlight .s1, .highlight .s2, .highlight .mi { /* string, number */
+  color: #396;
 }
-.string {
-    background-color: #E9F5F5;
+.highlight .s1, .highlight .s2 { /* string */
+  background-color: #E9F5F5;
 }
-.regex {
-    background-color: #E9F1F5;
-    color: #435;
+.highlight .sr { /* regex */
+  background-color: #E9F1F5;
+  color: #435;
 }
-.ident {
-    color: #369;
+.highlight .n { /* identifier */
+  color: #369;
 }
-.symbol {
-    color: #000;
+.highlight .ss { /* symbol */
+  color: #000;
 }
-.constant, .class {
-    color: #630;
-    font-weight: bold;
+.highlight .nc { /* constant */
+  color: #630;
+  font-weight: bold;
 }
