@@ -76,6 +76,7 @@ body {
   padding: 5px 10px;
   background-color: #EFC2B8;
   background-color: rgba(242, 220, 216, .9);
+  *background-color: #EFC2B8;
 }
 
 /* syntax highlighting */
