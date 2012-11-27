@@ -1,14 +1,39 @@
-On August 19, 2009 why the lucky stiff removed every trace of his work from the
-Web, including his Poignant Guide to Ruby.
+On August 19, 2009 Why the Lucky Stiff removed every trace of his work from the
+Web, including this book: the Poignant Guide to Ruby.
 
-I've salvaged what I could, cleaned it up a bit and saved here. He released the
-book under the [Attribution-ShareAlike license][cc].
+I've salvaged the book from the Internet archive and re-published it. The
+original work was under the [Attribution-ShareAlike license][cc].
+
+Since then I have:
+
+1. Changed code examples to never generate syntax warnings
+2. Updated code examples to match Ruby 1.9 behavior
+3. Applied grammar/spelling corrections
+4. Updated outdated Ruby installation instructions
+5. Converted the HTML book into Markdown (\_why originally authored it in Textile)
+6. Made a build system powered by Jekyll
+7. Enabled syntax highlighted code where previously there wasn't
+
+## Build system
+
+Run:
+
+1. `script/doctor` to verify that you have the necessary dependencies
+2. `script/jekyll` to build the site into "public" directory
+3. `script/guard`  to start a process that auto-rebuilds and live-reloads
+
+The individual chapters are in `_posts/` directory.
+
+## Notes
 
 There's a [Japanese translation of the book][jp], although I can't tell how up
 to date it is.
 
 The original soundtrack and PDF edition are also available in
 [the download section][dl] on GitHub.
+
+Chapter 8: Heaven's Harp was never recovered. I suspect \_why started drawing it,
+but never finished or published.
 
 
   [cc]: http://creativecommons.org/licenses/by-sa/2.5/
