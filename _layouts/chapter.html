@@ -19,7 +19,9 @@ layout: book
     <div class="pageTitle">
       <h3>{{ page.date | date: "%-d" }}.</h3>
       <h1>{{ page.title }}</h1>
-      <p><img src="../images/chapter.poignant.guide-{{ page.date | date: "%-d" }}.jpg" alt="" /></p>
+      <p>{% unless page.title ==  "When You Wish Upon a Beard" %}
+        <img src="../images/chapter.poignant.guide-{{ page.date | date: "%-d" }}.jpg" alt="">
+      {% endunless %}</p>
     </div>
 
     <div class="content">
