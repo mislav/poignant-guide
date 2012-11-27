@@ -78,10 +78,12 @@ blockquote code {
     margin: 5px 40px 5px 22px;
 }
 table {
-    padding: 5px 20px;
+    margin: 5px 20px;
+    border-collapse: collapse;
 }
 table td {
-    padding-right: 8px;
+    padding: 4px 8px 4px 0;
+    border-bottom: 1px solid #ddd;
 }
 pre {
     padding: 5px;
