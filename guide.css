@@ -150,12 +150,6 @@ pre {
 	padding: 0 10px 0 40px;
 	line-height: 120%;
 }
-#cornerkick {
-	z-index: 1;
-	position: absolute;
-	top: 1800px;
-	right: 0px;
-}
 .toc {
     padding-left: 30px;
 }
@@ -177,6 +171,8 @@ pre {
 #main {
     padding-top: 20px;
 	margin-left: 410px;
+  padding-bottom: 400px;
+  background: transparent url(images/2006.corner.jpg) no-repeat right bottom;
 }
 #main li {
     font-size: 1.2em;
