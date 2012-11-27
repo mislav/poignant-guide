@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -26,14 +28,14 @@
 
         <p><span>In this game, you are a rabbit who is going to die.  A dragon is going to do it.  Deep in Dwemthy's Array.</span></p>
 
-<pre>
+{% highlight ruby %}
 class Dragon < Creature
   life 1340     # tough scales
   strength 451  # bristling veins
   charisma 1020 # toothy smile
   weapon 939    # fire breath
 end
-</pre>
+{% endhighlight %}
 
     <p><span>More on this code in a moment.</span></p>
 
@@ -68,7 +70,7 @@ end
 
     <p><span>Tread carefully &#0151; here is the code for DWEMTHY'S ARRAY!!</span></p>
 
-    <pre>
+{% highlight ruby %}
 # The guts of life force within Dwemthy's Array
 class Creature
 
@@ -80,7 +82,7 @@ class Creature
     return @traits if arr.empty?
 
     # 1. Set up accessors for each variable
-    attr_accessor *arr
+    attr_accessor( *arr )
 
     # 2. Add a new class method to for each trait.
     arr.each do |a|
@@ -113,7 +115,7 @@ class Creature
     if p_up % 9 == 7
       @life += p_up / 4
       puts "[#{ self.class } magick powers up #{ p_up }!]"
-    end 
+    end
     @life -= damage
     puts "[#{ self.class } has died.]" if @life <= 0
   end
@@ -157,7 +159,7 @@ class DwemthysArray < Array
     answer || 0
   end
 end
-</pre>
+{% endhighlight %}
 
     <p><span>To play, start <code>irb</code>.  Cut and paste the above code into irb.  (You
         may also save the above code in a file called dwemthy.rb.  Then, load with: 
@@ -169,7 +171,7 @@ end
         Dwemthy Paradigms explicitly denote the code &#0151; and the altogether character &#0151; inscribed
         below.</span></p>
 
-    <pre>
+{% highlight ruby %}
 class Rabbit < Creature
   traits :bombs
 
@@ -205,7 +207,7 @@ class Rabbit < Creature
     fight( enemy, 86 )
   end
 end
-</pre>
+{% endhighlight %}
 
     <p><span>You have four weapons.  I shan't describe them further.</span></p>
 
@@ -218,32 +220,32 @@ end
     <p><span>For now, let's lurk covertly through the grotto of sausage smells.  And 
         defeat the ScubaArgentine.</span></p>
 
-    <pre>
+{% highlight ruby %}
 class ScubaArgentine < Creature
   life 46
   strength 35
   charisma 91
   weapon 2
 end
-</pre>
+{% endhighlight %}
 
     <p><span>To get the fight started, make sure you've created one of you and one of the
         ScubaArgentine</span></p>
 
-    <pre>
+{% highlight ruby %}
 r = Rabbit.new
 s = ScubaArgentine.new
-</pre>
+{% endhighlight %}
 
     <p><span>Now use the little boomerang!</span></p>
 
-    <pre>
+{% highlight rb %}
 >> r ^ s
 [You hit with 2 points of damage!]
 #<ScubaArgentine:0x808c864 @charisma=91, @strength=35, @life=44, @weapon=2>
 [Your enemy hit with 28 points of damage!]
 [Rabbit has died.]
-</pre>
+{% endhighlight %}
 
     <p><span>For crying out loud!!  Our sample rabbit died!!</span></p>
 
@@ -258,7 +260,7 @@ s = ScubaArgentine.new
 
     <p><span>You have six foes.</span></p>
 
-    <pre>
+{% highlight ruby %}
 class IndustrialRaverMonkey < Creature
   life 46
   strength 35
@@ -300,7 +302,7 @@ class Dragon < Creature
   charisma 1020 # toothy smile
   weapon 939    # fire breath
 end
-</pre>
+{% endhighlight %}
 
     <p><span>These are the living, breathing monstrosities of Dwemthy's Array.  I don't
         know how they got there.  No one knows.  Actually, I'm guessing the IntrepidDecomposedCyclist
@@ -311,14 +313,14 @@ end
 
    <p><span>As Dwemthy's Array gets deeper, the challenge becomes more difficult.</span></p>
 
-   <pre>
+{% highlight ruby %}
 dwarr = DwemthysArray[IndustrialRaverMonkey.new,
                       DwarvenAngel.new,
                       AssistantViceTentacleAndOmbudsman.new,
                       TeethDeer.new,
                       IntrepidDecomposedCyclist.new,
                       Dragon.new]
-</pre>
+{% endhighlight %}
 
     <p><span>Fight the Array and the monsters will appear as you go.  Godspeed
         and may you return with harrowing tales and nary an angel talon piercing

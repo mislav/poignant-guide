@@ -69,11 +69,37 @@ body {
     text-align: center;
     line-height: 90%;
 }
-.writ span {
+.writ p span {
     background-color: #efe;
 }
 .writ pre {
-    background-color: #034;
-    color: white;
-    padding: 5px 8px;
+  padding: 5px 10px;
+  background-color: #EFC2B8;
+  background-color: rgba(242, 220, 216, .9);
+}
+
+/* syntax highlighting */
+.highlight .k { /* keyword */
+  font-weight: bold;
+}
+.highlight .c1 { /* comment */
+  color: #555;
+}
+.highlight .s1, .highlight .s2, .highlight .mi { /* string, number */
+  color: #396;
+}
+.highlight .s1, .highlight .s2 { /* string */
+}
+.highlight .sr { /* regex */
+  color: #435;
+}
+.highlight .n { /* identifier */
+  color: #369;
+}
+.highlight .ss { /* symbol */
+  color: #000;
+}
+.highlight .nc { /* constant */
+  color: #630;
+  font-weight: bold;
 }
