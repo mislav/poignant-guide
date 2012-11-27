@@ -2,6 +2,17 @@
 title: "A Quick (and Hopefully Painless) Ride Through Ruby (with Cartoon Foxes)"
 permalink: book/chapter-3.html
 layout: chapter
+sections:
+- - section1
+  - Language and I MEAN Language
+- - section2
+  - The Parts of Speech
+- - section3
+  - If I Haven't Treated You Like a Child Enough Already
+- - section4
+  - An Example to Help You Grow Up
+- - section5
+  - And So, The Quick Trip Came To An Eased, Cushioned Halt
 ---
 
 ![The foxes show up.](../images/the.foxes-1.png "The foxes show up.")

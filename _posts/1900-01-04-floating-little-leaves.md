@@ -2,6 +2,15 @@
 title: "Floating Little Leaves of Code"
 permalink: book/chapter-4.html
 layout: chapter
+sections:
+- - section1
+  - The Leaf as a Status Symbol in Ambrose
+- - section2
+  - Small and Nearly Worthless
+- - section3
+  - Chaining Delusions Together
+- - section4
+  - The Miracle of Blocks
 ---
 
 ![Impossibly deep in the caverns of Ambrose... the Elf with a pet

@@ -1,123 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+---
+---
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>why&#8217;s (poignant) guide to ruby</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="../guide.css" />
+    <meta charset="utf-8">
+    <title>why’s (poignant) guide to ruby</title>
+    <link rel="stylesheet" type="text/css" href="../guide.css">
 </head>
 <body>
 
 <div id="wrapper">
 
-	<div id="sidepane">
-        <div id="bookplate"><a href="chapter-1.html"><img src="../images/2006.cover.jpg" alt="why's (poignant) guide to ruby" /></a></div>
-        <div id="bookseal"><a href="chapter-1.html"><img src="../images/2006.seal.jpg" alt="Open the book" /></a></div>
-        <div id="bookcontents">
-        <h3>~ Contents ~</h3>
-        <ol>
-            
-            <li><b><a href="chapter-1.html">About this Book</a></b>
-            </li>
-            <li><b><a href="chapter-2.html">Kon&#8217;nichi wa, Ruby</a></b>
-            
-                <ol>
-                
-                    <li><a href="chapter-2.html#section1">Opening This Book</a></li>
-                
-                    <li><a href="chapter-2.html#section2">The Dog Story</a></li>
-                
-                    <li><a href="chapter-2.html#section3">The Red Sun Rises</a></li>
-                
-                    <li><a href="chapter-2.html#section4">How Books Start</a></li>
-                
-                </ol>
-            </li>
-            <li><b><a href="chapter-3.html">A Quick (and Hopefully Painless) Ride Through Ruby (with Cartoon Foxes)</a></b>
-            
-                <ol>
-                
-                    <li><a href="chapter-3.html#section1">Language and <span class="caps">I MEAN</span> Language</a></li>
-                
-                    <li><a href="chapter-3.html#section2">The Parts of Speech</a></li>
-                
-                    <li><a href="chapter-3.html#section3">If I Haven&#8217;t Treated You Like a Child Enough Already</a></li>
-                
-                    <li><a href="chapter-3.html#section4">An Example to Help You Grow Up</a></li>
-                
-                    <li><a href="chapter-3.html#section5">And So, The Quick Trip Came To An Eased, Cushioned Halt</a></li>
-                
-                </ol>
-            </li>
-            <li><b><a href="chapter-4.html">Floating Little Leaves of Code</a></b>
-            
-                <ol>
-                
-                    <li><a href="chapter-4.html#section1">The Leaf as a Status Symbol in Ambrose</a></li>
-                
-                    <li><a href="chapter-4.html#section2">Small and Nearly Worthless</a></li>
-                
-                    <li><a href="chapter-4.html#section3">Chaining Delusions Together</a></li>
-                
-                    <li><a href="chapter-4.html#section4">The Miracle of Blocks</a></li>
-                
-                </ol>
-            </li>
-            <li><b><a href="chapter-5.html">Them What Make the Rules and Them What Live the Dream</a></b>
-            
-                <ol>
-                
-                    <li><a href="chapter-5.html#section1">This One&#8217;s For the Disenfranchised</a></li>
-                
-                    <li><a href="chapter-5.html#section2">A Castle Has Its Computers</a></li>
-                
-                    <li><a href="chapter-5.html#section3">The Continued Story of My Daughter&#8217;s Organ Instructor</a></li>
-                
-                    <li><a href="chapter-5.html#section4">The Goat Wants to Watch a Whole Film</a></li>
-                
-                    <li><a href="chapter-5.html#section5">The Theft of the Lottery Captain</a></li>
-                
-                    <li><a href="chapter-5.html#section6">Them What Make the Rules</a></li>
-                
-                    <li><a href="chapter-5.html#section7">Them What Live the Dream</a></li>
-                
-                </ol>
-            </li>
-            <li><b><a href="chapter-6.html">Downtown</a></b>
-            
-                <ol>
-                
-                    <li><a href="chapter-6.html#section1">If I Were Looking For a Vehicle</a></li>
-                
-                    <li><a href="chapter-6.html#section2">Meanwhile, The Porcupine Stops To Fill-Up</a></li>
-                
-                    <li><a href="chapter-6.html#section3">A Sponsored Dragon-Slaying</a></li>
-                
-                    <li><a href="chapter-6.html#section4">So, Let&#8217;s Be Clear: The Porcupine Is Now To The Sea</a></li>
-                
-                    <li><a href="chapter-6.html#section5">Walking, Walking, Walking, Walking and So Forth</a></li>
-                
-                    <li><a href="chapter-6.html#section6">Just Stopping To Assure You That the Porcupine Hasn&#8217;t Budged</a></li>
-                
-                    <li><a href="chapter-6.html#section7">I&#8217;m Out</a></li>
-                
-                </ol>
-            </li>
-            <li><b><a href="chapter-7.html">When You Wish Upon a Beard</a></b>
-            </li>
-        </ol>
-        <h4>+ Expansion Paks +</h4>
-        <ol>
-            
-            <li><b><a href="expansion-pak-1.html">The Tiger&#8217;s Vest (with a Basic Introduction to Irb)</a></b></li>
-            
-        </ol>
+  <div id="sidepane">
+    <div id="bookplate"><a href="chapter-1.html"><img src="../images/2006.cover.jpg" alt="why's (poignant) guide to ruby" /></a></div>
+    <div id="bookseal"><a href="chapter-1.html"><img src="../images/2006.seal.jpg" alt="Open the book" /></a></div>
+    <div id="bookcontents">
+      <h3>~ Contents ~</h3>
+      <ol class=toc>
+        {% for chapter in site.posts reversed %}
+        <li>
+          <a href="{{ chapter.url | split:"/" | last }}">{{ chapter.title | escape }}</a>
+          {% if chapter.sections %}
+          <ol>{% for section in chapter.sections %}
+            <li><a href="{{ chapter.url | split:"/" | last }}#{{ section.first }}">{{ section.last | escape }}</a></li>
+          {% endfor %}</ol>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+      <h4>+ Expansion Paks +</h4>
+      <ol class=toc>
+        <li><a href="expansion-pak-1.html">The Tiger's Vest (with a Basic Introduction to Irb)</a></li>
+      </ol>
 
-        <h4>+ See Also +</h4>
-        <ol>
-            <li><b><a href="../dwemthy/">Dwemthy's Array</a></b>: the official site for the <i>(Poignant) Guide</i>'s own MINI_ADVENTURE.</li>
-            <li><b><a href="http://preeventualist.org/">The Pre-eventualist</a></b></li>
-        </ol>
-        </div>
+      <h4>+ See Also +</h4>
+      <ol class=toc>
+        <li><a href="../dwemthy/">Dwemthy's Array</a>: the official site for the <i>(Poignant) Guide</i>'s own MINI_ADVENTURE.</li>
+        <li><a href="http://preeventualist.org/">The Pre-eventualist</a></li>
+      </ol>
     </div>
     <div id="main">
     	<div class="foxbox">

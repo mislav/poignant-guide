@@ -151,15 +151,23 @@ pre {
 	line-height: 120%;
 }
 .toc {
-    padding-left: 30px;
+    padding-left: 2em;
 }
-.toc ul {
+.toc ol {
     margin: 0px;
-    padding: 0px;
+    padding-left: 1.5em;
 }
 .toc li {
-    font-size: .8em;
-    line-height: 140%;
+    line-height: 1.2;
+}
+.toc > li {
+  margin-top: .5em;
+}
+.toc ol > li {
+  margin-top: .2em;
+}
+.toc > li > a {
+  font-weight: bold;
 }
 .content li {
     line-height: 170%;

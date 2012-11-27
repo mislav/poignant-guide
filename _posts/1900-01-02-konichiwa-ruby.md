@@ -2,6 +2,15 @@
 title: "Kon’nichi wa, Ruby"
 permalink: book/chapter-2.html
 layout: chapter
+sections:
+- - section1
+  - Opening This Book
+- - section2
+  - The Dog Story
+- - section3
+  - The Red Sun Rises
+- - section4
+  - How Books Start
 ---
 
 <a name="section1"></a>
