@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+      {{ page.title | escape }}
+      {% if page.title %}::{% endif %}
+      {{ site.title }}
+    </title>
+    <link rel="stylesheet" type="text/css" href="../guide.css">
+</head>
+<body class="{{ page.type }}">
+
+{{ content }}
+
+</body>
+</html>

@@ -8,3 +8,5 @@ exclude:
   - script
   - Guardfile
   - README.markdown
+
+title: "why's (poignant) guide to ruby"

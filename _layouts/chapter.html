@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>why’s (poignant) guide to ruby :: {{ page.date | date: "%-d" }}. {{ page.title | escape }}</title>
-    <link rel="stylesheet" type="text/css" href="../guide.css">
-</head>
-<body class="chapter">
-
+---
+layout: book
+---
 <div id="banner">
    <div class="pager">
      <a class="pagebar" href="{% if page.previous %}{{ page.previous.url | split:"/" | last }}{% else %}../{% endif %}">previous</a> |
      <a class="pagebar" href="{% if page.next %}{{ page.next.url | split:"/" | last }}{% else %}./{% endif %}">next</a>
    </div>
    <div class="title">
-   <img src="../images/2006.chaptertitle.png" alt="why's (poignant) guide to ruby" />
+     <img src="../images/2006.chaptertitle.png" alt="{{ site.title }}" />
    </div>
 </div>
 
@@ -35,8 +29,5 @@
       <a href="{% if page.next %}{{ page.next.url | split:"/" | last }}{% else %}./{% endif %}">Turn page.</a>
       </p>
     </div>
+  </div>
 </div>
-
-</div>
-</body>
-</html>

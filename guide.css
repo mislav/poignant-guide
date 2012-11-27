@@ -6,10 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-body.chapter {
-    text-align: center;
-    padding-bottom: 36px;
-}
 body.expansion {
     background: url(images/2006.pakback.png);
     padding-bottom: 36px;
