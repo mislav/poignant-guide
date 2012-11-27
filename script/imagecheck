@@ -1,0 +1,26 @@
+#!/bin/sh
+# Check if referenced images are present
+
+images="$(
+  { ruby -rnokogiri -e '
+      Nokogiri(ARGF).css("img[src]").each { |node|
+        link = node["src"]
+        next if link.include? "://"
+        puts link
+      }' $(find public -name '*.html' | grep -v 404) | sort -u
+
+    find public -name '*.css' | xargs grep "images/" | cut -d '(' -f 2 | cut -d ')' -f 1
+  } | sort -u
+)"
+
+unset missing
+
+for img in $images; do
+  img="${img#../}"
+  if [[ ! -e $img ]]; then
+    echo missing $img
+    missing=1
+  fi
+done
+
+[[ -z $missing ]] || exit 1
