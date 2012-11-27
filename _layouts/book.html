@@ -7,7 +7,7 @@
       {% if page.title %}::{% endif %}
       {{ site.title }}
     </title>
-    <link rel="stylesheet" type="text/css" href="../guide.css">
+    <link rel="stylesheet" type="text/css" href="{% if page.stylesheet %}{{ page.stylesheet }}{% else %}../guide.css{% endif %}">
 </head>
 <body class="{{ page.type }}">
 
