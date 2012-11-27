@@ -67,12 +67,6 @@ blockquote code {
     padding: 5px;
     font-size: .9em;
 }
-.example {
-    border: solid 1px #C9B;
-    background-color: #FFF5F9;
-    padding: 3px;
-    margin: 5px 40px 5px 22px;
-}
 table {
     margin: 5px 20px;
     border-collapse: collapse;
@@ -87,7 +81,7 @@ pre {
     color: #936;
     line-height: 170%;
 }
-.content > pre, .content > .highlight > pre {
+.content > pre {
   margin: 0 75px;
 }
 #sidepane {
@@ -339,6 +333,19 @@ body.expansion #banner a:hover {
 @page { size 8.5in 11in; margin: 0cm; }
 
 /* syntax highlighting */
+.highlight {
+  border: solid 1px #C9B;
+  background-color: #FFF5F9;
+  padding: 3px;
+  margin: 5px 40px 5px 22px;
+}
+.highlight > pre {
+  background-color: #FFFEF9;
+  padding: 5px 10px;
+  margin: 0px;
+  color: #936;
+  line-height: 170%;
+}
 .highlight .k { /* keyword */
   font-weight: bold;
 }
