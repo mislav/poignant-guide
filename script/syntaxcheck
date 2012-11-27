@@ -1,12 +1,12 @@
 #!/bin/sh
-ruby -rnokogiri -e '
-  Nokogiri(ARGF).css("pre, p > code").each { |node|
+# Check ruby syntax in code examples
+exec ruby -rnokogiri -e '
+  Nokogiri(ARGF).css("pre > code.rb").each { |node|
     code = node.text
-    next if code =~ /^ *(irb|ri|>>|\.\.|\w+Error:)/ or code =~ /\A\s*(\w+|[^\w\s]+)\s*\Z/ or node.css("span").empty?
     File.popen("ruby -wc >/dev/null", "w"){|f| f << code }
     unless $?.success?
       puts "------ " + node.path
       puts code
       puts "======"
     end
-  }' book/*.html | grep -v "warning: possibly useless use"
+  }' public/book/*.html public/dwemthy/index.html
