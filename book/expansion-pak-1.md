@@ -273,7 +273,7 @@ Though instance methods use a pound key rather than a dot. (Since the dot can
 mean class **or** instance methods.) I mean: `ri Class#method`.
 
 The full spread of classes, a full list from the Very Top down to the Earth’s
-core, can be achieved with `ri -c`.
+core, can be achieved with `ri -l`.
 
 And beyond text, you can make <span class="caps">HTML</span>:
 
