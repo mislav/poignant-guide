@@ -392,7 +392,7 @@ end
 
 In the above, how is the method’s answer being used?
 
-Let’s take the statement `nil  true`. This will fail every time. No match. When
+Let’s take the statement `nil.==(true)`. This will fail every time. No match. When
 there’s no match, the double equals method answers with `false`. A shake of the
 head. That answer is given to `if`, who can’t accept a `false`. The `print`
 never sees realization.
