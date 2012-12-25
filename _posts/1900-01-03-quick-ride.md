@@ -863,7 +863,7 @@ that string. See how the basic dot-method pattern happens in a chain. The next
 chapter will explore all these sorts of patterns in Ruby. It’ll be good fun.
 
 So, what does this code do? It prints the <span class="caps">HTML</span> for the
-Ruby home page to the screen. Using an web-enabled bus driver.
+Ruby home page to the screen using an web-enabled bus driver.
 
 <a name="section5"></a>
 
