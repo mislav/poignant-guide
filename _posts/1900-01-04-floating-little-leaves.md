@@ -43,11 +43,11 @@ Yeah, that’s not the way I remember it. This Elf was paging me constantly. Whe
 I refused to call him back, he somehow left a message on my pager. Meaning: it
 beeped a couple times and then printed out a small slip of paper. The slip said
 something to the effect of, “Get down here quick!” and also, “We’ve got to rid
-the earth of this scourge of enterpreneurial caterpillars, these twisted insect
+the earth of this scourge of entrepreneurial caterpillars, these twisted insect
 vikings are suffocating my blue crystals!”
 
 Lately, the exchange rate has settled down between leaves and crystals. One
-treegrown note is worth five crystals. So the basic money situation looks like
+tree-grown note is worth five crystals. So the basic money situation looks like
 this:
 
 {% highlight rb %}
@@ -261,7 +261,7 @@ similar way, `nil` has a slightly sour note that it whistles.
 
 Generally speaking, **everything in Ruby has a positive charge to it**. This
 spark flows through strings, numbers, regexps, all of it. Only two keywords wear
-a shady cloak: `nil` and `false` draggin us down.
+a shady cloak: `nil` and `false` draggin’ us down.
 
 You can **test that charge** with an `if` keyword. It looks very much like the
 `do` blocks we saw in the last chapter, in that both end with an `end`.
@@ -461,7 +461,7 @@ message. To the value: “Are you nil? Are you empty?”
 If `at_hotel` is empty, Ruby doesn’t have any idea if I’m in the hotel or not.
 So `if` answers with the “No clue” string. In order to handle the `true` or
 `false` possibilities, the `elsif` keyword is used. While you can have only one
-`if` and one `else`, you can fill the inbetween with an exorbitant number of
+`if` and one `else`, you can fill the in-between with an exorbitant number of
 `elsif` keywords. Each `elsif` acts as **a further `if` test**. Checking for a
 positive charge.
 
@@ -678,7 +678,7 @@ dangerous word matched with its code word, handing each pair to the `gsub!`
 method for the actual replacement.
 
 In Ruby, `gsub` is short for _global substitution_. The method is used to search
-and replace. Here, we want to find all the occurences of a dangerous word and
+and replace. Here, we want to find all the occurrences of a dangerous word and
 replace with its safe code word. With `gsub`, you provide the **word to find as
 the first argument**, then the **word to put in its place as the second
 argument**.

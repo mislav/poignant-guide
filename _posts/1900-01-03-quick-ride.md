@@ -17,7 +17,7 @@ sections:
 
 ![The foxes show up.](../images/the.foxes-1.png "The foxes show up.")
 
-Yeah, these are the two. My asthma’s kickin in so I’ve got to go take a puff of
+Yeah, these are the two. My asthma’s kickin’ in so I’ve got to go take a puff of
 medicated air just now. Be with you in a moment.
 
 ![Foxes in boxes.](../images/the.foxes-2.png "Foxes in boxes.")
@@ -38,7 +38,7 @@ finally realize the gravity of their predicament.")
 
 My conscience won’t let me call Ruby a _computer_ language. That would imply
 that the language works primarily on the computer’s terms. That the language is
-designed to accomodate the computer, first and foremost. That therefore, we, the
+designed to accommodate the computer, first and foremost. That therefore, we, the
 coders, are foreigners, seeking citizenship in the computer’s locale. It’s the
 computer’s language and we are translators for the world.
 
@@ -148,7 +148,7 @@ farm of inky foxes.
 > **Sensible Hipster Standing on Curb in Urban Wilderness**: He calls himself
 > the lucky stiff.
 
-> (Pulls aside curtain to reveal grey corpse on a gurney.)
+> (Pulls aside curtain to reveal gray corpse on a gurney.)
 
 > **Hipster**: Some stiffs ain’t so lucky.
 
@@ -186,7 +186,7 @@ How about making fun of asthmatics directly?
 
 Adapt the book into a movie. And since, you know, I’m a character in this book,
 you could get someone like Alec Baldwin to play me. Someone who’s at a real
-lowpoint in his career.
+low point in his career.
 
 You could make it seem like I did tons of drugs. Like I was insane to work with.
 Like I kept firing people and locking them in the scooter room and making them
@@ -217,7 +217,7 @@ Now, I’ve got to thinking. See, and actually, Alec Baldwin did a decent
 voiceover in _The Royal Tenenbaums_. His career might be okay. You might not
 want to use him. He might not do it.
 
-Tell ya what. I’ll play the part. I’ve made a career out of lowpoints.
+Tell ya what. I’ll play the part. I’ve made a career out of low points.
 {% endcapture %}
 {{ sidebar | markdownify }}
 </aside></div>
@@ -301,7 +301,7 @@ quotes. Both single and double **quotes** are used to create strings.
 When you enclose characters in quotes, they are stored together as a single
 string.
 
-Think of a reporter who is jotting down the mouthnoises of a rambling celebrity.
+Think of a reporter who is jotting down the mouth noises of a rambling celebrity.
 “I’m a lot wiser,” says Avril Lavigne. “Now I know what the business is
 like—what you have to do and how to work it.”
 
@@ -443,7 +443,7 @@ Door::new( :oak )
 As seen above, the `new` class method is most often used to create things. In
 the above example, we’re asking Ruby to make a new oak door for us. Of course,
 Ruby has to have an understanding of how to make a door—as well as a wealth of
-timber, lumberjacks, and those long, wiggily, two-man saws.
+timber, lumberjacks, and those long, wiggly, two-man saws.
 
 ![Plenty of chunky bacon to go around.](../images/the.foxes-4e.png "Plenty of
 chunky bacon to go around.")
@@ -456,7 +456,7 @@ Variables which begin with a **dollar sign** are global.
 
 Most variables are rather temporary in nature. Some parts of your program are
 like little houses. You walk in and they have their own variables. In one house,
-you may have a `dad` that represents Archie, a travelling salesman and skeleton
+you may have a `dad` that represents Archie, a traveling salesman and skeleton
 collector. In another house, `dad` could represent Peter, a lion tamer with a
 great love for flannel. Each house has its own meaning for `dad`.
 
@@ -773,7 +773,7 @@ This caterpillar partakes of finer delicacies. An _array_ starts this example.
 In the array, three _strings_ `'toast'`, `'cheese'`, and `'wine'`. The whole
 array is trailed by a _method_ `each`.
 
-Inside of a _block_, the _block argument_ `food`, travelling down its little
+Inside of a _block_, the _block argument_ `food`, traveling down its little
 waterslide into the block. The _method_ `capitalize` then capitalizes the first
 letter of the block argument, which has become _variable_ `food`. This
 capitalized _string_ is passed to kernel _method_ `print`.
@@ -815,7 +815,7 @@ _string_ containing the path `'/en/LICENSE.txt'`. Now, notice that another
 method is chained onto `get`. The _method_ `body`. Then, the block closes with
 `end`.
 
-Doing okay? Just out of curiousity, can you guess what this example does?
+Doing okay? Just out of curiosity, can you guess what this example does?
 Hopefully, you’re seeing some patterns in Ruby. If not, just shake your head
 vigorously while you’ve got these examples in your mind. The code should break
 apart into manageable pieces.
@@ -833,8 +833,8 @@ http.get( '/en/LICENSE.txt' )
 We’re using Ruby to get a web page. You’ve probably used <span
 class="caps">HTTP</span> with your web browser. <span class="caps">HTTP</span>
 is the Hypertext Transfer Protocol. <span class="caps">HTTP</span> is used to
-transfer web pages across the internet. Conceptualize a bus driver that can
-drive across the internet and bring back web pages for us. On his hat are
+transfer web pages across the Internet. Conceptualize a bus driver that can
+drive across the Internet and bring back web pages for us. On his hat are
 stitched the letters <span class="caps">HTTP</span>.
 
 The variable `http` is that bus driver. The _method_ is a message to the bus

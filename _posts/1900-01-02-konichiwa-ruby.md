@@ -51,18 +51,18 @@ Anyone who’s written a book can tell you how easily an author is distracted by
 visions of grandeur. In my experience, I stop twice for each paragraph, and four
 times for each panel of a comic, just to envision the wealth and prosperity that
 this book will procure for my lifestyle. I fear that the writing of this book
-will halt altogether to make way for the armada of SUVs and luxury towne cars
+will halt altogether to make way for the armada of SUVs and luxury town cars
 that are blazing away in my head.
 
 Rather than stop my production of the (Poignant) Guide, I’ve reserved this space
 as a safety zone for pouring my empty and vain wishes.
 
-Today I was at this Italian restaraunt, Granado’s, and I was paying my bill.
+Today I was at this Italian restaurant, Granado’s, and I was paying my bill.
 Happened to notice (under glass) a bottle of balsamic vinegar going for $150.
 Fairly small. I could conceal it in my palm. Aged twenty-two years.
 
 I’ve spent a lot of time thinking about that bottle. It is often an accessory in
-some of these obsessive fantasies. In one fantasy, I walk into the restaraunt,
+some of these obsessive fantasies. In one fantasy, I walk into the restaurant,
 toss a stack of greenery on the counter and earnestly say to the cashier,
 “Quick! I have an important salad to make!”
 
@@ -73,9 +73,9 @@ Cold, hard cash, Mrs. Price.
 
 Soon, I will be expending hundreds for a block of myzithra cheese.
 
-My imaginations have now gone beyond posessions, though. Certainly, I have
-thought through my acquisition of grecian urns, motorcades, airlines, pyramids,
-dinosaur bones. Occassionally I’ll see wind-tossed cities on the news and I’ll
+My imaginations have now gone beyond possessions, though. Certainly, I have
+thought through my acquisition of Grecian urns, motorcades, airlines, pyramids,
+dinosaur bones. Occasionally I’ll see wind-tossed cities on the news and I’ll
 jot down on my shopping list: _Hurricane_.
 
 But, now I’m seeing a larger goal. Simply put: what if I amassed such a fortune
@@ -112,7 +112,7 @@ So try this first bit of poignancy on for size:
 
 One day I was walking down one of those busy roads covered with car dealerships
 (this was shortly after my wedding was called off) and I found an orphaned dog
-on the road. A wooly, black dog with greenish red eyes. I was kind of feeling
+on the road. A woolly, black dog with greenish red eyes. I was kind of feeling
 like an orphan myself, so I took a couple balloons that were tied to a pole at
 the dealership and I relocated them to the dog’s collar. Then, I decided he
 would be my dog. I named him Bigelow.
@@ -127,7 +127,7 @@ had previously only been lost once, he was now lost twice. I slowed my pace
 towards the life of Milkbones and an extra recliner. I had a dog for five
 minutes.
 
-Stupid Benedict Arnold of a dog. I sat on a city bench and threw pinecones at a
+Stupid Benedict Arnold of a dog. I sat on a city bench and threw pine cones at a
 statue of three sheep crossing a bridge. After that, I wept for hours. The tears
 just came. Now there’s a little something poignant to get you started.
 
@@ -175,10 +175,10 @@ perfectly good chat. Their face doesn’t look so much like that childhood
 nemesis. You’ve met the Good Twin. You clicked.
 
 So whereas I should probably be pounding your teeth in with hype about Ruby and
-the tightly-knit cadre of pertinent ancronyms that accompany it everywhere
+the tightly-knit cadre of pertinent acronyms that accompany it everywhere
 (whetting the collective whistles of your bosses and their bosses’ bosses),
-instead I will just let you coast. I’ll let you freefall through some code,
-interjecting occassionally with my own heartfelt experiences. It’ll be quite
+instead I will just let you coast. I’ll let you free-fall through some code,
+interjecting occasionally with my own heartfelt experiences. It’ll be quite
 easy, quite natural.
 
 I should offer you some sort of motivation, though. So, Smotchkkiss, I’m going
@@ -250,7 +250,7 @@ maniacal laughing thing going on deep into that night. It was a real mess.
 
 But, since I don’t get along well with people, I hadn’t invited anyone but
 myself to the Opening Ceremonies of This Book. So it wasn’t really that
-embarassing. I kept it under wraps and no one found out about the whole ordeal.
+embarrassing. I kept it under wraps and no one found out about the whole ordeal.
 
 So you’ve got to know that **synergy** doesn’t actually mean **synergy** in this
 book. I can’t do normal **synergy**. No, in this book, **synergy** means
