@@ -1,10 +1,8 @@
 ---
+layout: book
+description: >
+  A programming adventure for Ruby beginners illustrated with cartoon foxes.
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Why's (Poignant) Guide to Ruby</title>
   <style type="text/css">
   body {
     color: white;
@@ -26,19 +24,9 @@
   #cover img {
     margin-bottom: -90px;
   }
-  #menu { font-size: 12px; color: #900; padding: 8px; }
-  #menu a {
-    color: #009;
-  }
-  #bookcontents {
-    font-size: 9px;
-    text-align: left;
-    width: 240px;
-    float: left;
-  }
-  #bookcontents a {
-    color: #eef;
-  }
+  #menu { font-size: 12px; color: gray }
+  #menu a { color: #009 }
+  #menu p:last-child a { color: inherit }
   #news {
     margin: 0 auto;
     text-align: center;
@@ -52,7 +40,8 @@
     color: #FF3;
   }
   </style>
-  <script language="Javascript">
+
+  <script>
   function openBook() {
     document.getElementById("cover-image").src = "images/2007-cover-open.jpg";
   }
@@ -60,22 +49,27 @@
     document.getElementById("cover-image").src = "images/2007-cover-shut.jpg";
   }
   </script>
-</head>
-<body>
+
   <div id="cover">
     <a href="book/chapter-1.html" onmouseover="openBook()" onmouseout="shutBook()"><img id="cover-image" src="images/2007-cover-shut.jpg" /></a>
     <div id="news">
       Ohh! Fresh chapter snuck up! <strong><a href="book/chapter-7.html">When You Wish Upon a Beard</a></strong>, drawings everywhichway.
     </div>
   </div>
+
   <div id="menu">
+    <p>
     <strong><a href="book/chapter-1.html">open the book</a></strong>
     &#0164;
     <a href="book/">the book??</a>
     &#0164;
     <a href="soundtrack/">but the soundtrack??!</a>
-  </div>
+    </p>
 
-{% include tracking_code.html %}
-</body>
-</html>
+    <p class=vcard>
+    Tenderly written and illustrated by
+    <a rel=author class=fn href="http://whytheluckystiff.net">Why the Lucky Stiff</a>.
+    <br>
+    <a href="https://github.com/mislav/poignant-guide">Source on GitHub</a>
+    </p>
+  </div>

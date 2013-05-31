@@ -7,6 +7,9 @@
       {% if page.title %}::{% endif %}
       {{ site.title }}
     </title>
+    <meta name=author content="Why the Lucky Stiff">
+    <meta name=creator content="Mislav Marohnić">
+    {% if page.description %}<meta name=description content="{{ page.description | escape }}">{% endif %}
     <link rel="stylesheet" type="text/css" href="{% if page.stylesheet %}{{ page.stylesheet }}{% else %}../guide.css{% endif %}">
 </head>
 <body class="{{ page.type }}">
