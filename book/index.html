@@ -11,10 +11,10 @@ layout: book
       <ol class=toc>
         {% for chapter in site.posts reversed %}
         <li>
-          <a href="{{ chapter.url | remove_first:"book/" }}">{{ chapter.title | escape }}</a>
+          <a href="{{ chapter.url | remove_first:"/book/" }}">{{ chapter.title | escape }}</a>
           {% if chapter.sections %}
           <ol>{% for section in chapter.sections %}
-            <li><a href="{{ chapter.url | remove_first:"book/" }}#{{ section.first }}">{{ section.last | escape }}</a></li>
+            <li><a href="{{ chapter.url | remove_first:"/book/" }}#{{ section.first }}">{{ section.last | escape }}</a></li>
           {% endfor %}</ol>
           {% endif %}
         </li>

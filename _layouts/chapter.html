@@ -3,8 +3,8 @@ layout: book
 ---
 <div id="banner">
    <div class="pager">
-     <a class="pagebar" href="{% if page.previous %}{{ page.previous.url | remove_first:"book/" }}{% else %}../{% endif %}">previous</a> |
-     <a class="pagebar" href="{% if page.next %}{{ page.next.url | remove_first:"book/" }}{% else %}./{% endif %}">next</a>
+     <a class="pagebar" href="{% if page.previous %}{{ page.previous.url | remove_first:"/book/" }}{% else %}../{% endif %}">previous</a> |
+     <a class="pagebar" href="{% if page.next %}{{ page.next.url | remove_first:"/book/" }}{% else %}./{% endif %}">next</a>
    </div>
    <div class="title">
      <img src="../images/2006.chaptertitle.png" alt="{{ site.title }}" />
@@ -28,7 +28,7 @@ layout: book
       {{ content }}
 
       <p style="text-align:right;">
-      <a href="{% if page.next %}{{ page.next.url | remove_first:"book/" }}{% else %}./{% endif %}">Turn page.</a>
+      <a href="{% if page.next %}{{ page.next.url | remove_first:"/book/" }}{% else %}./{% endif %}">Turn page.</a>
       </p>
     </div>
   </div>
