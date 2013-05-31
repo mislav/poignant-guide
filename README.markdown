@@ -16,11 +16,7 @@ Since then I have:
 
 ## Build system
 
-Run:
-
-1. `script/doctor` to verify that you have the necessary dependencies
-2. `script/jekyll` to build the site into "public" directory
-3. `script/guard`  to start a process that auto-rebuilds and live-reloads
+Run `script/jekyll` to [build the site with Jekyll][jk].
 
 The individual chapters are in `_posts/` directory.
 
@@ -39,3 +35,4 @@ but never finished or published.
   [cc]: http://creativecommons.org/licenses/by-sa/2.5/
   [jp]: http://www.aoky.net/articles/why_poignant_guide_to_ruby/
   [dl]: http://github.com/mislav/poignant-guide/downloads
+  [jk]: https://help.github.com/articles/using-jekyll-with-pages
