@@ -8,7 +8,7 @@ sections:
 - - section2
   - قصّة الكلب
 - - section3
-  - The Red Sun Rises
+  - الشمس الحمراء تشرق
 - - section4
   - كيف تبدأ الكتب
 ---
