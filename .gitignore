@@ -1,1 +1,10 @@
 public
+
+tmp/
+build/
+
+.DS_Store
+*.swp
+*.swo
+.rvmrc
+
