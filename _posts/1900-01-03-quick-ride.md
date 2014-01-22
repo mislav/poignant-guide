@@ -793,7 +793,7 @@ firmly on your temples. Now, let’s dissect a cow’s eye worth of code.
 {% highlight rb %}
 require 'net/http'
 Net::HTTP.start( 'www.ruby-lang.org', 80 ) do |http|
-  print( http.get( '/en/LICENSE.txt' ).body )
+  print( http.get( '/en/about/LICENSE.txt' ).body )
 end
 {% endhighlight %}
 
