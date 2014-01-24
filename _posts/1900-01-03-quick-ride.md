@@ -793,7 +793,7 @@ firmly on your temples. Now, let’s dissect a cow’s eye worth of code.
 {% highlight rb %}
 require 'net/http'
 Net::HTTP.start( 'www.ruby-lang.org', 80 ) do |http|
-  print( http.get( '/en/about/LICENSE.txt' ).body )
+  print( http.get( '/en/about/license.txt' ).body )
 end
 {% endhighlight %}
 
@@ -811,7 +811,7 @@ The word `do` opens a _block_. The block has one _block variable_ `http`. Inside
 the block, the _method_ `print` is called. What is being printed?
 
 From the _variable_ `http`, the _method_ `get` is called. Into `get`, we pass a
-_string_ containing the path `'/en/about/LICENSE.txt'`. Now, notice that another
+_string_ containing the path `'/en/about/license.txt'`. Now, notice that another
 method is chained onto `get`. The _method_ `body`. Then, the block closes with
 `end`.
 
@@ -827,7 +827,7 @@ For example, this pattern is used a number of times:
 You see it inside the block:
 
 {% highlight rb %}
-http.get( '/en/about/LICENSE.txt' )
+http.get( '/en/about/license.txt' )
 {% endhighlight %}
 
 We’re using Ruby to get a web page. You’ve probably used <span
@@ -838,12 +838,12 @@ drive across the Internet and bring back web pages for us. On his hat are
 stitched the letters <span class="caps">HTTP</span>.
 
 The variable `http` is that bus driver. The _method_ is a message to the bus
-driver. Go `get` the web page called `/en/about/LICENSE.txt`.
+driver. Go `get` the web page called `/en/about/license.txt`.
 
 So where you see the chain of methods:
 
 {% highlight rb %}
-http.get( '/en/about/LICENSE.txt' ).body
+http.get( '/en/about/license.txt' ).body
 {% endhighlight %}
 
 Since we’ll be getting back a web page from the `http` bus driver, you can read
@@ -854,7 +854,7 @@ this in your brain as:
 And this bit of code:
 
 {% highlight rb %}
-print( http.get( '/en/about/LICENSE.txt' ).body )
+print( http.get( '/en/about/license.txt' ).body )
 {% endhighlight %}
 
 This code gets the web page. We send a `body` message to the web page, which
