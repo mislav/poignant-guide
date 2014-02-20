@@ -521,7 +521,7 @@ pincers, remember that the code inside has been pressed into a single unit.
 
 It’s like one of those little Hello Kitty boxes they sell at the mall that’s
 stuffed with tiny pencils and microscopic paper, all crammed into a glittery
-transparent case that can be concealed in your palm for covert stationary
+transparent case that can be concealed in your palm for covert stationery
 operations. Except that blocks don’t require so much squinting.
 
 The curly braces can also be traded for the words **do** and **end**, which is
