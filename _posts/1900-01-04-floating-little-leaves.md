@@ -778,7 +778,7 @@ because files have a method called `<<` just like strings do.
 
 ### Settle Down, Your Ideas Aren’t Trapped
 
-Here, let’s get your ideas back to their original verbage, so you can rumminate
+Here, let’s get your ideas back to their original verbage, so you can ruminate
 over their brilliance.
 
 {% highlight rb %}
