@@ -587,7 +587,7 @@ dangerous words of yours. In the Hash, each dangerous word is matched up against
 a code word (or phrase). The code word will be swapped in for the real word.
 
 {% highlight rb %}
-code_words = {
+CODE_WORDS = {
   'starmonkeys' => 'Phil and Pete, those prickly chancellors of the New Reich',
   'catapult' => 'chucky go-go', 'firebomb' => 'Heat-Assisted Living',
   'Nigeria' => "Ny and Jerry's Dry Cleaning (with Donuts)",
@@ -606,7 +606,7 @@ before the apostrophe such as: `'Ny and Jerry\'s Dry Cleaning (with Donuts)'`.)
 Should you need to look up a specific word, you can do so by using the **square
 brackets** method.
 
-`code_words['catapult']` will answer with the string `'chucky go-go'`.
+`CODE_WORDS['catapult']` will answer with the string `'chucky go-go'`.
 
 Look at the square brackets as if they are a wooden pallet the word is sitting
 upon. A forklift could slide its prongs into each side of the pallet and bring
@@ -623,19 +623,19 @@ lid.
 As with many of the other operators you’ve seen recently, the index brackets are
 simply a shortcut for a method.
 
-`code_words.[]( 'catapult' )` will answer with the string `'chucky go-go'`.
+`CODE_WORDS.[]( 'catapult' )` will answer with the string `'chucky go-go'`.
 
 ### Making the Swap
 
 I went ahead and saved the Hash of code words to a file called **wordlist.rb**.
 
 {% highlight rb %}
-require 'wordlist'
+require_relative 'wordlist'
 
 # Get evil idea and swap in code words
 print "Enter your new idea: " 
 idea = gets
-code_words.each do |real, code| 
+CODE_WORDS.each do |real, code| 
   idea.gsub!( real, code )
 end
 
@@ -648,7 +648,7 @@ end
 {% endhighlight %}
 
 Script starts by pulling in our word list. Like `gets` and `print`, the
-`require` method is a kernel method, you can use it anywhere. I give it the
+`require_relative` method is a kernel method, you can use it anywhere. I give it the
 string `'wordlist'` and it will look for a file named `wordlist.rb`.
 
 After that, there are two sections. I am marking these sections with comments,
@@ -666,7 +666,7 @@ in the new code words. The second section saves the encoded idea into a new text
 file.
 
 {% highlight rb %}
-code_words.each do |real, code|
+CODE_WORDS.each do |real, code|
   idea.gsub!( real, code )
 end
 {% endhighlight %}
@@ -782,7 +782,7 @@ Here, let’s get your ideas back to their original verbage, so you can rumminat
 over their brilliance.
 
 {% highlight rb %}
-require 'wordlist'
+require_relative 'wordlist'
 
 # Print each idea out with the words fixed
 Dir['idea-*.txt'].each do |file_name|
