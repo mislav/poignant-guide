@@ -672,7 +672,7 @@ end
 {% endhighlight %}
 
 You see the `each` method? The `each` method is all over in Ruby. It’s available
-for Arrays, Hashes, even Strings. Here, our `code_words` dictionary is kept in a
+for Arrays, Hashes, even Strings. Here, our `CODE_WORDS` dictionary is kept in a
 Hash. This `each` method will hurry through **all the pairs of the Hash**, one
 dangerous word matched with its code word, handing each pair to the `gsub!`
 method for the actual replacement.
@@ -787,7 +787,7 @@ require_relative 'wordlist'
 # Print each idea out with the words fixed
 Dir['idea-*.txt'].each do |file_name|
   idea = File.read( file_name )
-  code_words.each do |real, code|
+  CODE_WORDS.each do |real, code|
     idea.gsub!( code, real )
   end
   puts idea
