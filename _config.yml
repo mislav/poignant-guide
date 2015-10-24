@@ -1,12 +1,12 @@
 permalink:   none
 lsi:         false
-pygments:    true
-destination: public
+highlighter: pygments
 markdown:    rdiscount
 rdiscount:   { extensions: [smart] }
 exclude:
+  - Gemfile
+  - Gemfile.lock
   - script
-  - Guardfile
   - README.markdown
 
 title: "Why's (Poignant) Guide to Ruby"
