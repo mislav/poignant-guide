@@ -1,3 +1,5 @@
+## Why's (Poignant) Guide to Ruby
+
 On August 19, 2009 Why the Lucky Stiff removed every trace of his work from the
 Web, including this book: the Poignant Guide to Ruby.
 
@@ -30,6 +32,13 @@ The original soundtrack and PDF edition are also available in
 
 Chapter 8: Heaven's Harp was never recovered. I suspect \_why started drawing it,
 but never finished or published.
+
+> "Quite so," he said.  "I went out to my car yesterday and there was a shoe in the passenger's
+seat.  A very battered oxford.  Looking straight ahead like it needed a lift to the cobbler's.
+I did a cavity search and came up with a crisp note from my deceased ancestor, the same 
+whose property I've looked after, lo, these many years."
+
+> "Wow," I said.  And I glared at my shoe, at the things it would do when I'm gone.
 
 
   [cc]: http://creativecommons.org/licenses/by-sa/2.5/
