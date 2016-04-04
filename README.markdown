@@ -33,6 +33,8 @@ The original soundtrack and PDF edition are also available in
 Chapter 8: Heaven's Harp was never recovered. I suspect \_why started drawing it,
 but never finished or published.
 
+* * *
+
 > "Quite so," he said.  "I went out to my car yesterday and there was a shoe in the passenger's
 seat.  A very battered oxford.  Looking straight ahead like it needed a lift to the cobbler's.
 I did a cavity search and came up with a crisp note from my deceased ancestor, the same 
