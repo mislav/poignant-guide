@@ -1096,7 +1096,7 @@ end
 “As for your `sort_by`, it **starts at the top** of the list and **goes through
 each item**, one at a time. So `toy` is one of those items. With each item,
 `sort_by` stops and **slides that item down the chute**, under the `toy` name,
-and let’s you figure out what to do with it.”
+and lets you figure out what to do with it.”
 
 “Okay, so `toy` takes turns being each of the different toys I have.”
 
