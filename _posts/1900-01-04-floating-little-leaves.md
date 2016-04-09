@@ -744,7 +744,7 @@ You don’t even need to spell `Kernel` out for Ruby. Ruby knows to check
 
 Most methods are more specialized than `print` or `gets`. Take the `File::open`
 for example. The creator of Ruby, Matz, has given us many different methods
-which which read, rename, or delete files. They are all organized inside the
+which read, rename, or delete files. They are all organized inside the
 `File` class.
 
 * `File::read( "idea-mustard-plus-codeine.txt" )` will answer back with a string
