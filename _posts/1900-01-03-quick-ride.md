@@ -146,11 +146,11 @@ farm of inky foxes.
 
 > **Sensible Hipster Standing on Curb in Urban Wilderness**: He calls himself
 > the lucky stiff.
-
+>
 > (Pulls aside curtain to reveal gray corpse on a gurney.)
-
+>
 > **Hipster**: Some stiffs ain’t so lucky.
-
+>
 > (Erratic zoom in. Superimposed cartoon foxes for subliminal Willy Wonka mind
 > trip.)
 
