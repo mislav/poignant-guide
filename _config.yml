@@ -1,6 +1,5 @@
 permalink:   none
 lsi:         false
-highlighter: pygments
 markdown:    rdiscount
 rdiscount:   { extensions: [smart] }
 exclude:

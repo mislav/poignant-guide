@@ -94,7 +94,7 @@ body {
 .highlight .sr { /* regex */
   color: #435;
 }
-.highlight .n { /* identifier */
+.highlight .nf { /* identifier */
   color: #369;
 }
 .highlight .ss { /* symbol */

@@ -362,7 +362,7 @@ body.expansion #banner a:hover {
   background-color: #E9F1F5;
   color: #435;
 }
-.highlight .n { /* identifier */
+.highlight .nf { /* identifier */
   color: #369;
 }
 .highlight .ss { /* symbol */
