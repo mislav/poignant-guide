@@ -104,8 +104,7 @@ punctuation which encompass a single thought. These sentences can form books.
 They can form pages. They can form entire novels, when strung together. Novels
 that can be read by humans, but also by computers.
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## Concerning Commercial Uses of the (Poignant) Guide
 
 This book is released under a Creative Commons license which allows unlimited
@@ -218,9 +217,7 @@ voiceover in _The Royal Tenenbaums_. His career might be okay. You might not
 want to use him. He might not do it.
 
 Tell ya what. I’ll play the part. I’ve made a career out of low points.
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 <a name="section2"></a>
 
@@ -689,8 +686,7 @@ broad view of them. I’ll be testing your metal in the next section.
 ![Out in the pickup truck.](../images/the.foxes-6.png "Out in the pickup
 truck.")
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## Seven Moments of Zen from My Life
 
 1. 8 years old. Just laying in bed, thinking. And I realize. _There’s nothing
@@ -718,9 +714,7 @@ day.)
 Forgot about it for almost a couple months. One day, while cleaning, I found a
 chain and he was there on the end. Hey, little duck. Mad freaky, hoppin’ around
 with his hair out, squawking diagonal lines. In a tuxedo.
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 <a name="section3"></a>
 

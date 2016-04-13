@@ -7,8 +7,7 @@ layout: expansion
 sun...](../images/tigers.vest-1.gif "Tiger has vest.  Tiger likes girl robot.
 Earth crashing into sun...")
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## About Ruby Versions
 
 **1.9.3** is the latest **stable** version of Ruby. Stable versions offer the
@@ -27,9 +26,7 @@ Oh, and if I could give you a taste of how smoothly Ruby moves along! I can’t
 count how often a fresh idea lands on the Ruby-Core mailing list, where the
 Emperors of Ruby converse, and **that same idea** gets worked into Ruby within
 a few days. It is a lovely machine says I.
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 Let’s install the very latest Ruby on your computer so you can follow all the
 examples in the (Poignant) Guide and actually do things right now! (Yes,

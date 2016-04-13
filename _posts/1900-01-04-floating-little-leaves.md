@@ -68,8 +68,7 @@ though he’s an elf to us, he’s a tall monster to them.)
 
 ![Animal Perfect, LLC](../images/the.elf-4.jpg "Animal Perfect, LLC")
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## The Scarf Eaters
 
 I hate to intrude upon your instruction, but I’ve already walked all over it
@@ -96,9 +95,7 @@ It’s like 0sil8 starring Hillary Duff.
 
 I don’t want to give away the plot at all, but to tug your appetite I’ll just
 say this: one kid talks to his dead brother in ActionScript. More to come.
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 Nonono. Hang on a sec. You’re not ready for what the Elf here is doing in his
 caves. You’ll think it’s all positively inhumane, naughty, sick, tweeested, yada
@@ -306,8 +303,7 @@ This trick is a gorgeous way of expressing, _Do this only if **a* is true and
 
 Now that you’ve met `false`, I’m sure you can see what’s on next.
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## Make Your Own Starmonkey!
 
 1. Turn a mug upside-down. ![](../images/starmonkeycrafts-1.jpg)
@@ -322,9 +318,7 @@ Standard, placid.</p>
 
 <p style="text-align:center;"><img src="../images/starmonkeycrafts-6.gif" alt="" />
 Eating chalk.</p>
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 ### True
 
@@ -536,8 +530,7 @@ you hit _Enter_, `gets` will then stop paying attention to your keyboard
 punchings and answer back to Ruby with a string that contains everything you
 typed.
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## Get Ahead with The Tiger’s Vest
 
 [![](../images/ad-tiger.gif)][1]
@@ -547,11 +540,7 @@ off to [Expansion Pak I: The Tiger’s Vest][1], a trite mini-chapter which will
 aid you in installing Ruby. In addition, you’ll learn how to use Irb and Ri, two
 teaching aids that come with Ruby which will really speed you up in your
 learning.
-
-[1]: expansion-pak-1.html
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 The `reverse` method is then used on the string that `gets` is giving back. The
 `reverse` method is part of the `String` class. Which means that **anything
@@ -832,8 +821,7 @@ p File::methods
 
 ![Flowerboyz?  Heard it before.](../images/blix-2.gif "Flowerboyz?  Heard it before.")
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown="1">
 ## Excerpt from The Scarf Eaters
 
 (_from Chapter V: A Man in Uniform_.)
@@ -885,9 +873,7 @@ we got our family back.”
 Lara’s smiled reflected across the glass of her monitor. She chose the text tool
 and in 42 point serif typed: “Dad.” She created a path for it and let it tween
 off the right side of the screen. She cried long after it was gone.
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 Since you and I are becoming closer friends as we share this time together, I
 should probably let you in on a bit of the history going on here. It’s a good
@@ -1159,3 +1145,5 @@ I worked on it whenever I found myself bored. And when I wasn’t bored, I could
 always switch on _The Phantom Menace_ to get me in the mood.
 
 ![Someone let them all out.](../images/the.elf-7.jpg "Someone let them all out.")
+
+[1]: expansion-pak-1.html

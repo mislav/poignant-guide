@@ -43,8 +43,7 @@ to Ruby_, so you can always have this book’s tender companionship.
 You really must sob once. Or at least sniffle. And if not, then the onion will
 make it all happen for you.
 
-<div class=sidebar><aside>
-{% capture sidebar %}
+<aside class="sidebar" markdown=1>
 ## What I’m Going to Do With the Massive Proceeds from this Book
 
 Anyone who’s written a book can tell you how easily an author is distracted by
@@ -100,9 +99,7 @@ Maybe these were _real_ pesos! Let’s go make more _real_ pesos!
 I think we even had a tavern where you could get totally hammered off Kool-Aid.
 There’s nothing like a bunch of kids stumbling around, mumbling incoherently
 with punchy red clown lips.
-{% endcapture %}
-{{ sidebar | markdownify }}
-</aside></div>
+</aside>
 
 <a name="section2"></a>
 
