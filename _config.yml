@@ -1,7 +1,7 @@
 permalink:   none
 lsi:         false
-markdown:    rdiscount
-rdiscount:   { extensions: [smart] }
+kramdown:
+  auto_ids:  false
 exclude:
   - Gemfile
   - Gemfile.lock
