@@ -1,7 +1,9 @@
 #!/bin/sh
+
+site="${1:-_site}"
 code="$(grep data-site-id _includes/tracking_code.html)"
 
-for html in $(find public -name '*.html' | grep -v 404); do
+for html in $(find "$site" -name '*.html' | grep -v 404); do
   if ! grep "$code" "$html" >/dev/null; then
     echo no tracking: $html
   fi

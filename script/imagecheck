@@ -1,15 +1,17 @@
 #!/bin/sh
 # Check if referenced images are present
 
+site="${1:-_site}"
+
 images="$(
   { ruby -rnokogiri -e '
       Nokogiri(ARGF).css("img[src]").each { |node|
         link = node["src"]
         next if link.include? "://"
         puts link
-      }' $(find public -name '*.html' | grep -v 404) | sort -u
+      }' $(find "$site" -name '*.html' | grep -v 404) | sort -u
 
-    find public -name '*.css' | xargs grep "images/" | cut -d '(' -f 2 | cut -d ')' -f 1
+    find "$site" -name '*.css' | xargs grep "images/" | cut -d '(' -f 2 | cut -d ')' -f 1
   } | sort -u
 )"
 

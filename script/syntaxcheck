@@ -1,7 +1,10 @@
 #!/bin/sh
 # Check ruby syntax in code examples
+
+site="${1:-_site}"
+
 exec ruby -rnokogiri -e '
-  Nokogiri(ARGF).css("pre > code.rb").each { |node|
+  Nokogiri(ARGF).css("[data-lang=ruby]").each { |node|
     code = node.text
     File.popen("ruby -wc >/dev/null", "w"){|f| f << code }
     unless $?.success?
@@ -9,4 +12,4 @@ exec ruby -rnokogiri -e '
       puts code
       puts "======"
     end
-  }' public/book/*.html public/dwemthy/index.html
+  }' "$site"/book/*.html "$site"/dwemthy/index.html

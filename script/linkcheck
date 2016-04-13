@@ -1,8 +1,11 @@
 #!/bin/sh
 # Display absolute links or assets
+
+site="${1:-_site}"
+
 exec ruby -rnokogiri -e '
   Nokogiri(ARGF).css("*[href], *[src]").each { |node|
     link = node["href"] || node["src"]
     next unless link.include? "://" or link[0,1] == "/"
     puts link
-  }' $(find public -name '*.html' | grep -v 404) | sort -u
+  }' $(find "$site" -name '*.html' | grep -v 404) | sort -u
