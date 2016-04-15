@@ -2,7 +2,8 @@ permalink:   none
 lsi:         false
 kramdown:
   auto_ids:  false
-  syntax_highlighter: none
+  syntax_highlighter_opts:
+    disable: true
 exclude:
   - Gemfile
   - Gemfile.lock
