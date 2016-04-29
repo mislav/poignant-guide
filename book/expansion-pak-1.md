@@ -391,6 +391,6 @@ Well then. Your hands are in it all now. Welcome to Ruby.
 
 
 [1]: http://rubyinstaller.org/
-[2]: http://mxcl.github.com/homebrew/
+[2]: http://brew.sh/
 [3]: http://www.rubycentral.com/book/irb.html
 [4]: http://rdoc.sourceforge.net/doc/files/README.html
