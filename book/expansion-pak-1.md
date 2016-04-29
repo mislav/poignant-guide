@@ -37,11 +37,7 @@ things!)
   for you, as well as a tidy pack of useful software, such as a small text editor
   and some additional libraries.
 
-* If you are on Apple’s **Mac OS X**, then Ruby is already installed. However,
-  it is not the latest version available, so I encourage you to upgrade it by
-  first installing [Homebrew][2] package manager, then in the Terminal run:
-
-        brew install ruby
+* If you are on Apple’s **Mac OS X**, then Ruby is already installed.
 
 * On **Debian**, use `apt-get install ruby`.
 
@@ -50,7 +46,7 @@ things!)
 To test if Ruby is installed, open a command shell and run: `ruby -v`. If Ruby
 is installed properly, you’ll see a bit of version info.
 
-    ruby 1.9.3p194 (2012-04-20) [x86_64-darwin12.0.0]
+    ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin15]
 
 * To open a command shell in **Microsoft Windows**, go to the Start Menu and
   select `Run...`. Type in: `cmd`. Press OK. A command shell window will
@@ -391,6 +387,5 @@ Well then. Your hands are in it all now. Welcome to Ruby.
 
 
 [1]: http://rubyinstaller.org/
-[2]: http://mxcl.github.com/homebrew/
 [3]: http://www.rubycentral.com/book/irb.html
 [4]: http://rdoc.sourceforge.net/doc/files/README.html
