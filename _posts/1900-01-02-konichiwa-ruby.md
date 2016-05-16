@@ -43,7 +43,7 @@ to Ruby_, so you can always have this book’s tender companionship.
 You really must sob once. Or at least sniffle. And if not, then the onion will
 make it all happen for you.
 
-<aside class="sidebar" markdown=1>
+<aside class="sidebar" markdown="1">
 ## What I’m Going to Do With the Massive Proceeds from this Book
 
 Anyone who’s written a book can tell you how easily an author is distracted by
