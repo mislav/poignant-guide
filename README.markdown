@@ -18,7 +18,7 @@ Since then I have:
 
 ## Build system
 
-Run `script/jekyll` to [build the site with Jekyll][jk].
+Run `jekyll serve` to [build the site with Jekyll][jk].
 
 The individual chapters are in `_posts/` directory.
 
