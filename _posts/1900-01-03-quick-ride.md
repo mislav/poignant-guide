@@ -916,4 +916,4 @@ So I guess you’re going to be okay. Whatdya say? Let’s get moving on this sc
 of yours?
 
 
-  [1]: http://www.whiskeyclone.net/ghost/L/lordonlyknows.html
+  [1]: http://whiskeyclone.net/ghost/songinfo.php?songID=175
