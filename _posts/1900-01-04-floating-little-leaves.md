@@ -564,7 +564,7 @@ idea_backwards = gets.upcase.reverse
 You hand me a legal pad, doused in illegible shorthand. Scanning over it, I
 start to notice patterns. That you seem to use the same set of words repeatedly
 in your musings. Words like _starmonkey_, _Nigeria_, _firebomb_. Some phrases
-even. _Put the kabosh on._ That gets said a lot.
+even. _Put the kibosh on._ That gets said a lot.
 
 Let us disguise these foul terms, my brother. Let us obscure them from itching
 eyes that cry to know our delicate schemes and to thwart us from having great
@@ -580,7 +580,7 @@ CODE_WORDS = {
   'starmonkeys' => 'Phil and Pete, those prickly chancellors of the New Reich',
   'catapult' => 'chucky go-go', 'firebomb' => 'Heat-Assisted Living',
   'Nigeria' => "Ny and Jerry's Dry Cleaning (with Donuts)",
-  'Put the kabosh on' => 'Put the cable box on'
+  'Put the kibosh on' => 'Put the cable box on'
 }
 {% endhighlight %}
 
@@ -767,7 +767,7 @@ because files have a method called `<<` just like strings do.
 
 ### Settle Down, Your Ideas Aren’t Trapped
 
-Here, let’s get your ideas back to their original verbage, so you can rumminate
+Here, let’s get your ideas back to their original verbage, so you can ruminate
 over their brilliance.
 
 {% highlight rb %}
