@@ -278,6 +278,12 @@ And beyond text, you can make <span class="caps">HTML</span>:
 
 And this is last and best.
 
+Sometimes you need to help ri help you, though.
+
+For example like this:
+
+    rvm docs generate-ri 
+
 ### Into the Ri Switchboard
 
 Behind Ri sings a chorus of human voices, primarily Dave Thomas, an author of
