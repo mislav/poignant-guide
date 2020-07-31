@@ -799,7 +799,7 @@ _.txt_.” The forklift shuffles off to the directory and comes back with a list
 of all matching files.
 
 That **list of files** will come in the form of `Array` the Caterpillar, with a
-`String` for each file. If you are curious and want to play with with `Dir::[]`,
+`String` for each file. If you are curious and want to play with `Dir::[]`,
 try this:
 
 {% highlight rb %}
