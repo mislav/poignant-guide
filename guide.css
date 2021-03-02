@@ -111,13 +111,13 @@ pre {
 .foxbox, .foxbox_body, .foxbox_head 
 { 
     background: transparent url(images/2006.foxbox.jpg) no-repeat bottom right;
+    max-width: 760px;
+    margin-left: auto;
 }
 /* set the top-right image */
 .foxbox_head
 { 
     background-position: top left; 
-    margin-right: -15px; /* pull the right image over on top of border */ 
-    padding-right: 40px; /* right-image-gap + right-inside padding */ 
 }
 /* set the top-left image */ 
 .foxbox_head h3 
