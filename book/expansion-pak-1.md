@@ -387,5 +387,5 @@ Well then. Your hands are in it all now. Welcome to Ruby.
 
 
 [1]: http://rubyinstaller.org/
-[3]: http://www.rubycentral.com/book/irb.html
+[3]: https://docs.ruby-lang.org/en/2.0.0/IRB.html
 [4]: http://rdoc.sourceforge.net/doc/files/README.html
