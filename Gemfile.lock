@@ -2,7 +2,7 @@ GEM
   remote: https://api.rubygems.org/
   specs:
     RedCloth (4.2.9)
-    activesupport (7.0.4.3)
+    activesupport (7.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -53,7 +53,7 @@ GEM
     html-pipeline (2.14.2)
       activesupport (>= 2)
       nokogiri (>= 1.4)
-    i18n (1.12.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jekyll (3.0.3)
       colorator (~> 0.1)
@@ -97,7 +97,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     mini_portile2 (2.8.1)
-    minitest (5.18.0)
+    minitest (5.19.0)
     multipart-post (2.0.0)
     net-dns (0.8.0)
     nokogiri (1.14.3)
