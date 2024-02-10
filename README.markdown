@@ -27,9 +27,6 @@ The individual chapters are in `_posts/` directory.
 There's a [Japanese translation of the book][jp], although I can't tell how up
 to date it is.
 
-The original soundtrack and PDF edition are also available in
-[the download section][dl] on GitHub.
-
 Chapter 8: Heaven's Harp was never recovered. I suspect \_why started drawing it,
 but never finished or published.
 
@@ -45,5 +42,4 @@ whose property I've looked after, lo, these many years."
 
   [cc]: http://creativecommons.org/licenses/by-sa/2.5/
   [jp]: http://www.aoky.net/articles/why_poignant_guide_to_ruby/
-  [dl]: http://github.com/mislav/poignant-guide/downloads
   [jk]: https://help.github.com/articles/using-jekyll-with-pages
